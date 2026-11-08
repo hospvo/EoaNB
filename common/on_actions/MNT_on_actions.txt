@@ -1,0 +1,80 @@
+# Montenegro
+
+on_actions = {
+	on_daily_MNT = {
+		effect = {
+			MNT_clans_daily = yes
+
+			if = {
+				limit = {
+					has_completed_focus = MNT_focus_guerrilla_war NOT = {
+						has_country_flag = MNT_crisis_initialized
+					}
+				}
+				MNT_crisis_initialize = yes
+			}
+			if = {
+				limit = { has_country_flag = MNT_crisis_initialized }
+				MNT_crisis_vukalovic_initialize = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = MNT_crisis_initialized has_country_flag = MNT_crisis_active
+					NOT = { has_country_flag = MNT_frontier_running }
+					NOT = { has_war_with = OTO }
+					OR = {
+						has_completed_focus = MNT_focus_strike_a_deal_with_the_ottomans_n has_completed_focus = MNT_focus_the_mostar_convention_n has_completed_focus = MNT_focus_recognize_our_status_under_the_ottomans_n
+					}
+				}
+				set_variable = {
+					MNT_crisis_phase = 4
+				}
+				clr_country_flag = MNT_crisis_active
+			}
+
+			MNT_diplomacy_daily = yes
+
+			MNT_frontier_daily = yes
+
+			MNT_state_daily = yes
+		}
+	}
+
+	on_startup = {
+		effect = {
+			MNT = {
+				MNT_clans_daily = yes
+			}
+
+			MNT = { MNT_diplomacy_daily = yes }
+
+			MNT = { if = { limit = { has_country_flag = MNT_crisis_initialized } MNT_frontier_initialize = yes } }
+
+			MNT = { MNT_state_daily = yes }
+		}
+	}
+
+	on_weekly_MNT = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = MNT_crisis_active
+				}
+				MNT_crisis_week = yes
+			}
+
+			if = { limit = { MNT_frontier_prewar = yes has_completed_focus = MNT_focus_guerrilla_war OTO = { check_variable = { MNT_frontier_garrison > 5 } } }
+				subtract_from_variable = { MNT_crisis_strength = 2 } MNT_crisis_refresh = yes
+			}
+			if = { limit = { MNT_frontier_running = yes NOT = { has_country_flag = MNT_frontier_cordon_suspended } check_variable = { MNT_frontier_fielded > OTO.MNT_frontier_garrison } }
+				add_to_variable = { MNT_frontier_pressure = 15 } MNT_frontier_refresh = yes
+			}
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = { limit = { tag = MNT } MNT_state_month = yes }
+		}
+	}
+}

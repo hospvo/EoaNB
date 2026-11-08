@@ -1,5 +1,4 @@
 characters = {
-
 	### RULERS ###
 
 	MNT_danilo_i = {
@@ -12,12 +11,13 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_Danilo_I__DESC"
 			ideology = absolutism
-			expire = "1860.1.1.1"
+			# Succession is resolved by the August 1860 campaign event.
+			expire = "1980.1.1.1"
 		}
 	}
 
 	### COMMANDERS ###
-	
+
 	MNT_mirko_petrovicnjegos = {
 		name = "Mirko Petrović-Njegoš"
 		portraits = {
@@ -27,7 +27,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-		traits={ MNT_velkovojvoda MNT_house_of_petrovic_njegoš }
+			traits={ MNT_velkovojvoda MNT_house_of_petrovic_njegos }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -35,7 +35,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	
+
 	MNT_marko_miljanov = {
 		name = "Marko Miljanov"
 		portraits = {
@@ -45,7 +45,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-		    traits={ career_officer trait_engineer MNT_vojvoda MNT_tribe_kuci }
+			traits={ career_officer trait_engineer MNT_vojvoda MNT_tribe_kuci }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -53,7 +53,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	
+
 	MNT_simo_bacovic = {
 		name = "Simo Baćović"
 		portraits = {
@@ -63,7 +63,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-		    traits={ MNT_vojvoda }
+			traits={ MNT_vojvoda }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 3
@@ -81,15 +81,15 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { fast_planner thorough_planner MNT_Leader_of_the_Clan_Army MNT_tribe_ozrinici  MNT_velkovojvoda }
+			traits = { fast_planner thorough_planner MNT_leader_of_the_Clan_Army MNT_tribe_ozrinici  MNT_velkovojvoda }
 			skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
 		}
 	}
-	
+
 	MNT_miljan_vukov_vesovic = {
 		name = "Miljan Vukov Vešović"
 		portraits = {
@@ -99,7 +99,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-		    traits={ MNT_vojvoda }
+			traits={ MNT_vojvoda }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -107,7 +107,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	
+
 	MNT_todor_vukovic = {
 		name = "Todor Vuković"
 		portraits = {
@@ -117,7 +117,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-		    traits={ MNT_casnik }
+			traits={ MNT_casnik }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 2
@@ -125,9 +125,9 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	
+
 	### ADVISORS ###
-	
+
 	MNT_stanislav_radonjic = {
 		name = "Stanislav Radonjić"
 		portraits = {
@@ -140,20 +140,20 @@ characters = {
 			slot = political_advisor
 			idea_token = MNT_advisor_Stanislav_Radonjić
 			allowed = { original_tag = MNT }
-			available = { 
-				
+			available = {
+
 			}
 			traits = {
 				MNT_mandator_of_the_Montenegrin_people
 			}
 		}
 	}
-	
+
 	MNT_nikanor_ivanovic = {
 		name = "Nikanor Ivanovic"
 		portraits = {
 			civilian = {
-				small = "GFX_idea_MNT_advisor_Nikanor_Ivanovic"
+				small = "GFX_MNT_nikanor_secretary"
 			}
 		}
 		advisor = {
@@ -162,11 +162,11 @@ characters = {
 			idea_token = MNT_advisor_Nikanor_Ivanovic
 			allowed = { original_tag = MNT }
 			traits = {
-				MNT_trait_metropolitan_of_montenegro
+				MNT_danilo_secretary
 			}
 		}
 	}
-	
+
 	MNT_jaroslav_cermak = {
 		name = "Jaroslav Čermák"
 		portraits = {
@@ -175,7 +175,7 @@ characters = {
 			}
 		}
 		advisor = {
-		cost = 100
+			cost = 100
 			slot = political_advisor
 			idea_token = MNT_advisor_Jaroslav_Čermák
 			allowed = { original_tag = MNT }
@@ -184,7 +184,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_novica_cerovic = {
 		name = "Novica Cerović"
 		portraits = {
@@ -202,12 +202,12 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_Henri_Delarue = {
 		name = "Henri Delarue"
 		portraits = {
 			civilian = {
-				small = "GFX_idea_MNT_advisor_Henri_Delarue"
+				small = "GFX_MNT_delarue_french"
 			}
 		}
 		advisor = {
@@ -215,12 +215,13 @@ characters = {
 			slot = political_advisor
 			idea_token = MNT_advisor_Henri_Delarue
 			allowed = { original_tag = MNT }
+			available = { NOT = { has_country_flag = MNT_diplomacy_delarue_returned } }
 			traits = {
 				MNT_Danilo_chancellor_France
 			}
 		}
 	}
-	
+
 	MNT_gavro_vukovic = {
 		name = "Gavro Vuković"
 		portraits = {
@@ -238,7 +239,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_valtazar_bogisic = {
 		name = "Valtazar Bogišić"
 		portraits = {
@@ -247,7 +248,7 @@ characters = {
 			}
 		}
 		advisor = {
-		cost = 200
+			cost = 200
 			slot = political_advisor
 			idea_token = MNT_advisor_Valtazar_Bogišić
 			allowed = { original_tag = MNT }
@@ -256,7 +257,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_milena_vukotic = {
 		name = "Milena Vukotić"
 		portraits = {
@@ -265,7 +266,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_petar_popovic_pecija = {
 		name = "Petar Popović Pecija"
 		portraits = {
@@ -274,25 +275,26 @@ characters = {
 			}
 		}
 		advisor = {
-		cost = 200
+			cost = 200
 			slot = political_advisor
 			idea_token = MNT_advisor_Petar_Popović_Pecija
 			allowed = { original_tag = MNT }
 			traits = {
-				 MNT_Herzegovina_rebel_leader
+				MNT_Herzegovina_rebel_leader
 			}
 		}
 	}
-	
+
 	MNT_jan_vaclik = {
 		name = "Jan Vaclík"
-		portraits = {
-			civilian = {
-				small = "GFX_idea_MNT_advisor_Jan_Vaclik"
-			}
+		portraits = { civilian = { small = "GFX_MNT_advisor_jan_vaclik_1860" } }
+		advisor = { slot = political_advisor idea_token = MNT_advisor_Jan_Vaclik
+			allowed = { original_tag = MNT }
+			available = { has_country_flag = MNT_vaclik_appointed }
+			traits = { MNT_chancellor_vaclik } cost = 100 ai_will_do = { factor = 1 }
 		}
 	}
-	
+
 	MNT_nicifor_ducic = {
 		name = "Nićifor Dučić"
 		portraits = {
@@ -300,8 +302,8 @@ characters = {
 				small = "GFX_idea_MNT_advisor_Nicifor_Ducic"
 			}
 		}
-	} 
-	
+	}
+
 	MNT_rade_turov_plamenac = {
 		name = "Rade Turov Plamenac"
 		portraits = {
@@ -310,7 +312,7 @@ characters = {
 			}
 		}
 		advisor = {
-		cost = 150
+			cost = 150
 			slot = political_advisor
 			idea_token = MNT_advisor_Rade_Turov_Plamenac
 			allowed = { original_tag = MNT }
@@ -319,7 +321,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_djuro_matanovic = {
 		name = "Djuro Matanovic"
 		portraits = {
@@ -328,7 +330,7 @@ characters = {
 			}
 		}
 		advisor = {
-		cost = 150
+			cost = 150
 			slot = political_advisor
 			idea_token = MNT_advisor_Djuro_Matanovic
 			allowed = { original_tag = MNT }
@@ -337,7 +339,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_hilarion_ii = {
 		name = "Hilarion II"
 		portraits = {
@@ -346,7 +348,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	### THEORISTS + ARMY COMMAND ###
 
 	MNT_milos_krivokapic = {
@@ -357,7 +359,7 @@ characters = {
 			}
 		}
 	}
-	 
+
 	MNT_jole_piletic = {
 		name = "Jole Piletić"
 		portraits = {
@@ -366,7 +368,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_bozo_petrović_njegos = {
 		name = "Božo Petrović-Njegoš"
 		portraits = {
@@ -375,7 +377,7 @@ characters = {
 			}
 		}
 	}
-	
+
 	MNT_ilija_plamenac = {
 		name = "Ilija Plamenac"
 		portraits = {
@@ -384,19 +386,19 @@ characters = {
 			}
 		}
 		advisor = {
-		cost = 150
+			cost = 150
 			slot = theorist
 			idea_token = MNT_theorist_Ilija_Plamenac
 			allowed = { original_tag = MNT }
 			traits = {
-				military_theorist				 
+				military_theorist
 			}
 		}
 	}
-	
+
 	MNT_luka_vukalovic = {
 		name = "Luka Vukalović"
-		portraits = {
+		portraits = { army = { large = "GFX_Portrait_HRZ_Luka_Vukalovic" }
 			civilian = {
 				small = "GFX_MNT_theorist_Luka_Vukalović"
 			}
@@ -409,6 +411,31 @@ characters = {
 			civilian = {
 				small = "GFX_idea_MNT_advisor_Mašo_Vrbica"
 			}
+		}
+	}
+
+	MNT_diplomacy_zimonjic = { name = "Bogdan Zimonjić" portraits = { army = { large = "GFX_MNT_portrait_zimonjic" } civilian = { large = "GFX_MNT_portrait_zimonjic" } } }
+
+	MNT_diplomacy_ljubibratic = { name = "Mićo Ljubibratić" portraits = { army = { large = "GFX_MNT_portrait_ljubibratic" } civilian = { large = "GFX_MNT_portrait_ljubibratic" } } }
+
+	MNT_djuro_kusovac = { name = "Đuro Kusovac"
+		portraits = { army = { large = "GFX_MNT_general_djuro_kusovac" small = "GFX_MNT_general_djuro_kusovac_small" } }
+		corps_commander = { traits = { MNT_vojvoda } skill = 2
+			attack_skill = 3 defense_skill = 2 planning_skill = 1 logistics_skill = 2
+		}
+	}
+
+	MNT_petar_vujovic = { name = "Petar Filipov Vujović"
+		portraits = { army = { large = "GFX_MNT_general_petar_vujovic" small = "GFX_MNT_general_petar_vujovic_small" } }
+		corps_commander = { traits = { MNT_vojvoda } skill = 2
+			attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 2
+		}
+	}
+
+	MNT_ivo_radonjic = { name = "Ivo Rakov Radonjić"
+		portraits = { army = { large = "GFX_MNT_general_ivo_radonjic" small = "GFX_MNT_general_ivo_radonjic_small" } }
+		corps_commander = { traits = { MNT_vojvoda } skill = 2
+			attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 3
 		}
 	}
 }

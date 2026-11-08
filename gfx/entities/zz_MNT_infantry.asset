@@ -1,0 +1,22 @@
+entity = {
+	clone = "irregular_infantry_entity"
+	name = "MNT_irregular_infantry_entity"
+	pdxmesh = "MNT_infantry_rifle_mesh"
+}
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "MNT_infantry_entity"
+	pdxmesh = "MNT_infantry_rifle_mesh"
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "MNT_infantry_2_entity"
+	pdxmesh = "MNT_infantry_mg_mesh"
+}
+
+entity = {
+	clone = "MNT_infantry_2_entity"
+	name = "MNT_infantry_3_entity"
+}

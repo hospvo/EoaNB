@@ -1,0 +1,52 @@
+# Montenegro
+
+MNT_chapter_one_inlay = {
+	window_name = MNT_chapter_one_window
+	internal = no
+	visible = {
+		NOT = { has_completed_focus = MNT_focus_new_goals_for_our_nation }
+	}
+}
+
+MNT_state_food_inlay = {
+	window_name = MNT_state_food_window internal = yes
+	visible = { tag = MNT has_country_flag = MNT_state_initialized }
+	scripted_progressbars = { food_bar = { progress = MNT_state_food } }
+	scripted_buttons = { buy_food = { available = { MNT_state_can_buy_food = yes } click_effect = { MNT_state_buy_food = yes } } }
+	scripted_images = { buy_food = { GFX_button_221x34 = yes } }
+}
+
+MNT_state_clans_inlay = {
+	window_name = MNT_state_clans_window internal = yes
+	visible = { tag = MNT has_country_flag = MNT_state_initialized }
+	scripted_progressbars = { unrest_bar = { progress = MNT_state_unrest } }
+}
+
+MNT_state_foreign_inlay = {
+	window_name = MNT_state_foreign_window internal = yes
+	visible = { tag = MNT has_country_flag = MNT_state_initialized }
+}
+
+MNT_state_herzegovina_inlay = {
+	window_name = MNT_state_herzegovina_window internal = yes
+	visible = { tag = MNT has_country_flag = MNT_state_initialized }
+	scripted_progressbars = { trust_bar = { progress = MNT_crisis_vukalovic_trust } }
+	scripted_buttons = {
+		vukalovic = { available = { tag = MNT has_completed_focus = MNT_state_rebel_council } click_effect = { if = { limit = { has_country_flag = MNT_diplomacy_vukalovic_captured } country_event = { id = MNT_diplomacy.6 } } else = { country_event = { id = MNT_state.30 } } } }
+		zimonjic_emblem = { available = { tag = MNT has_completed_focus = MNT_state_rebel_council } click_effect = { country_event = { id = MNT_state.31 } } }
+		ljubibratic_emblem = { available = { tag = MNT has_completed_focus = MNT_state_rebel_council } click_effect = { country_event = { id = MNT_state.32 } } }
+		future_emblem = { available = { always = no } click_effect = { } }
+	}
+	scripted_images = {
+		vukalovic_prison_bars = { GFX_MNT_diplomacy_prison_bars = { has_country_flag = MNT_diplomacy_vukalovic_captured } GFX_MNT_diplomacy_clear = yes }
+
+		vukalovic = { GFX_MNT_portrait_vukalovic = yes }
+		zimonjic_emblem = { GFX_MNT_portrait_zimonjic = yes }
+		ljubibratic_emblem = { GFX_MNT_portrait_ljubibratic = yes }
+		future_emblem = { GFX_MNT_council_future = yes }
+	}
+}
+
+MNT_rel_ottoman_inlay = { window_name = MNT_rel_ottoman_window internal = yes
+	visible = { tag = MNT has_country_flag = MNT_state_initialized }
+}

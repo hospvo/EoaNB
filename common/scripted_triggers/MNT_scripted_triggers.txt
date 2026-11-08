@@ -1,10 +1,12 @@
+# Montenegro
+
 herzegovina_uprising = {
 	NOT = { has_global_flag = montenegro_ottomans_neogotiations }
 	has_global_flag = OTO_herzegovina_uprising_1857
 }
 
 montenegro_revolt = {
-	OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+	OTO = { always = no }
 	MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 }
 
@@ -34,7 +36,7 @@ MNT_OTO_mission_war_1858_cancel_trigger = {
 			}
 		}
 		OTO = { controls_state = 942 }
-		MNT = { days_since_capitulated < 1 }
+		MNT = { has_capitulated = yes }
 	}
 }
 
@@ -179,4 +181,540 @@ division_limit_WAR_1858 = {
 			}
 		}
 	}
+}
+
+MNT_clans_prepared = {
+	OR = {
+		has_completed_focus = MNT_focus_prepare_the_clans_for_conflict
+		has_completed_focus = MNT_state_state_service
+		has_completed_focus = MNT_state_clan_compact
+	}
+}
+
+MNT_clans_may_muster = {
+	tag = MNT
+	MNT_clans_prepared = yes
+	942 = {
+		is_controlled_by = MNT
+	}
+	OR = {
+		has_war = yes
+		has_border_war = yes
+	}
+}
+
+MNT_clans_can_raise_kuci = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_kuci
+	}
+	check_variable = {
+		montenegro_KUCI_loyalty > -1
+	}
+	check_variable = {
+		montenegro_KUCI_power > 0
+	}
+	check_variable = {
+		montenegro_KUCI_power < 4
+	}
+}
+
+MNT_clans_can_petition_kuci = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_kuci
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_kuci
+	}
+	check_variable = {
+		montenegro_KUCI_loyalty > -3
+	}
+	check_variable = {
+		montenegro_KUCI_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_vasojevici = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_vasojevici
+	}
+	check_variable = {
+		montenegro_VASOJEVICI_loyalty > -1
+	}
+	check_variable = {
+		montenegro_VASOJEVICI_power > 0
+	}
+	check_variable = {
+		montenegro_VASOJEVICI_power < 4
+	}
+}
+
+MNT_clans_can_petition_vasojevici = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_vasojevici
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_vasojevici
+	}
+	check_variable = {
+		montenegro_VASOJEVICI_loyalty > -3
+	}
+	check_variable = {
+		montenegro_VASOJEVICI_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_drobnjaci = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_drobnjaci
+	}
+	check_variable = {
+		montenegro_DROBNJACI_loyalty > -1
+	}
+	check_variable = {
+		montenegro_DROBNJACI_power > 0
+	}
+	check_variable = {
+		montenegro_DROBNJACI_power < 4
+	}
+}
+
+MNT_clans_can_petition_drobnjaci = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_drobnjaci
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_drobnjaci
+	}
+	check_variable = {
+		montenegro_DROBNJACI_loyalty > -3
+	}
+	check_variable = {
+		montenegro_DROBNJACI_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_piperi = {
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_piperi
+	}
+	check_variable = {
+		montenegro_PIPERI_loyalty > -1
+	}
+	check_variable = {
+		montenegro_PIPERI_power > 0
+	}
+	check_variable = {
+		montenegro_PIPERI_power < 4
+	}
+}
+
+MNT_clans_can_petition_piperi = {
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_piperi
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_piperi
+	}
+	check_variable = {
+		montenegro_PIPERI_loyalty > -3
+	}
+	check_variable = {
+		montenegro_PIPERI_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_cuce = {
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_cuce
+	}
+	check_variable = {
+		montenegro_CUCE_loyalty > -1
+	}
+	check_variable = {
+		montenegro_CUCE_power > 0
+	}
+	check_variable = {
+		montenegro_CUCE_power < 4
+	}
+}
+
+MNT_clans_can_petition_cuce = {
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_cuce
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_cuce
+	}
+	check_variable = {
+		montenegro_CUCE_loyalty > -3
+	}
+	check_variable = {
+		montenegro_CUCE_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_njegusi = {
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_njegusi
+	}
+	check_variable = {
+		montenegro_NJEGUSI_loyalty > -1
+	}
+	check_variable = {
+		montenegro_NJEGUSI_power > 0
+	}
+	check_variable = {
+		montenegro_NJEGUSI_power < 4
+	}
+}
+
+MNT_clans_can_petition_njegusi = {
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_njegusi
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_njegusi
+	}
+	check_variable = {
+		montenegro_NJEGUSI_loyalty > -3
+	}
+	check_variable = {
+		montenegro_NJEGUSI_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_ceklin = {
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_ceklin
+	}
+	check_variable = {
+		montenegro_CEKLIN_loyalty > -1
+	}
+	check_variable = {
+		montenegro_CEKLIN_power > 0
+	}
+	check_variable = {
+		montenegro_CEKLIN_power < 4
+	}
+}
+
+MNT_clans_can_petition_ceklin = {
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_ceklin
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_ceklin
+	}
+	check_variable = {
+		montenegro_CEKLIN_loyalty > -3
+	}
+	check_variable = {
+		montenegro_CEKLIN_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_bjelice = {
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_bjelice
+	}
+	check_variable = {
+		montenegro_BJELICE_loyalty > -1
+	}
+	check_variable = {
+		montenegro_BJELICE_power > 0
+	}
+	check_variable = {
+		montenegro_BJELICE_power < 4
+	}
+}
+
+MNT_clans_can_petition_bjelice = {
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_bjelice
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_bjelice
+	}
+	check_variable = {
+		montenegro_BJELICE_loyalty > -3
+	}
+	check_variable = {
+		montenegro_BJELICE_loyalty < 3
+	}
+}
+
+MNT_clans_can_raise_grahovo = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	MNT_clans_may_muster = yes
+	NOT = {
+		has_country_flag = MNT_clans_raised_grahovo
+	}
+	check_variable = {
+		montenegro_GRAHOVO_loyalty > -1
+	}
+	check_variable = {
+		montenegro_GRAHOVO_power > 0
+	}
+	check_variable = {
+		montenegro_GRAHOVO_power < 4
+	}
+}
+
+MNT_clans_can_petition_grahovo = {
+	1204 = {
+		is_owned_by = MNT
+	}
+	tag = MNT
+	has_political_power > 14
+	NOT = {
+		has_country_flag = MNT_clans_raised_grahovo
+	}
+	NOT = {
+		has_country_flag = MNT_clans_petition_grahovo
+	}
+	check_variable = {
+		montenegro_GRAHOVO_loyalty > -3
+	}
+	check_variable = {
+		montenegro_GRAHOVO_loyalty < 3
+	}
+}
+
+MNT_rel_valid_terms = {
+	OR = { NOT = { has_country_flag = MNT_content_consolidated }
+		AND = { has_country_flag = MNT_rel_choose_amnesty NOT = { has_country_flag = MNT_rel_choose_rights } NOT = { has_country_flag = MNT_rel_choose_nonintervention } }
+		AND = { has_country_flag = MNT_rel_choose_rights NOT = { has_country_flag = MNT_rel_choose_amnesty } NOT = { has_country_flag = MNT_rel_choose_nonintervention } }
+		AND = { has_country_flag = MNT_rel_choose_nonintervention NOT = { has_country_flag = MNT_rel_choose_amnesty } NOT = { has_country_flag = MNT_rel_choose_rights } }
+	}
+}
+
+MNT_rel_rights_feasible = {
+	OR = { NOT = { has_country_flag = MNT_rel_choose_rights }
+		AND = { check_variable = { MNT_crisis_reputation > 59 }
+			check_variable = { MNT_crisis_france > 1 } check_variable = { MNT_crisis_russia > 0 } }
+	}
+}
+
+MNT_crisis_covert_phase = {
+	# MNT DELEGATE CHOICE LOCK
+	NOT = { has_country_flag = MNT_diplomacy_delegate_pending }
+
+	custom_trigger_tooltip = {
+		tooltip = MNT_crisis_covert_phase_tt
+
+		has_country_flag = MNT_crisis_active check_variable = {
+			MNT_crisis_phase = 1
+		}
+
+	}
+}
+
+MNT_crisis_talks_phase = {
+	custom_trigger_tooltip = {
+		tooltip = MNT_crisis_talks_phase_tt
+
+		has_country_flag = MNT_crisis_active check_variable = {
+			MNT_crisis_phase = 2
+		}
+
+	}
+}
+
+MNT_crisis_can_operate = {
+	custom_trigger_tooltip = {
+		tooltip = MNT_crisis_can_operate_tt
+
+		MNT_crisis_covert_phase = yes NOT = {
+			has_country_flag = MNT_crisis_operation_pending
+		}
+		has_completed_focus = MNT_focus_guerrilla_war
+
+	}
+}
+
+MNT_crisis_can_edit_treaty = {
+	# MNT DELEGATE REQUIRED
+	OR = { NOT = { has_country_flag = MNT_diplomacy_initialized } has_country_flag = MNT_diplomacy_delegate_selected }
+
+	# MNT DELEGATE CHOICE LOCK
+	NOT = { has_country_flag = MNT_diplomacy_delegate_pending }
+
+	custom_trigger_tooltip = {
+		tooltip = MNT_crisis_can_edit_treaty_tt
+
+		MNT_crisis_talks_phase = yes NOT = {
+			has_country_flag = MNT_crisis_reply_pending
+		}
+
+	}
+}
+
+MNT_crisis_treaty_acceptable = {
+	# MNT DELEGATE REQUIRED
+	OR = { NOT = { has_country_flag = MNT_diplomacy_initialized } has_country_flag = MNT_diplomacy_delegate_selected }
+
+	MNT_rel_valid_terms = yes
+	MNT_rel_rights_feasible = yes
+
+	check_variable = {
+		var = MNT_crisis_leverage value = MNT_crisis_price compare = greater_than_or_equals
+	}
+
+	OR = {
+		NOT = {
+			has_country_flag = MNT_crisis_demand_recognition
+		}
+		AND = {
+			check_variable = {
+				MNT_crisis_strength > 74
+			}
+			check_variable = {
+				MNT_crisis_france > 1
+			}
+			check_variable = {
+				MNT_crisis_russia > 1
+			}
+		}
+	}
+}
+
+MNT_crisis_can_send_treaty = {
+	MNT_rel_valid_terms = yes
+
+	MNT_crisis_can_edit_treaty = yes
+	check_variable = { MNT_crisis_round < 3 }
+	check_variable = { MNT_crisis_phase_days < 50 }
+
+}
+
+MNT_diplomacy_can_accept_rebels = {
+	tag = MNT has_country_flag = MNT_frontier_running has_war_with = OTO
+	NOT = { has_country_flag = MNT_diplomacy_rebels_granted }
+	NOT = { has_country_flag = MNT_diplomacy_rebels_declined }
+	NOT = { has_country_flag = MNT_rel_nonintervention_active }
+	942 = { is_controlled_by = MNT }
+}
+
+MNT_frontier_prewar = {
+	MNT = { has_country_flag = MNT_crisis_active check_variable = { MNT_crisis_phase < 3 } }
+}
+
+MNT_frontier_running = {
+	MNT = { has_country_flag = MNT_frontier_running has_country_flag = MNT_crisis_active check_variable = { MNT_crisis_phase = 3 } has_war_with = OTO }
+}
+
+MNT_frontier_can_recruit = {
+	tag = OTO
+	OR = { MNT_frontier_prewar = yes MNT_frontier_running = yes }
+	check_variable = { MNT_frontier_garrison < OTO.MNT_frontier_garrison_limit }
+	has_political_power > 19
+	NOT = { has_country_flag = MNT_frontier_recruit_cooldown }
+	OR = {
+		MNT_frontier_prewar = yes
+		1205 = { is_controlled_by = OTO }
+		1204 = { is_controlled_by = OTO }
+		225 = { is_controlled_by = OTO }
+	}
+}
+
+MNT_frontier_can_reduce = {
+	tag = OTO MNT_frontier_prewar = yes
+	check_variable = { MNT_frontier_garrison > 2 }
+	NOT = { has_country_flag = MNT_frontier_recruit_cooldown }
+}
+
+MNT_frontier_can_observers = {
+	tag = OTO MNT_frontier_running = yes has_political_power > 14
+	MNT = { check_variable = { MNT_frontier_pressure > 0 } }
+	NOT = { has_country_flag = MNT_frontier_observer_cooldown }
+}
+
+MNT_frontier_can_appeal = {
+	tag = MNT MNT_frontier_running = yes has_political_power > 19
+	NOT = { has_country_flag = MNT_frontier_appeal_cooldown }
+}
+
+MNT_frontier_can_offer_peace = {
+	OR = { tag = MNT tag = OTO }
+	MNT_frontier_running = yes
+	MNT = { check_variable = { MNT_frontier_days > 29 } NOT = { has_country_flag = MNT_frontier_peace_pending } }
+	NOT = { has_country_flag = MNT_frontier_peace_cooldown }
+}
+
+MNT_frontier_can_protest = {
+	OR = { tag = FRA tag = RUS tag = AUS }
+	MNT_frontier_running = yes has_political_power > 14
+	MNT = { check_variable = { MNT_frontier_pressure > 39 } }
+	NOT = { has_country_flag = MNT_frontier_protest_sent }
+}
+
+MNT_state_can_buy_food = {
+	custom_trigger_tooltip = { tooltip = MNT_state_food_available_tt
+		tag = MNT has_country_flag = MNT_state_initialized
+		NOT = { has_country_flag = MNT_state_grain_cooldown }
+		check_variable = { MNT_state_food < 77 }
+		NOT = { check_variable = { money < MNT_state_grain_price } }
+		country_exists = AUS NOT = { has_war_with = AUS }
+	}
+}
+
+MNT_state_can_send_rifles = {
+	# MNT PRISONER ACTION LOCK
+	NOT = { has_country_flag = MNT_diplomacy_vukalovic_captured }
+
+	NOT = { has_country_flag = MNT_rel_nonintervention_active }
+	tag = MNT has_completed_focus = MNT_state_rebel_council
+	date < 1861.1.1
+	NOT = { has_country_flag = MNT_state_rifles_cooldown }
+	has_equipment = { infantry_equipment > 24 }
+	check_variable = { MNT_crisis_vukalovic_trust < 100 }
+}
+
+MNT_state_can_pay_guard = {
+	tag = MNT has_completed_focus = MNT_state_princely_guard
+	NOT = { check_variable = { money < MNT_state_guard_price } }
 }

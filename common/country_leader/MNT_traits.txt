@@ -1,0 +1,7 @@
+# Montenegro
+
+leader_traits = {
+	MNT_danilo_secretary = { random = no political_power_gain = 0.10 ai_will_do = { factor = 10 } }
+
+	MNT_chancellor_vaclik = { random = no political_power_gain = 0.10 }
+}

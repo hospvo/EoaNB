@@ -1,0 +1,427 @@
+# Montenegro
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_MNT_chapter_herzegovina_art"
+		texturefile = "gfx/interface/MNT/chapters_herzegovina_1857.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_medal_icon_mnt_clans"
+		texturefile = "gfx/interface/MNT/clans_black_mountain_badge.png"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_medal_icon_mnt_clans_large"
+		texturefile = "gfx/interface/MNT/clans_black_mountain_badge_large.png"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_MNT_clan_badge_texticon"
+		texturefile = "gfx/interface/MNT/clans_black_mountain_badge_texticon.png"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_marker_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_marker_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_nato_unit_MNT_clan_muster_marker_icon_small"
+		texturefile = "gfx/texticons/nato_unit_irregular_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_marker_icon_small"
+		texturefile = "gfx/texticons/unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_medium_marker_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_medium_marker_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_nato_unit_MNT_clan_muster_medium_marker_icon_small"
+		texturefile = "gfx/texticons/nato_unit_irregular_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_medium_marker_icon_small"
+		texturefile = "gfx/texticons/unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_large_marker_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_large_marker_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_nato_unit_MNT_clan_muster_large_marker_icon_small"
+		texturefile = "gfx/texticons/nato_unit_irregular_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_MNT_clan_muster_large_marker_icon_small"
+		texturefile = "gfx/texticons/unit_irregular_infantry_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = { name = "GFX_MNT_clans_levy_head" texturefile = "gfx/interface/MNT/clans_rows_levy_head.png" }
+
+	spriteType = { name = "GFX_MNT_clans_influence" texturefile = "gfx/interface/MNT/clans_rows_influence.png" }
+
+	spriteType = { name = "GFX_MNT_clans_badge_trait" texturefile = "gfx/interface/MNT/clans_rows_clan_badge_trait.png" }
+
+	spriteType = { name = "GFX_MNT_clans_mountain_trait" texturefile = "gfx/interface/MNT/clans_rows_mountain_trait.png" }
+
+	spriteType = { name = "GFX_MNT_clans_trait_rail" texturefile = "gfx/interface/MNT/clans_rows_trait_rail.png" }
+
+	spriteType = { name = "GFX_MNT_clans_influence_texticon" texturefile = "gfx/interface/MNT/clans_rows_influence_texticon.png" }
+
+	spriteType = { name = "GFX_idea_MNT_clan_influence" texturefile = "gfx/interface/MNT/clans_rows_influence_idea.png" }
+
+	spriteType = { name = "GFX_MNT_portrait_zimonjic" texturefile = "gfx/interface/MNT/state_zimonjic.png" }
+
+	spriteType = { name = "GFX_MNT_portrait_ljubibratic" texturefile = "gfx/interface/MNT/state_ljubibratic.png" }
+
+	spriteType = { name = "GFX_MNT_portrait_vukalovic" texturefile = "gfx/interface/MNT/state_vukalovic.png" }
+
+	spriteType = { name = "GFX_MNT_council_frame" texturefile = "gfx/interface/MNT/state_frame.png" }
+
+	spriteType = { name = "GFX_MNT_council_future" texturefile = "gfx/interface/MNT/state_future.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_mount" texturefile = "gfx/interface/MNT/state_pledge_mount.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_ornament" texturefile = "gfx/interface/MNT/state_ledger_ornament.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_amnesty" texturefile = "gfx/interface/MNT/state_amnesty.png" }
+
+	spriteType = { name = "GFX_idea_MNT_pledge_amnesty" texturefile = "gfx/interface/MNT/state_amnesty.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_amnesty_texticon" texturefile = "gfx/interface/MNT/state_amnesty_texticon.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_rights" texturefile = "gfx/interface/MNT/state_rights.png" }
+
+	spriteType = { name = "GFX_idea_MNT_pledge_rights" texturefile = "gfx/interface/MNT/state_rights.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_rights_texticon" texturefile = "gfx/interface/MNT/state_rights_texticon.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_nonintervention" texturefile = "gfx/interface/MNT/state_nonintervention.png" }
+
+	spriteType = { name = "GFX_idea_MNT_pledge_nonintervention" texturefile = "gfx/interface/MNT/state_nonintervention.png" }
+
+	spriteType = { name = "GFX_MNT_pledge_nonintervention_texticon" texturefile = "gfx/interface/MNT/state_nonintervention_texticon.png" }
+
+	spriteType = {
+		name = "GFX_MNT_crisis_herzegovina_gold"
+		texturefile = "gfx/interface/MNT/crisis_treaty_herzegovina_gold_sharp.png"
+		legacy_lazy_load = no
+	}
+
+	progressbartype = {
+		name = "GFX_MNT_crisis_strength_bar"
+		textureFile1 = "gfx/interface/logistics_status_progressbar.dds"
+		textureFile2 = "gfx/interface/logistics_status_progressbar_bg.dds"
+		size = {
+			x = 460
+			y = 12
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_MNT_crisis_supply_bar"
+		textureFile1 = "gfx/interface/logistics_status_progressbar_blue.dds"
+		textureFile2 = "gfx/interface/logistics_status_progressbar_bg.dds"
+		size = {
+			x = 460
+			y = 12
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_MNT_crisis_escalation_bar"
+		textureFile1 = "gfx/interface/prod_progress_bar2_red.dds"
+		textureFile2 = "gfx/interface/logistics_status_progressbar_bg.dds"
+		size = {
+			x = 460
+			y = 12
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_MNT_crisis_strength_texticon"
+		texturefile = "gfx/texticons/infantry_equipment_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_crisis_supply_texticon"
+		texturefile = "gfx/texticons/supply_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_crisis_escalation_texticon"
+		texturefile = "gfx/texticons/world_tension_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_crisis_credibility_texticon"
+		texturefile = "gfx/texticons/trade_deal_opinion_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_crisis_diplomacy_texticon"
+		texturefile = "gfx/texticons/influence_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = { name = "GFX_MNT_treaty_sovereignty" texturefile = "gfx/interface/MNT/crisis_treaty_sovereignty.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_sovereignty_texticon" texturefile = "gfx/interface/MNT/crisis_treaty_sovereignty_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_frontier" texturefile = "gfx/interface/MNT/crisis_treaty_frontier.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_frontier_texticon" texturefile = "gfx/interface/MNT/crisis_treaty_frontier_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_arms" texturefile = "gfx/interface/MNT/crisis_treaty_arms.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_arms_texticon" texturefile = "gfx/interface/MNT/crisis_treaty_arms_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_recognition" texturefile = "gfx/interface/MNT/crisis_treaty_recognition.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_recognition_texticon" texturefile = "gfx/interface/MNT/crisis_treaty_recognition_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_guarantee" texturefile = "gfx/interface/MNT/crisis_treaty_guarantee.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_guarantee_texticon" texturefile = "gfx/interface/MNT/crisis_treaty_guarantee_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_reparations" texturefile = "gfx/interface/MNT/crisis_treaty_reparations.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_reparations_texticon" texturefile = "gfx/interface/MNT/crisis_treaty_reparations_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_map_small" texturefile = "gfx/interface/MNT/crisis_treaty_herzegovina_small.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_row_panel" texturefile = "gfx/interface/MNT/crisis_treaty_row_panel.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_leader_card_panel" texturefile = "gfx/interface/MNT/crisis_treaty_leader_card_panel.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_treaty_dispatch_panel" texturefile = "gfx/interface/MNT/crisis_treaty_dispatch_panel.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_delegate_option_portraits"
+		texturefile = "gfx/interface/MNT/diplomacy_delegate_option_portraits.dds"
+		noOfFrames = 6 legacy_lazy_load = no
+	}
+
+	spriteType = { name = "GFX_MNT_nikanor_secretary" texturefile = "gfx/interface/MNT/diplomacy_nikanor_secretary_v2.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_nikanor_secretary_texticon" texturefile = "gfx/interface/MNT/diplomacy_nikanor_secretary_texticon_v2.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_nikanor_metropolitan" texturefile = "gfx/interface/MNT/diplomacy_nikanor_metropolitan.png" }
+
+	spriteType = { name = "GFX_MNT_nikanor_metropolitan_texticon" texturefile = "gfx/interface/MNT/diplomacy_nikanor_metropolitan_texticon.png"  legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_nikanor_austrian_metropolitan" texturefile = "gfx/interface/MNT/diplomacy_nikanor_austrian_metropolitan.png" }
+
+	spriteType = { name = "GFX_MNT_nikanor_austrian_metropolitan_texticon" texturefile = "gfx/interface/MNT/diplomacy_nikanor_austrian_metropolitan_texticon.png"  legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_delarue_french" texturefile = "gfx/interface/MNT/diplomacy_delarue_french.png" }
+
+	spriteType = { name = "GFX_MNT_delarue_french_texticon" texturefile = "gfx/interface/MNT/diplomacy_delarue_french_texticon.png"  legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_diplomacy_prison_bars" texturefile = "gfx/interface/MNT/diplomacy_prison_bars.png" }
+
+	spriteType = { name = "GFX_MNT_diplomacy_clear" texturefile = "gfx/interface/MNT/diplomacy_clear.png" }
+
+	spriteType = { name = "GFX_MNT_nikanor_russian_metropolitan" texturefile = "gfx/interface/MNT/diplomacy_nikanor_russian_metropolitan.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_nikanor_russian_metropolitan_texticon" texturefile = "gfx/interface/MNT/diplomacy_nikanor_russian_metropolitan_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_focus_metropolitan" texturefile = "gfx/interface/MNT/diplomacy_focus_metropolitan.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_idea_MNT_missing_chancellor" texturefile = "gfx/interface/MNT/diplomacy_missing_chancellor.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_missing_chancellor_texticon" texturefile = "gfx/interface/MNT/diplomacy_missing_chancellor_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_france_up" texturefile = "gfx/interface/MNT/diplomacy_support_france_up.dds" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_france_up_large" texturefile = "gfx/interface/MNT/diplomacy_support_france_up_large.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_france_down" texturefile = "gfx/interface/MNT/diplomacy_support_france_down.dds" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_france_down_large" texturefile = "gfx/interface/MNT/diplomacy_support_france_down_large.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_russia_up" texturefile = "gfx/interface/MNT/diplomacy_support_russia_up.dds" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_russia_up_large" texturefile = "gfx/interface/MNT/diplomacy_support_russia_up_large.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_russia_down" texturefile = "gfx/interface/MNT/diplomacy_support_russia_down.dds" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_russia_down_large" texturefile = "gfx/interface/MNT/diplomacy_support_russia_down_large.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_austria_up" texturefile = "gfx/interface/MNT/diplomacy_support_austria_up.dds" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_austria_up_large" texturefile = "gfx/interface/MNT/diplomacy_support_austria_up_large.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_austria_down" texturefile = "gfx/interface/MNT/diplomacy_support_austria_down.dds" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_support_austria_down_large" texturefile = "gfx/interface/MNT/diplomacy_support_austria_down_large.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_delarue" texturefile = "gfx/interface/MNT/diplomacy_envoy_delarue.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_secretary" texturefile = "gfx/interface/MNT/diplomacy_envoy_secretary.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_russia" texturefile = "gfx/interface/MNT/diplomacy_envoy_russia.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_austria" texturefile = "gfx/interface/MNT/diplomacy_envoy_austria.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_mirko" texturefile = "gfx/interface/MNT/diplomacy_envoy_mirko.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_vukalovic" texturefile = "gfx/interface/MNT/diplomacy_envoy_vukalovic.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_delarue_texticon" texturefile = "gfx/interface/MNT/diplomacy_envoy_delarue_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_delarue_gallery" texturefile = "gfx/interface/MNT/diplomacy_envoy_delarue_gallery.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_nikanor_texticon" texturefile = "gfx/interface/MNT/diplomacy_envoy_nikanor_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_nikanor_gallery" texturefile = "gfx/interface/MNT/diplomacy_envoy_nikanor_gallery.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_mirko_texticon" texturefile = "gfx/interface/MNT/diplomacy_envoy_mirko_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_mirko_gallery" texturefile = "gfx/interface/MNT/diplomacy_envoy_mirko_gallery.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_vukalovic_texticon" texturefile = "gfx/interface/MNT/diplomacy_envoy_vukalovic_texticon.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_vukalovic_gallery" texturefile = "gfx/interface/MNT/diplomacy_envoy_vukalovic_gallery.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_russia_gallery" texturefile = "gfx/interface/MNT/diplomacy_envoy_russia_gallery.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_envoy_austria_gallery" texturefile = "gfx/interface/MNT/diplomacy_envoy_austria_gallery.png" legacy_lazy_load = no }
+
+	spriteType = { name = "GFX_MNT_event_cetinje_metropolitan" texturefile = "gfx/interface/MNT/diplomacy_event_cetinje_metropolitan.png" legacy_lazy_load = no }
+
+	spriteType = {
+		name = "GFX_MNT_ottoman_manpower"
+		texturefile = "gfx/interface/manpower_icon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_ottoman_badge"
+		texturefile = "gfx/interface/MNT/frontier_ottoman_badge.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_garrison_card"
+		texturefile = "gfx/interface/MNT/frontier_garrison_card.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_MNT_garrison_card_compact"
+		texturefile = "gfx/interface/MNT/frontier_garrison_card_compact.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = { name = "GFX_MNT_advisor_jan_vaclik_1860" texturefile = "gfx/interface/MNT/personnel_advisor_jan_vaclik_1860.png" }
+
+	spriteType = { name = "GFX_MNT_general_djuro_kusovac" texturefile = "gfx/interface/MNT/personnel_general_djuro_kusovac.png" }
+
+	spriteType = { name = "GFX_MNT_general_djuro_kusovac_small" texturefile = "gfx/interface/MNT/personnel_general_djuro_kusovac_small.png" }
+
+	spriteType = { name = "GFX_MNT_general_petar_vujovic" texturefile = "gfx/interface/MNT/personnel_general_petar_vujovic.png" }
+
+	spriteType = { name = "GFX_MNT_general_petar_vujovic_small" texturefile = "gfx/interface/MNT/personnel_general_petar_vujovic_small.png" }
+
+	spriteType = { name = "GFX_MNT_general_ivo_radonjic" texturefile = "gfx/interface/MNT/personnel_general_ivo_radonjic.png" }
+
+	spriteType = { name = "GFX_MNT_general_ivo_radonjic_small" texturefile = "gfx/interface/MNT/personnel_general_ivo_radonjic_small.png" }
+
+	spriteType = { name = "GFX_trait_MNT_vojvoda" texturefile = "gfx/interface/MNT/personnel_trait_vojvoda.png" }
+
+	spriteType = { name = "GFX_trait_MNT_vojvoda_small" texturefile = "gfx/interface/MNT/personnel_trait_vojvoda.png" }
+
+	spriteType = { name = "GFX_trait_MNT_velkovojvoda" texturefile = "gfx/interface/MNT/personnel_trait_velkovojvoda.png" }
+
+	spriteType = { name = "GFX_trait_MNT_velkovojvoda_small" texturefile = "gfx/interface/MNT/personnel_trait_velkovojvoda.png" }
+
+	spriteType = { name = "GFX_MNT_focus_metropolitan_shine"
+		texturefile = "gfx/interface/MNT/diplomacy_focus_metropolitan.png" effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/MNT/diplomacy_focus_metropolitan.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90 animationlooping = no animationtime = 0.75 animationdelay = 0
+			animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0 y = 0 } animationtexturescale = { x = 1 y = 1 } }
+		animation = { animationmaskfile = "gfx/interface/MNT/diplomacy_focus_metropolitan.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = 90 animationlooping = no animationtime = 0.75 animationdelay = 0
+			animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0 y = 0 } animationtexturescale = { x = 1 y = 1 } }
+		legacy_lazy_load = no
+	}
+
+	progressbartype = { name = "GFX_MNT_state_food_bar"
+		color = { 1.0 1.0 1.0 } colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/MNT/state_bar_food.png"
+		textureFile2 = "gfx/interface/MNT/state_bar_bg.png"
+		size = { x = 840 y = 12 } steps = 100 effectFile = "gfx/FX/progress.lua" }
+
+	progressbartype = { name = "GFX_MNT_state_unrest_bar"
+		color = { 1.0 1.0 1.0 } colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/MNT/state_bar_unrest.png"
+		textureFile2 = "gfx/interface/MNT/state_bar_bg.png"
+		size = { x = 840 y = 12 } steps = 100 effectFile = "gfx/FX/progress.lua" }
+
+	progressbartype = { name = "GFX_MNT_state_trust_bar"
+		color = { 1.0 1.0 1.0 } colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/MNT/state_bar_trust.png"
+		textureFile2 = "gfx/interface/MNT/state_bar_bg.png"
+		size = { x = 840 y = 12 } steps = 100 effectFile = "gfx/FX/progress.lua" }
+}

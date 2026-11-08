@@ -1,4 +1,5 @@
-### kuči clan ###
+# Montenegro
+
 defined_text = {
 	name = kuciloyalty
 	text = {
@@ -84,7 +85,6 @@ defined_text = {
 	}
 }
 
-### vasojevíci clan ###
 defined_text = {
 	name = vasojeviciloyalty
 	text = {
@@ -170,7 +170,6 @@ defined_text = {
 	}
 }
 
-###drobnjaci clan ###
 defined_text = {
 	name = drobnjaciloyalty
 	text = {
@@ -256,7 +255,6 @@ defined_text = {
 	}
 }
 
-###Piperi clan ###
 defined_text = {
 	name = piperiloyalty
 	text = {
@@ -331,7 +329,6 @@ defined_text = {
 	}
 }
 
-##cuce clan ###
 defined_text = {
 	name = cuceloyalty
 	text = {
@@ -406,7 +403,6 @@ defined_text = {
 	}
 }
 
-###njeguši clan ###
 defined_text = {
 	name = njegusiloyalty
 	text = {
@@ -481,7 +477,6 @@ defined_text = {
 	}
 }
 
-###ceklin clan ###
 defined_text = {
 	name = ceklinloyalty
 	text = {
@@ -556,7 +551,6 @@ defined_text = {
 	}
 }
 
-###Bjelice clan ###
 defined_text = {
 	name = bjeliceloyalty
 	text = {
@@ -631,7 +625,6 @@ defined_text = {
 	}
 }
 
-###Grahovo clan ###
 defined_text = {
 	name = grahovoloyalty
 	text = {
@@ -717,12 +710,11 @@ defined_text = {
 	}
 }
 
-######## before grahovac #########
 defined_text = {
 	name = the_Montenegrin_question
 	text = {
 		trigger = {
-			OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+			OTO = { always = no }
 			NOT = {
 				MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 			}
@@ -731,7 +723,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+			OTO = { always = no }
 			MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 		}
 		localization_key = montenegro_revolt_t
@@ -739,7 +731,10 @@ defined_text = {
 	text = {
 		trigger = {
 			MNT = { has_completed_focus = MNT_focus_negotiations_with_the_ottomans_n }
-			has_global_flag = montenegro_ottomans_neogotiations
+			OR = {
+				has_global_flag = montenegro_ottomans_neogotiations
+				MNT = { has_country_flag = MNT_mostar_resolution_pending }
+			}
 		}
 		localization_key = montenegro_ottomans_neogotiations_t
 	}
@@ -758,7 +753,7 @@ defined_text = {
 			NOT = {
 				SER = { has_country_flag = SER_support_herzegovina_uprising }
 			}
-			OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+			OTO = { always = no }
 			NOT = {
 				MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 			}
@@ -768,6 +763,8 @@ defined_text = {
 	text = {
 		### for montenegro .if Serbia support uprisnig else for serbia ###
 		trigger = {
+			OR = { tag = MNT tag = SER }
+			herzegovina_uprising = yes
 			MNT = { has_completed_focus = MNT_focus_guerrilla_war }
 		}
 		localization_key = herzegovina_uprising_1857_MNT
@@ -776,7 +773,7 @@ defined_text = {
 		### for ottomans ###
 		trigger = {
 			tag = OTO
-			OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+			OTO = { always = no }
 			NOT = {
 				MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 			}
@@ -787,7 +784,7 @@ defined_text = {
 		### for austria ###
 		trigger = {
 			tag = AUS
-			OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+			OTO = { always = no }
 			NOT = {
 				MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 			}
@@ -796,7 +793,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			OTO = { has_active_mission = OTO_mission_herzegovina_uprising_1857_final }
+			OTO = { always = no }
 			MNT = { has_completed_focus = MNT_focus_outbreak_of_the_pro_Montenegro_revolt }
 		}
 		localization_key = montenegro_revolt_desc
@@ -804,7 +801,10 @@ defined_text = {
 	text = {
 		trigger = {
 			MNT = { has_completed_focus = MNT_focus_negotiations_with_the_ottomans_n }
-			has_global_flag = montenegro_ottomans_neogotiations
+			OR = {
+				has_global_flag = montenegro_ottomans_neogotiations
+				MNT = { has_country_flag = MNT_mostar_resolution_pending }
+			}
 		}
 		localization_key = montenegro_ottomans_neogotiations_desc
 	}
@@ -819,7 +819,6 @@ defined_text = {
 	text = { localization_key = stats }
 }
 
-### MNT OTO war HP count
 defined_text = {
 	name = MNT_lives
 	text = {
@@ -948,7 +947,6 @@ defined_text = {
 	}
 }
 
-### herzegovina  urpising variables ###
 defined_text = {
 	name = tension
 	text = {
@@ -1139,7 +1137,6 @@ defined_text = {
 	}
 }
 
-##### neogations shop ##################
 defined_text = {
 	name = MNT_indenpendence
 	text = {
@@ -1354,7 +1351,6 @@ defined_text = {
 	}
 }
 
-######## mostar conditions for event OTO_battleofgrahovac.24
 defined_text = {
 	name = mostar_condition_MNT_indenpendence
 	text = {
@@ -1424,20 +1420,6 @@ defined_text = {
 			MNT = { has_country_flag = demanded_debt_repayment }
 		}
 		localization_key = debt_repayment_M
-	}
-}
-
-##########################
-#### MNT OTO war 1858 ####
-defined_text = {
-	name = opponent_country
-	text = {
-		trigger = { tag = OTO }
-		localization_key = it_is_montenegro
-	}
-	text = {
-		trigger = { tag = MNT }
-		localization_key = it_is_ottoman_empire
 	}
 }
 
@@ -1530,7 +1512,6 @@ defined_text = {
 	}
 }
 
-### divisions count ###
 defined_text = {
 	name = divisions_in_montenegro_region
 	text = {
@@ -1839,7 +1820,6 @@ defined_text = {
 	}
 }
 
-### division  limit count ###
 defined_text = {
 	name = divisions_limit
 	text = {
@@ -1962,4 +1942,2672 @@ defined_text = {
 		trigger = { is_debug = yes }
 		localization_key = MNT_sc_visible
 	}
+}
+
+defined_text = {
+	name = MNTchapterStatus
+	text = {
+		trigger = { MNT = { check_variable = { MNT_crisis_phase = 4 } } }
+		localization_key = MNT_chapter_status_settled
+	}
+	text = {
+		trigger = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+		localization_key = MNT_chapter_status_war
+	}
+	text = {
+		trigger = { MNT = { check_variable = { MNT_crisis_phase = 2 } } }
+		localization_key = MNT_chapter_status_talks
+	}
+	text = {
+		trigger = { MNT = { has_country_flag = MNT_crisis_initialized } }
+		localization_key = MNT_chapter_status_covert
+	}
+	text = { localization_key = MNT_chapter_status_preparing }
+}
+
+defined_text = { name = MNTclansInfluenceValue_kuci
+	text = { trigger = { MNT = { check_variable = { montenegro_KUCI_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_kuci }
+	text = { localization_key = MNT_clans_row_influence_positive_kuci }
+}
+
+defined_text = { name = MNTclansBadgeState_kuci
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_kuci has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_kuci } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_vasojevici
+	text = { trigger = { MNT = { check_variable = { montenegro_VASOJEVICI_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_vasojevici }
+	text = { localization_key = MNT_clans_row_influence_positive_vasojevici }
+}
+
+defined_text = { name = MNTclansBadgeState_vasojevici
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_vasojevici has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_vasojevici } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_drobnjaci
+	text = { trigger = { MNT = { check_variable = { montenegro_DROBNJACI_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_drobnjaci }
+	text = { localization_key = MNT_clans_row_influence_positive_drobnjaci }
+}
+
+defined_text = { name = MNTclansBadgeState_drobnjaci
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_drobnjaci has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_drobnjaci } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_piperi
+	text = { trigger = { MNT = { check_variable = { montenegro_PIPERI_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_piperi }
+	text = { localization_key = MNT_clans_row_influence_positive_piperi }
+}
+
+defined_text = { name = MNTclansBadgeState_piperi
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_piperi has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_piperi } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_cuce
+	text = { trigger = { MNT = { check_variable = { montenegro_CUCE_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_cuce }
+	text = { localization_key = MNT_clans_row_influence_positive_cuce }
+}
+
+defined_text = { name = MNTclansBadgeState_cuce
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_cuce has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_cuce } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_njegusi
+	text = { trigger = { MNT = { check_variable = { montenegro_NJEGUSI_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_njegusi }
+	text = { localization_key = MNT_clans_row_influence_positive_njegusi }
+}
+
+defined_text = { name = MNTclansBadgeState_njegusi
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_njegusi has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_njegusi } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_ceklin
+	text = { trigger = { MNT = { check_variable = { montenegro_CEKLIN_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_ceklin }
+	text = { localization_key = MNT_clans_row_influence_positive_ceklin }
+}
+
+defined_text = { name = MNTclansBadgeState_ceklin
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_ceklin has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_ceklin } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_bjelice
+	text = { trigger = { MNT = { check_variable = { montenegro_BJELICE_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_bjelice }
+	text = { localization_key = MNT_clans_row_influence_positive_bjelice }
+}
+
+defined_text = { name = MNTclansBadgeState_bjelice
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_bjelice has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_bjelice } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceValue_grahovo
+	text = { trigger = { MNT = { check_variable = { montenegro_GRAHOVO_inluence < 0 } } } localization_key = MNT_clans_row_influence_negative_grahovo }
+	text = { localization_key = MNT_clans_row_influence_positive_grahovo }
+}
+
+defined_text = { name = MNTclansBadgeState_grahovo
+	text = { trigger = { MNT = { NOT = { has_dlc = "By Blood Alone" } } } localization_key = MNT_clans_badge_no_dlc }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_grahovo has_country_flag = MNT_clans_badges_pending } } localization_key = MNT_clans_badge_pending }
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_raised_grahovo } } localization_key = MNT_clans_badge_service }
+	text = { localization_key = MNT_clans_badge_on_call }
+}
+
+defined_text = { name = MNTclansInfluenceTotalValue
+	text = { trigger = { MNT = { check_variable = { MNT_clans_influence_total < 0 } } } localization_key = MNT_clans_influence_total_negative }
+	text = { localization_key = MNT_clans_influence_total_positive }
+}
+
+defined_text = {
+	name = MNTclansMusterStatus
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_muster_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_may_muster = yes
+			}
+		}
+		localization_key = MNT_clans_muster_war
+	}
+	text = {
+		localization_key = MNT_clans_muster_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_kuci
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_KUCI_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_kuci
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_KUCI_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_kuci
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_KUCI_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_kuci = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_vasojevici
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_VASOJEVICI_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_vasojevici
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_VASOJEVICI_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_vasojevici
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_VASOJEVICI_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_vasojevici = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_drobnjaci
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_DROBNJACI_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_drobnjaci
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_DROBNJACI_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_drobnjaci
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_DROBNJACI_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_drobnjaci = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_piperi
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_piperi
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_piperi
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_PIPERI_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_piperi = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_cuce
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_cuce
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_cuce
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CUCE_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_cuce = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_njegusi
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_njegusi
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_njegusi
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_NJEGUSI_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_njegusi = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_ceklin
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_ceklin
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_ceklin
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_CEKLIN_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_ceklin = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_bjelice
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_bjelice
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty < -3
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_bjelice
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_BJELICE_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_bjelice = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansLoyalty_grahovo
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_GRAHOVO_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_external
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = -3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = -2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = -1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_minus1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = 0
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_0
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = 1
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = 2
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty = 3
+				}
+			}
+		}
+		localization_key = MNT_clans_loyalty_3
+	}
+	text = {
+		localization_key = MNT_clans_status_refuses
+	}
+}
+
+defined_text = {
+	name = MNTclansStatus_grahovo
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					check_variable = {
+						montenegro_GRAHOVO_loyalty < -3
+					}
+					NOT = {
+						1204 = {
+							is_owned_by = MNT
+						}
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_outside
+	}
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_clans_raised_grahovo
+			}
+		}
+		localization_key = MNT_clans_status_raised
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					montenegro_GRAHOVO_loyalty < 0
+				}
+			}
+		}
+		localization_key = MNT_clans_status_refuses
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					MNT_clans_prepared = yes
+				}
+			}
+		}
+		localization_key = MNT_clans_status_locked
+	}
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					942 = {
+						is_controlled_by = MNT
+					}
+				}
+			}
+		}
+		localization_key = MNT_clans_status_no_capital
+	}
+	text = {
+		trigger = {
+			MNT = {
+				MNT_clans_can_raise_grahovo = yes
+			}
+		}
+		localization_key = MNT_clans_status_ready
+	}
+	text = {
+		localization_key = MNT_clans_status_peace
+	}
+}
+
+defined_text = {
+	name = MNTclansSummary
+	text = { trigger = { MNT = { has_country_flag = MNT_clans_manager_initialized } } localization_key = MNT_clans_totals }
+	text = { localization_key = MNT_clans_totals_pending }
+}
+
+defined_text = {
+	name = MNTcrisis_france
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_france = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_france = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_france = 1
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_1
+	}
+	text = {
+		localization_key = MNT_crisis_stance_0
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_russia
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_russia = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_russia = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_russia = 1
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_1
+	}
+	text = {
+		localization_key = MNT_crisis_stance_0
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_austria
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_austria = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_austria = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_austria = 1
+				}
+			}
+		}
+		localization_key = MNT_crisis_stance_1
+	}
+	text = {
+		localization_key = MNT_crisis_stance_0
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_demand_border
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_demand_border
+			}
+		}
+		localization_key = MNT_crisis_yes
+	}
+	text = {
+		localization_key = MNT_crisis_no
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_demand_arms
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_demand_arms
+			}
+		}
+		localization_key = MNT_crisis_yes
+	}
+	text = {
+		localization_key = MNT_crisis_no
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_demand_recognition
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_demand_recognition
+			}
+		}
+		localization_key = MNT_crisis_yes
+	}
+	text = {
+		localization_key = MNT_crisis_no
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_offer_guarantee
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_offer_guarantee
+			}
+		}
+		localization_key = MNT_crisis_yes
+	}
+	text = {
+		localization_key = MNT_crisis_no
+	}
+}
+
+defined_text = {
+	name = MNTcrisis_offer_reparations
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_offer_reparations
+			}
+		}
+		localization_key = MNT_crisis_yes
+	}
+	text = {
+		localization_key = MNT_crisis_no
+	}
+}
+
+defined_text = {
+	name = MNTcrisisPhase
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 4
+				}
+			}
+		}
+		localization_key = MNT_crisis_phase_4
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_phase_3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_phase_2
+	}
+	text = {
+		localization_key = MNT_crisis_phase_1
+	}
+}
+
+defined_text = {
+	name = MNTcrisisGoal
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 4
+				}
+			}
+		}
+		localization_key = MNT_crisis_goal_4
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_goal_3
+	}
+	text = {
+		trigger = {
+			tag = OTO
+		}
+		localization_key = MNT_crisis_goal_ottoman
+	}
+	text = {
+		trigger = {
+			tag = FRA
+		}
+		localization_key = MNT_crisis_goal_france
+	}
+	text = {
+		trigger = {
+			tag = RUS
+		}
+		localization_key = MNT_crisis_goal_russia
+	}
+	text = {
+		trigger = {
+			tag = AUS
+		}
+		localization_key = MNT_crisis_goal_austria
+	}
+	text = {
+		trigger = {
+			tag = SER
+		}
+		localization_key = MNT_crisis_goal_observer
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_goal_2
+	}
+	text = {
+		localization_key = MNT_crisis_goal_1
+	}
+}
+
+defined_text = {
+	name = MNTcrisisReadiness
+	text = {
+		trigger = {
+			MNT = {
+				MNT_crisis_treaty_acceptable = yes
+			}
+		}
+		localization_key = MNT_crisis_ready
+	}
+	text = {
+		localization_key = MNT_crisis_not_ready
+	}
+}
+
+defined_text = {
+	name = MNTcrisisDispatch
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_talks_dispatch
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_war_dispatch
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_phase = 4
+				}
+			}
+		}
+		localization_key = MNT_crisis_settled_dispatch
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_report = 1
+				}
+			}
+		}
+		localization_key = MNT_crisis_report_1
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_report = 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_report_2
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_report = 3
+				}
+			}
+		}
+		localization_key = MNT_crisis_report_3
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_report = 4
+				}
+			}
+		}
+		localization_key = MNT_crisis_report_4
+	}
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_report = 5
+				}
+			}
+		}
+		localization_key = MNT_crisis_report_5
+	}
+	text = {
+		localization_key = MNT_crisis_report_0
+	}
+}
+
+defined_text = {
+	name = MNTcrisisCategoryDesc
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_initialized
+			}
+		}
+		localization_key = MNT_crisis_empty
+	}
+	text = {
+		localization_key = MNT_crisis_legacy_desc
+	}
+}
+
+defined_text = {
+	name = MNTcrisisPanelReadiness
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_reply_pending
+			}
+		}
+		localization_key = MNT_crisis_waiting
+	}
+	text = {
+		localization_key = MNT_crisis_panel_readiness_default
+	}
+}
+
+defined_text = {
+	name = MNTcrisisAmmoPreview
+	text = {
+		trigger = {
+			MNT = {
+				OR = {
+					has_country_flag = MNT_crisis_routes
+					has_completed_focus = MNT_focus_bring_weapons_to_montenegro
+				}
+			}
+		}
+		localization_key = MNT_crisis_ammo_prepared_tt
+	}
+	text = {
+		localization_key = MNT_crisis_ammo_unprepared_tt
+	}
+}
+
+defined_text = {
+	name = MNTcrisisCattaroPreview
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_austria > 0
+				}
+			}
+		}
+		localization_key = MNT_crisis_cattaro_backed_tt
+	}
+	text = {
+		localization_key = MNT_crisis_cattaro_unbacked_tt
+	}
+}
+
+defined_text = {
+	name = MNTcrisisCommissionStability
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_unrestrained
+			}
+		}
+		localization_key = MNT_crisis_commission_loss_tt
+	}
+	text = {
+		localization_key = MNT_crisis_commission_gain_tt
+	}
+}
+
+defined_text = {
+	name = MNTcrisisCommissionBorder
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = have_outer_montenegro
+				1204 = {
+					is_owned_by = MNT
+				}
+			}
+		}
+		localization_key = MNT_crisis_commission_border_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisRejectionPreview
+	text = {
+		trigger = {
+			MNT = {
+				check_variable = {
+					MNT_crisis_round > 2
+				}
+			}
+		}
+		localization_key = MNT_crisis_rejection_final_tt
+	}
+	text = {
+		localization_key = MNT_crisis_rejection_revise_tt
+	}
+}
+
+defined_text = {
+	name = MNTcrisisTreatyArms
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_demand_arms
+			}
+		}
+		localization_key = MNT_crisis_treaty_arms_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisTreatyRecognition
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_demand_recognition
+			}
+		}
+		localization_key = MNT_crisis_treaty_recognition_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisTreatyGuarantee
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_offer_guarantee
+			}
+		}
+		localization_key = MNT_crisis_treaty_guarantee_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisTreatyReparations
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_offer_reparations
+			}
+		}
+		localization_key = MNT_crisis_treaty_reparations_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisTreatyBorder
+	text = {
+		trigger = {
+			MNT = {
+				has_country_flag = MNT_crisis_demand_border
+				1204 = {
+					is_owned_by = OTO
+				}
+			}
+		}
+		localization_key = MNT_crisis_treaty_border_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisTreatyFocus
+	text = {
+		trigger = {
+			MNT = {
+				NOT = {
+					has_completed_focus = MNT_focus_recognize_our_status_under_the_ottomans_n
+				}
+			}
+		}
+		localization_key = MNT_crisis_treaty_focus_tt
+	}
+	text = {
+		localization_key = MNT_crisis_empty
+	}
+}
+
+defined_text = {
+	name = MNTcrisisVukalovicTrust
+	text = {
+		trigger = { MNT = { NOT = { has_country_flag = MNT_crisis_vukalovic_initialized } } }
+		localization_key = MNT_crisis_trust_cooperative
+	}
+	text = {
+		trigger = { MNT = { check_variable = { MNT_crisis_vukalovic_trust > 74 } } }
+		localization_key = MNT_crisis_trust_high
+	}
+	text = {
+		trigger = { MNT = { check_variable = { MNT_crisis_vukalovic_trust > 49 } } }
+		localization_key = MNT_crisis_trust_cooperative
+	}
+	text = {
+		trigger = { MNT = { check_variable = { MNT_crisis_vukalovic_trust > 24 } } }
+		localization_key = MNT_crisis_trust_wary
+	}
+	text = { localization_key = MNT_crisis_trust_strained }
+}
+
+defined_text = {
+	name = MNTcrisisVukalovicValue
+	text = {
+		trigger = { MNT = { NOT = { has_country_flag = MNT_crisis_vukalovic_initialized } } }
+		localization_key = MNT_crisis_trust_initial_value
+	}
+	text = { localization_key = MNT_crisis_trust_current_value }
+}
+
+defined_text = {
+	name = MNTtreatyStatus
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_reply_pending } } localization_key = MNT_treaty_waiting }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_round > 2 } } } localization_key = MNT_treaty_no_rounds }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_phase_days > 49 } } } localization_key = MNT_treaty_deadline }
+	text = { trigger = { MNT = { MNT_crisis_treaty_acceptable = yes } } localization_key = MNT_treaty_ready }
+	text = { localization_key = MNT_treaty_not_ready }
+}
+
+defined_text = {
+	name = MNTtreatyPayment
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_offer_reparations } } localization_key = MNT_treaty_payment_yes }
+	text = { localization_key = MNT_treaty_payment_no }
+}
+
+defined_text = {
+	name = MNTtreatyBasePreview
+	text = { trigger = { MNT = { is_subject_of = OTO } } localization_key = MNT_treaty_base_independence }
+	text = { localization_key = MNT_treaty_base_status_quo }
+}
+
+defined_text = {
+	name = MNTtreatyBaseRow
+	text = { trigger = { MNT = { is_subject_of = OTO } } localization_key = MNT_treaty_base_row_independence }
+	text = { localization_key = MNT_treaty_base_row_status_quo }
+}
+
+defined_text = {
+	name = MNTtreatySignedBase
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_signed_independence } } localization_key = MNT_treaty_signed_independence }
+	text = { localization_key = MNT_treaty_signed_ceasefire }
+}
+
+defined_text = {
+	name = MNTtreatySignedBorder
+	text = { trigger = { MNT = { OR = { has_country_flag = MNT_crisis_signed_border AND = { NOT = { has_country_flag = MNT_crisis_signed_record_v1 } has_country_flag = MNT_crisis_demand_border has_country_flag = have_outer_montenegro 1204 = { is_owned_by = MNT } } } } } localization_key = MNT_treaty_signed_border }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+defined_text = {
+	name = MNTtreatySignedArms
+	text = { trigger = { MNT = { OR = { has_country_flag = MNT_crisis_signed_arms AND = { NOT = { has_country_flag = MNT_crisis_signed_record_v1 } has_country_flag = MNT_crisis_demand_arms } } } } localization_key = MNT_treaty_signed_arms }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+defined_text = {
+	name = MNTtreatySignedRecognition
+	text = { trigger = { MNT = { OR = { has_country_flag = MNT_crisis_signed_recognition AND = { NOT = { has_country_flag = MNT_crisis_signed_record_v1 } has_country_flag = MNT_crisis_demand_recognition } } } } localization_key = MNT_treaty_signed_recognition }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+defined_text = {
+	name = MNTtreatySignedGuarantee
+	text = { trigger = { MNT = { OR = { has_country_flag = MNT_crisis_signed_guarantee AND = { NOT = { has_country_flag = MNT_crisis_signed_record_v1 } has_country_flag = MNT_crisis_offer_guarantee } } } } localization_key = MNT_treaty_signed_guarantee }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+defined_text = { name = MNTtreatySignedReparations
+	text = { trigger = { MNT = { has_country_flag = MNT_reparations_debt_v1 } }
+		localization_key = MNT_treaty_signed_reparations }
+	text = { trigger = { MNT = { OR = { has_country_flag = MNT_crisis_signed_reparations
+					AND = { NOT = { has_country_flag = MNT_crisis_signed_record_v1 } has_country_flag = MNT_crisis_offer_reparations } } } }
+		localization_key = MNT_treaty_signed_reparations_legacy }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+defined_text = {
+	name = MNTtreatyCommissionStatus
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_boundary_commission } } localization_key = MNT_treaty_commission_pending }
+	text = { localization_key = MNT_treaty_commission_done }
+}
+
+defined_text = { name = GetMNTDiagnosticPairThree
+	text = { trigger = { OTO = { casualties_inflicted_by = { opponent = MNT thousands > 3 } } } localization_key = MNT_diag_true }
+	text = { localization_key = MNT_diag_false }
+}
+
+defined_text = { name = GetMNTDiagnosticPairInclusive
+	text = { trigger = { OTO = { casualties_inflicted_by = { opponent = MNT thousands > 2.999 } } } localization_key = MNT_diag_true }
+	text = { localization_key = MNT_diag_false }
+}
+
+defined_text = { name = GetMNTDiagnosticReverse
+	text = { trigger = { MNT = { casualties_inflicted_by = { opponent = OTO thousands > 3 } } } localization_key = MNT_diag_true }
+	text = { localization_key = MNT_diag_false }
+}
+
+defined_text = { name = GetMNTDiagnosticObjective
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_casualties_secured } } localization_key = MNT_diag_true }
+	text = { localization_key = MNT_diag_false }
+}
+
+defined_text = { name = GetMNTDiagnosticWar
+	text = { trigger = { MNT = { has_war_with = OTO has_country_flag = MNT_frontier_running } } localization_key = MNT_diag_true }
+	text = { localization_key = MNT_diag_false }
+}
+
+defined_text = { name = GetMNTDiplomacyVukaStatus
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_vukalovic_captured } } localization_key = MNT_diplomacy_vuka_prisoner }
+	text = { localization_key = MNT_diplomacy_vuka_free }
+}
+
+defined_text = { name = GetMNTDiplomacyOffice
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_austrian_consecration } } localization_key = MNT_diplomacy_office_austria }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_russian_consecration } } localization_key = MNT_diplomacy_office_russia }
+	text = { localization_key = MNT_diplomacy_office_vacant }
+}
+
+defined_text = { name = GetMNTDiplomacyDelegate
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_delarue } } localization_key = MNT_diplomacy_envoy_delarue }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor_austria } } localization_key = MNT_diplomacy_envoy_nikanor_austria }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor_russia } } localization_key = MNT_diplomacy_envoy_nikanor_russia }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_mirko } } localization_key = MNT_diplomacy_envoy_mirko }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_vukalovic } } localization_key = MNT_diplomacy_envoy_vukalovic }
+	text = { localization_key = MNT_diplomacy_envoy_waiting }
+}
+
+defined_text = { name = GetMNTDiplomacyEnvoyReport
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_delarue } } localization_key = MNT_diplomacy_delegate_delarue_tt }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor } } localization_key = MNT_diplomacy_delegate_nikanor_tt }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_mirko } } localization_key = MNT_diplomacy_delegate_mirko_tt }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_vukalovic } } localization_key = MNT_diplomacy_delegate_vukalovic_tt }
+	text = { localization_key = MNT_diplomacy_envoy_waiting }
+}
+
+defined_text = { name = GetMNTDiplomacyCandidateDelarue
+	text = { trigger = { MNT = { has_character = MNT_Henri_Delarue } } localization_key = MNT_envoy_candidate_delarue }
+	text = { localization_key = MNT_envoy_candidate_absent }
+}
+
+defined_text = { name = GetMNTDiplomacyCandidateNikanor
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_russian_consecration } } localization_key = MNT_envoy_candidate_nikanor_russia }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_austrian_consecration } } localization_key = MNT_envoy_candidate_nikanor_austria }
+	text = { localization_key = MNT_envoy_candidate_nikanor_secretary }
+}
+
+defined_text = { name = GetMNTDiplomacyNikanorOption
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_russian_consecration } } localization_key = MNT_delegate_nikanor_russia_name }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_austrian_consecration } } localization_key = MNT_delegate_nikanor_austria_name }
+	text = { localization_key = MNT_delegate_nikanor_secretary_name }
+}
+
+defined_text = { name = GetMNTDiplomacyNikanorEffects
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor_russia } } localization_key = MNT_delegate_nikanor_russia_tt }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor_austria } } localization_key = MNT_delegate_nikanor_austria_tt }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_russian_consecration } } localization_key = MNT_delegate_nikanor_russia_tt }
+	text = { localization_key = MNT_delegate_nikanor_austria_tt }
+}
+
+defined_text = {
+	name = MNTfrontierCordon
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_cordon_suspended } } localization_key = MNT_frontier_cordon_suspended }
+	text = { localization_key = MNT_frontier_cordon_active }
+}
+
+defined_text = {
+	name = MNTfrontierGrahovo
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_grahovo_secured } } localization_key = MNT_frontier_grahovo_done }
+	text = { localization_key = MNT_frontier_grahovo_progress }
+}
+
+defined_text = {
+	name = MNTfrontierMostar
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_mostar_secured } } localization_key = MNT_frontier_mostar_done }
+	text = { localization_key = MNT_frontier_mostar_progress }
+}
+
+defined_text = {
+	name = MNTfrontierScutari
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_scutari_secured } } localization_key = MNT_frontier_scutari_done }
+	text = { localization_key = MNT_frontier_scutari_progress }
+}
+
+defined_text = {
+	name = MNTfrontierResult
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_victory has_country_flag = MNT_frontier_border_gain } } localization_key = MNT_frontier_result_victory }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_victory } } localization_key = MNT_frontier_result_victory_no_border }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_defeat } } localization_key = MNT_frontier_result_defeat }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_external_end } } localization_key = MNT_frontier_result_external }
+	text = { localization_key = MNT_frontier_result_draw }
+}
+
+defined_text = {
+	name = MNTfrontierEndReason
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_reason_capital } } localization_key = MNT_frontier_reason_capital }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_reason_mnt_resolve } } localization_key = MNT_frontier_reason_mnt_resolve }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_reason_oto_resolve } } localization_key = MNT_frontier_reason_oto_resolve }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_reason_timeout } } localization_key = MNT_frontier_reason_timeout }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_reason_ultimatum } } localization_key = MNT_frontier_reason_ultimatum }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_reason_offer } } localization_key = MNT_frontier_reason_offer }
+	text = { localization_key = MNT_frontier_reason_unknown }
+}
+
+defined_text = {
+	name = MNTfrontierResultTitle
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_victory } } localization_key = MNT_frontier_title_victory }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_defeat } } localization_key = MNT_frontier_title_defeat }
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_external_end } } localization_key = MNT_frontier_title_external }
+	text = { localization_key = MNT_frontier_title_ceasefire }
+}
+
+defined_text = {
+	name = MNTfrontierCeasefireReward
+	text = { trigger = { MNT = { has_country_flag = MNT_frontier_ceasefire_pp } } localization_key = MNT_frontier_pp_awarded }
+	text = { localization_key = MNT_frontier_pp_already_done }
+}
+
+defined_text = {
+	name = MNTfrontierOurLabel
+	text = { trigger = { tag = OTO } localization_key = MNT_frontier_mnt_label }
+	text = { localization_key = MNT_frontier_our_label }
+}
+
+defined_text = {
+	name = MNTfrontierOttomanLabel
+	text = { trigger = { tag = OTO } localization_key = MNT_frontier_our_label }
+	text = { localization_key = MNT_frontier_oto_label }
+}
+
+defined_text = { name = GetMNTStateRations
+	text = { trigger = { MNT = { has_country_flag = MNT_state_rations } } localization_key = MNT_state_rations_on }
+	text = { localization_key = MNT_state_rations_off }
+}
+
+defined_text = { name = GetMNTStateBan
+	text = { trigger = { MNT = { has_country_flag = MNT_state_raid_ban } } localization_key = MNT_state_ban_on }
+	text = { localization_key = MNT_state_ban_off }
+}
+
+defined_text = { name = GetMNTStateGuard
+	text = { trigger = { MNT = { has_country_flag = MNT_state_danilo_survived } } localization_key = MNT_state_guard_survived }
+	text = { trigger = { MNT = { has_country_flag = MNT_state_danilo_dead } } localization_key = MNT_state_guard_dead }
+	text = { trigger = { MNT = { has_completed_focus = MNT_state_princely_guard } } localization_key = MNT_state_guard_ready }
+	text = { localization_key = MNT_state_guard_locked }
+}
+
+defined_text = { name = GetMNTStateTripRisk
+	text = { trigger = { MNT = { check_variable = { MNT_state_unrest > 59 } } } localization_key = MNT_state_trip_high }
+	text = { localization_key = MNT_state_trip_low }
+}
+
+defined_text = { name = GetMNTStateZimonjic
+	text = { trigger = { MNT = { has_country_flag = MNT_state_zimonjic_active } } localization_key = MNT_state_associate_active }
+	text = { localization_key = MNT_state_associate_waiting }
+}
+
+defined_text = { name = GetMNTStateLjubibratic
+	text = { trigger = { MNT = { has_country_flag = MNT_state_ljubibratic_active } } localization_key = MNT_state_associate_active }
+	text = { localization_key = MNT_state_associate_waiting }
+}
+
+defined_text = { name = GetMNTStateFuture
+	text = { trigger = { MNT = { has_country_flag = MNT_state_council_extra_slot } } localization_key = MNT_state_future_open }
+	text = { localization_key = MNT_state_future_locked }
+}
+
+defined_text = { name = GetMNTStateNextPoint
+	text = { trigger = { MNT = { NOT = { has_country_flag = MNT_state_mandate_1858a } } } localization_key = MNT_state_next_1858_jan }
+	text = { trigger = { MNT = { NOT = { has_country_flag = MNT_state_mandate_1858b } } } localization_key = MNT_state_next_1858_jul }
+	text = { trigger = { MNT = { NOT = { has_country_flag = MNT_state_mandate_1859a } } } localization_key = MNT_state_next_1859_jan }
+	text = { trigger = { MNT = { NOT = { has_country_flag = MNT_state_mandate_1859b } } } localization_key = MNT_state_next_1859_jul }
+	text = { trigger = { MNT = { NOT = { has_country_flag = MNT_state_mandate_1860a } } } localization_key = MNT_state_next_1860_jan }
+	text = { trigger = { MNT = { NOT = { has_country_flag = MNT_state_mandate_1860b } } } localization_key = MNT_state_next_1860_jul }
+	text = { localization_key = MNT_state_no_more_points }
+}
+
+defined_text = { name = GetMNTStateAidSummary
+	text = { trigger = { FROM = { tag = FRA } } localization_key = MNT_state_aid_france }
+	text = { trigger = { FROM = { tag = RUS } } localization_key = MNT_state_aid_russia }
+	text = { trigger = { FROM = { tag = AUS } } localization_key = MNT_state_aid_austria }
+	text = { localization_key = MNT_state_aid_unknown }
+}
+
+defined_text = { name = GetMNTPledgeRaids
+	text = { trigger = { MNT = { has_country_flag = MNT_state_broke_promise } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_state_raid_ban } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeDiscipline
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_broken_discipline } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_disciplined } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeNonintervention
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_broken_nonintervention } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_nonintervention_active } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeAmnesty
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_amnesty_revoked } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_signed_amnesty } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeRights
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_rights_revoked } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_signed_rights } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeCommission
+	text = { trigger = { MNT = { always = no } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_treaty_signed NOT = { has_country_flag = MNT_crisis_boundary_commission } } } localization_key = MNT_rel_pledge_done }
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_boundary_commission } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeCompensation
+	text = { trigger = { MNT = { has_country_flag = MNT_reparations_debt_v1 } } localization_key = MNT_reparations_debt_recorded }
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_signed_reparations } } localization_key = MNT_reparations_old_record }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = GetMNTPledgeRecognition
+	text = { trigger = { MNT = { always = no } } localization_key = MNT_rel_pledge_broken }
+	text = { trigger = { MNT = { has_country_flag = MNT_crisis_signed_recognition } } localization_key = MNT_rel_pledge_active }
+	text = { localization_key = MNT_rel_pledge_none }
+}
+
+defined_text = { name = MNTrelChoiceAmnesty
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_choose_amnesty } } localization_key = MNT_rel_choice_selected }
+	text = { localization_key = MNT_rel_choice_not_selected }
+}
+
+defined_text = { name = MNTrelChoiceRights
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_choose_rights } } localization_key = MNT_rel_choice_selected }
+	text = { localization_key = MNT_rel_choice_not_selected }
+}
+
+defined_text = { name = MNTrelChoiceNonintervention
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_choose_nonintervention } } localization_key = MNT_rel_choice_selected }
+	text = { localization_key = MNT_rel_choice_not_selected }
+}
+
+defined_text = { name = MNTrelTermsPreview
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_choose_amnesty } } localization_key = MNT_rel_amnesty_preview }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_choose_rights } } localization_key = MNT_rel_rights_preview }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_choose_nonintervention } } localization_key = MNT_rel_nonintervention_preview }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+defined_text = { name = MNTrelTermsSigned
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_signed_rights } } localization_key = MNT_rel_rights_signed }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_signed_amnesty } } localization_key = MNT_rel_amnesty_signed }
+	text = { trigger = { MNT = { has_country_flag = MNT_rel_signed_nonintervention } } localization_key = MNT_rel_nonintervention_signed }
+	text = { localization_key = MNT_crisis_empty }
+}
+
+# MNT CONTEXTUAL SUPPORT TOOLTIPS
+defined_text = { name = GetMNTSupportFranceGain
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_france } } } localization_key = MNT_tt_france_gain }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_france < 3 } } } localization_key = MNT_tt_france_gain }
+	text = { localization_key = MNT_tt_france_gain_unchanged }
+}
+
+defined_text = { name = GetMNTSupportFranceLoss
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_france } } } localization_key = MNT_tt_france_loss_unchanged }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_france > 0 } } } localization_key = MNT_tt_france_loss }
+	text = { localization_key = MNT_tt_france_loss_unchanged }
+}
+
+defined_text = { name = GetMNTSupportFrancePressure
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_france } } } localization_key = MNT_tt_france_pressure }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_france < 3 } } } localization_key = MNT_tt_france_pressure }
+	text = { localization_key = MNT_tt_france_pressure_unchanged }
+}
+
+defined_text = { name = GetMNTSupportRussiaGain
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_russia } } } localization_key = MNT_tt_russia_gain }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_russia < 3 } } } localization_key = MNT_tt_russia_gain }
+	text = { localization_key = MNT_tt_russia_gain_unchanged }
+}
+
+defined_text = { name = GetMNTSupportRussiaLoss
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_russia } } } localization_key = MNT_tt_russia_loss }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_russia > 0 } } } localization_key = MNT_tt_russia_loss }
+	text = { localization_key = MNT_tt_russia_loss_unchanged }
+}
+
+defined_text = { name = GetMNTSupportRussiaPressure
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_russia } } } localization_key = MNT_tt_russia_pressure }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_russia < 3 } } } localization_key = MNT_tt_russia_pressure }
+	text = { localization_key = MNT_tt_russia_pressure_unchanged }
+}
+
+defined_text = { name = GetMNTSupportAustriaGain
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_austria } } } localization_key = MNT_tt_austria_gain }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_austria < 3 } } } localization_key = MNT_tt_austria_gain }
+	text = { localization_key = MNT_tt_austria_gain_unchanged }
+}
+
+defined_text = { name = GetMNTSupportAustriaLoss
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_austria } } } localization_key = MNT_tt_austria_loss_unchanged }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_austria > 0 } } } localization_key = MNT_tt_austria_loss }
+	text = { localization_key = MNT_tt_austria_loss_unchanged }
+}
+
+defined_text = { name = GetMNTSupportAustriaPressure
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_austria } } } localization_key = MNT_tt_austria_pressure }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_austria < 3 } } } localization_key = MNT_tt_austria_pressure }
+	text = { localization_key = MNT_tt_austria_pressure_unchanged }
+}
+
+defined_text = { name = GetMNTSupportAustriaLoss2
+	text = { trigger = { MNT = { NOT = { has_variable = MNT_crisis_austria } } } localization_key = MNT_tt_austria_loss_unchanged }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_austria > 1 } } } localization_key = MNT_tt_austria_loss2 }
+	text = { trigger = { MNT = { check_variable = { MNT_crisis_austria > 0 } } } localization_key = MNT_tt_austria_loss }
+	text = { localization_key = MNT_tt_austria_loss_unchanged }
+}
+
+defined_text = { name = GetMNTPatronSympathyResult
+	text = { trigger = { ROOT = { tag = FRA } MNT = { check_variable = { MNT_crisis_france < 1 } } } localization_key = MNT_tt_france_sympathy }
+	text = { trigger = { ROOT = { tag = FRA } } localization_key = MNT_tt_france_sympathy_unchanged }
+	text = { trigger = { ROOT = { tag = RUS } MNT = { check_variable = { MNT_crisis_russia < 1 } } } localization_key = MNT_tt_russia_sympathy }
+	text = { trigger = { ROOT = { tag = RUS } } localization_key = MNT_tt_russia_sympathy_unchanged }
+	text = { trigger = { ROOT = { tag = AUS } MNT = { check_variable = { MNT_crisis_austria < 1 } } } localization_key = MNT_tt_austria_sympathy }
+	text = { trigger = { ROOT = { tag = AUS } } localization_key = MNT_tt_austria_sympathy_unchanged }
+	text = { localization_key = MNT_tt_support_unchanged }
+}
+
+defined_text = { name = GetMNTPatronMediationResult
+	text = { trigger = { ROOT = { tag = FRA } MNT = { check_variable = { MNT_crisis_france < 2 } } } localization_key = MNT_tt_france_mediation }
+	text = { trigger = { ROOT = { tag = FRA } } localization_key = MNT_tt_france_mediation_unchanged }
+	text = { trigger = { ROOT = { tag = RUS } MNT = { check_variable = { MNT_crisis_russia < 2 } } } localization_key = MNT_tt_russia_mediation }
+	text = { trigger = { ROOT = { tag = RUS } } localization_key = MNT_tt_russia_mediation_unchanged }
+	text = { trigger = { ROOT = { tag = AUS } MNT = { check_variable = { MNT_crisis_austria < 2 } } } localization_key = MNT_tt_austria_mediation }
+	text = { trigger = { ROOT = { tag = AUS } } localization_key = MNT_tt_austria_mediation_unchanged }
+	text = { localization_key = MNT_tt_support_unchanged }
+}
+
+defined_text = { name = GetMNTRaidBanCost
+	text = { trigger = { MNT = { has_country_flag = MNT_state_raid_ban } } localization_key = MNT_tt_raid_ban_existing }
+	text = { localization_key = MNT_tt_raid_ban_new }
+}
+
+defined_text = { name = GetMNTDiplomacyEnvoyRecord
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_delarue } } localization_key = MNT_tt_envoy_record_delarue }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor_russia } } localization_key = MNT_tt_envoy_record_nikanor_russia }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_nikanor_austria } } localization_key = MNT_tt_envoy_record_nikanor_austria }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_mirko } } localization_key = MNT_tt_envoy_record_mirko }
+	text = { trigger = { MNT = { has_country_flag = MNT_diplomacy_delegate_vukalovic } } localization_key = MNT_tt_envoy_record_vukalovic }
+	text = { localization_key = MNT_crisis_empty }
 }

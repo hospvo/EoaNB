@@ -1,0 +1,1447 @@
+# Montenegro
+
+guiTypes = {
+	containerWindowType = {
+		name = "MNT_chapter_one_window"
+		orientation = lower_left
+		position = { x = 0 y = 0 }
+		size = { width = 760 height = 352 }
+		# Inlay windows must not clip (native focus-inlay guidance).
+		clipping = no
+		containerWindowType = {
+			name = "chapter_frame"
+			position = { x = 0 y = 0 }
+			size = { width = 760 height = 352 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" alwaystransparent = yes }
+			clipping = no
+		}
+		iconType = {
+			name = "chapter_illustration"
+			spriteType = "GFX_MNT_chapter_herzegovina_art"
+			position = { x = 6 y = 6 }
+			scale = 0.344383
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "chapter_kicker"
+			position = { x = 24 y = 24 }
+			font = "hoi_18mbs"
+			text = "MNT_chapter_one_kicker"
+			maxWidth = 450 maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "chapter_title"
+			position = { x = 24 y = 58 }
+			font = "hoi_36header"
+			text = "MNT_chapter_one_title"
+			maxWidth = 440 maxHeight = 90
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "chapter_subtitle"
+			position = { x = 25 y = 151 }
+			font = "hoi_18mbs"
+			text = "MNT_chapter_one_subtitle"
+			maxWidth = 390 maxHeight = 42
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "chapter_status"
+			position = { x = 25 y = 216 }
+			font = "hoi_18mbs"
+			context_aware_text = "MNT_chapter_one_status"
+			maxWidth = 700 maxHeight = 24
+			fixedsize = yes
+			context_aware_tooltip = "MNT_chapter_one_status_tt"
+		}
+		instantTextBoxType = {
+			name = "chapter_description"
+			position = { x = 24 y = 271 }
+			font = "hoi_18mbs"
+			text = "MNT_chapter_one_description"
+			maxWidth = 712 maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "chapter_hint"
+			position = { x = 24 y = 327 }
+			font = "hoi_16mbs"
+			text = "MNT_chapter_one_hint"
+			maxWidth = 712 maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "MNT_clans_dashboard_window" position = { x = 0 y = 0 } size = { width = 497 height = 960 }
+		containerWindowType = { name = "clans_bg" position = { x = 6 y = 3 } size = { width = 485 height = 952 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clans_title" position = { x = 18 y = 12 }
+			font = "hoi_24header" text = "MNT_clans_title" maxWidth = 460 maxHeight = 26 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clans_summary" position = { x = 18 y = 44 }
+			font = "hoi_18mbs" text = "MNT_clans_rows_summary" maxWidth = 460 maxHeight = 42 fixedsize = yes
+			pdx_tooltip = "MNT_clans_rows_levy_tt" }
+		iconType = { name = "clans_influence_icon" spriteType = "GFX_MNT_clans_influence" position = { x = 18 y = 91 } scale = 1
+			pdx_tooltip = "MNT_clans_influence_total_tt" }
+		instantTextBoxType = { name = "clans_influence_total" position = { x = 48 y = 91 }
+			font = "hoi_18mbs" text = "MNT_clans_influence_total_line" maxWidth = 430 maxHeight = 26 fixedsize = yes
+			pdx_tooltip = "MNT_clans_influence_total_tt" }
+		containerWindowType = { name = "row_bg_kuci" position = { x = 14 y = 128 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_kuci" position = { x = 26 y = 132 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_kuci" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_kuci" position = { x = 183 y = 134 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_kuci" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_kuci" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 157 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_kuci" }
+		instantTextBoxType = { name = "clan_levy_kuci" position = { x = 53 y = 158 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_kuci" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_kuci" }
+		instantTextBoxType = { name = "clan_status_kuci" position = { x = 183 y = 158 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_kuci" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_kuci" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 182 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_kuci" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 182 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_kuci" }
+		iconType = { name = "mountains_kuci" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 182 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_kuci" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 182 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_kuci" }
+		instantTextBoxType = { name = "influence_value_kuci" position = { x = 140 y = 184 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_kuci" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_kuci" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_kuci" position = { x = 358 y = 133 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_kuci" position = { x = 459 y = 137 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_vasojevici" position = { x = 14 y = 214 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_vasojevici" position = { x = 26 y = 218 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_vasojevici" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_vasojevici" position = { x = 183 y = 220 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_vasojevici" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_vasojevici" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 243 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_vasojevici" }
+		instantTextBoxType = { name = "clan_levy_vasojevici" position = { x = 53 y = 244 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_vasojevici" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_vasojevici" }
+		instantTextBoxType = { name = "clan_status_vasojevici" position = { x = 183 y = 244 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_vasojevici" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_vasojevici" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 268 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_vasojevici" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 268 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_vasojevici" }
+		iconType = { name = "mountains_vasojevici" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 268 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_vasojevici" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 268 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_vasojevici" }
+		instantTextBoxType = { name = "influence_value_vasojevici" position = { x = 140 y = 270 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_vasojevici" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_vasojevici" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_vasojevici" position = { x = 358 y = 219 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_vasojevici" position = { x = 459 y = 223 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_drobnjaci" position = { x = 14 y = 300 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_drobnjaci" position = { x = 26 y = 304 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_drobnjaci" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_drobnjaci" position = { x = 183 y = 306 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_drobnjaci" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_drobnjaci" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 329 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_drobnjaci" }
+		instantTextBoxType = { name = "clan_levy_drobnjaci" position = { x = 53 y = 330 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_drobnjaci" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_drobnjaci" }
+		instantTextBoxType = { name = "clan_status_drobnjaci" position = { x = 183 y = 330 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_drobnjaci" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_drobnjaci" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 354 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_drobnjaci" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 354 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_drobnjaci" }
+		iconType = { name = "mountains_drobnjaci" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 354 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_drobnjaci" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 354 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_drobnjaci" }
+		instantTextBoxType = { name = "influence_value_drobnjaci" position = { x = 140 y = 356 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_drobnjaci" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_drobnjaci" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_drobnjaci" position = { x = 358 y = 305 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_drobnjaci" position = { x = 459 y = 309 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_piperi" position = { x = 14 y = 386 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_piperi" position = { x = 26 y = 390 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_piperi" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_piperi" position = { x = 183 y = 392 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_piperi" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_piperi" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 415 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_piperi" }
+		instantTextBoxType = { name = "clan_levy_piperi" position = { x = 53 y = 416 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_piperi" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_piperi" }
+		instantTextBoxType = { name = "clan_status_piperi" position = { x = 183 y = 416 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_piperi" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_piperi" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 440 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_piperi" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 440 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_piperi" }
+		iconType = { name = "mountains_piperi" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 440 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_piperi" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 440 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_piperi" }
+		instantTextBoxType = { name = "influence_value_piperi" position = { x = 140 y = 442 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_piperi" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_piperi" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_piperi" position = { x = 358 y = 391 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_piperi" position = { x = 459 y = 395 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_cuce" position = { x = 14 y = 472 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_cuce" position = { x = 26 y = 476 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_cuce" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_cuce" position = { x = 183 y = 478 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_cuce" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_cuce" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 501 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_cuce" }
+		instantTextBoxType = { name = "clan_levy_cuce" position = { x = 53 y = 502 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_cuce" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_cuce" }
+		instantTextBoxType = { name = "clan_status_cuce" position = { x = 183 y = 502 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_cuce" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_cuce" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 526 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_cuce" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 526 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_cuce" }
+		iconType = { name = "mountains_cuce" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 526 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_cuce" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 526 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_cuce" }
+		instantTextBoxType = { name = "influence_value_cuce" position = { x = 140 y = 528 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_cuce" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_cuce" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_cuce" position = { x = 358 y = 477 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_cuce" position = { x = 459 y = 481 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_njegusi" position = { x = 14 y = 558 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_njegusi" position = { x = 26 y = 562 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_njegusi" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_njegusi" position = { x = 183 y = 564 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_njegusi" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_njegusi" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 587 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_njegusi" }
+		instantTextBoxType = { name = "clan_levy_njegusi" position = { x = 53 y = 588 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_njegusi" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_njegusi" }
+		instantTextBoxType = { name = "clan_status_njegusi" position = { x = 183 y = 588 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_njegusi" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_njegusi" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 612 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_njegusi" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 612 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_njegusi" }
+		iconType = { name = "mountains_njegusi" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 612 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_njegusi" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 612 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_njegusi" }
+		instantTextBoxType = { name = "influence_value_njegusi" position = { x = 140 y = 614 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_njegusi" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_njegusi" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_njegusi" position = { x = 358 y = 563 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_njegusi" position = { x = 459 y = 567 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_ceklin" position = { x = 14 y = 644 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_ceklin" position = { x = 26 y = 648 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_ceklin" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_ceklin" position = { x = 183 y = 650 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_ceklin" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_ceklin" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 673 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_ceklin" }
+		instantTextBoxType = { name = "clan_levy_ceklin" position = { x = 53 y = 674 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_ceklin" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_ceklin" }
+		instantTextBoxType = { name = "clan_status_ceklin" position = { x = 183 y = 674 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_ceklin" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_ceklin" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 698 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_ceklin" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 698 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_ceklin" }
+		iconType = { name = "mountains_ceklin" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 698 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_ceklin" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 698 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_ceklin" }
+		instantTextBoxType = { name = "influence_value_ceklin" position = { x = 140 y = 700 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_ceklin" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_ceklin" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_ceklin" position = { x = 358 y = 649 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_ceklin" position = { x = 459 y = 653 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_bjelice" position = { x = 14 y = 730 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_bjelice" position = { x = 26 y = 734 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_bjelice" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_bjelice" position = { x = 183 y = 736 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_bjelice" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_bjelice" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 759 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_bjelice" }
+		instantTextBoxType = { name = "clan_levy_bjelice" position = { x = 53 y = 760 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_bjelice" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_bjelice" }
+		instantTextBoxType = { name = "clan_status_bjelice" position = { x = 183 y = 760 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_bjelice" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_bjelice" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 784 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_bjelice" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 784 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_bjelice" }
+		iconType = { name = "mountains_bjelice" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 784 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_bjelice" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 784 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_bjelice" }
+		instantTextBoxType = { name = "influence_value_bjelice" position = { x = 140 y = 786 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_bjelice" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_bjelice" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_bjelice" position = { x = 358 y = 735 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_bjelice" position = { x = 459 y = 739 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		containerWindowType = { name = "row_bg_grahovo" position = { x = 14 y = 816 } size = { width = 469 height = 80 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" } clipping = yes }
+		instantTextBoxType = { name = "clan_name_grahovo" position = { x = 26 y = 820 }
+			font = "hoi_18mbs" text = "MNT_clans_row_name_grahovo" maxWidth = 151 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "clan_loyalty_grahovo" position = { x = 183 y = 822 }
+			font = "hoi_16mbs" text = "MNT_clans_row_loyalty_grahovo" maxWidth = 168 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "clan_levy_icon_grahovo" spriteType = "GFX_MNT_clans_levy_head" position = { x = 26 y = 845 } scale = 1
+			pdx_tooltip = "MNT_clans_row_levy_tt_grahovo" }
+		instantTextBoxType = { name = "clan_levy_grahovo" position = { x = 53 y = 846 }
+			font = "hoi_16mbs" text = "MNT_clans_row_levy_grahovo" maxWidth = 127 maxHeight = 23 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_levy_tt_grahovo" }
+		instantTextBoxType = { name = "clan_status_grahovo" position = { x = 183 y = 846 }
+			font = "hoi_16mbs" text = "MNT_clans_row_status_grahovo" maxWidth = 278 maxHeight = 23 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "trait_rail_grahovo" spriteType = "GFX_MNT_clans_trait_rail" position = { x = 24 y = 870 } scale = 1
+			alwaystransparent = yes }
+		iconType = { name = "badge_grahovo" spriteType = "GFX_MNT_clans_badge_trait" position = { x = 29 y = 870 } scale = 1
+			pdx_tooltip = "MNT_clans_row_badge_tt_grahovo" }
+		iconType = { name = "mountains_grahovo" spriteType = "GFX_MNT_clans_mountain_trait" position = { x = 67 y = 870 } scale = 1
+			pdx_tooltip = "MNT_clans_mountain_trait_tt" }
+		iconType = { name = "influence_grahovo" spriteType = "GFX_MNT_clans_influence" position = { x = 105 y = 870 } scale = 1
+			pdx_tooltip = "MNT_clans_row_influence_tt_grahovo" }
+		instantTextBoxType = { name = "influence_value_grahovo" position = { x = 140 y = 872 }
+			font = "hoi_16mbs" text = "MNT_clans_row_influence_grahovo" maxWidth = 205 maxHeight = 22 fixedsize = yes
+			pdx_tooltip = "MNT_clans_row_influence_tt_grahovo" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "raise_grahovo" position = { x = 358 y = 821 } quadTextureSprite = "GFX_button_94x31"
+			buttonText = "MNT_clans_raise" buttonFont = "hoi_16mbs" clicksound = click_default pdx_tooltip = "MNT_clans_raise_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "petition_grahovo" position = { x = 459 y = 825 } quadTextureSprite = "GFX_quick_add_button"
+			clicksound = click_default pdx_tooltip = "MNT_clans_petition_tt" }
+		instantTextBoxType = { name = "clans_help" position = { x = 18 y = 908 }
+			font = "hoi_16mbs" text = "MNT_clans_rows_help" maxWidth = 460 maxHeight = 43 fixedsize = yes
+			alwaystransparent = yes }
+	}
+
+	containerWindowType = {
+		name = "MNT_crisis_dashboard_window"
+		position = {
+			x = 0
+			y = 0
+		}
+		size = {
+			width = 497
+			height = 834
+		}
+		containerWindowType = {
+			name = "dossier_bg"
+			position = {
+				x = 6
+				y = 3
+			}
+			size = {
+				width = 485
+				height = 825
+			}
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_plain_bg_small"
+			}
+			clipping = yes
+		}
+		instantTextBoxType = {
+			name = "phase"
+			position = {
+				x = 18
+				y = 12
+			}
+			font = "hoi_24header"
+			text = "MNT_crisis_phase_label"
+			maxWidth = 460
+			maxHeight = 25
+			fixedsize = yes
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "goal"
+			position = {
+				x = 18
+				y = 42
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_goal"
+			maxWidth = 460
+			maxHeight = 40
+			fixedsize = yes
+			format = left
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "herzegovina_map"
+			position = {
+				x = 56
+				y = 88
+			}
+			spriteType = "GFX_MNT_crisis_herzegovina_gold"
+			scale = 0.34
+			pdx_tooltip = "MNT_crisis_map_tt"
+		}
+		instantTextBoxType = {
+			name = "herzegovina_map_caption"
+			position = {
+				x = 18
+				y = 192
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_map_caption"
+			maxWidth = 240
+			maxHeight = 18
+			fixedsize = yes
+			format = center
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "leader_card_bg"
+			position = {
+				x = 278
+				y = 88
+			}
+			spriteType = "GFX_MNT_treaty_leader_card_panel"
+			alwaystransparent = yes
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "leader_portrait"
+			position = {
+				x = 290
+				y = 100
+			}
+			quadTextureSprite = "GFX_Portrait_HRZ_Luka_Vukalovic"
+			scale = 0.46
+			pdx_tooltip = "MNT_crisis_leader_tt"
+		}
+		iconType = { name = "leader_prison_bars" spriteType = "GFX_MNT_diplomacy_prison_bars" position = { x = 290 y = 100 } scale = 0.46 alwaystransparent = yes }
+		instantTextBoxType = {
+			name = "leader_name"
+			position = {
+				x = 370
+				y = 102
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_leader_name"
+			maxWidth = 100
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "leader_role"
+			position = {
+				x = 370
+				y = 151
+			}
+			font = "hoi_16mbs"
+			text = "MNT_diplomacy_vuka_status"
+			maxWidth = 100
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "leader_relationship"
+			position = {
+				x = 290
+				y = 212
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_leader_relationship"
+			maxWidth = 180
+			maxHeight = 44
+			fixedsize = yes
+			pdx_tooltip = "MNT_crisis_leader_tt"
+		}
+		instantTextBoxType = {
+			name = "strength_label"
+			position = {
+				x = 18
+				y = 276
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_strength_label"
+			maxWidth = 460
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+			pdx_tooltip = "MNT_crisis_strength_tt"
+		}
+		iconType = {
+			name = "strength_bar"
+			position = {
+				x = 18
+				y = 298
+			}
+			spriteType = "GFX_MNT_crisis_strength_bar"
+			pdx_tooltip = "MNT_crisis_strength_tt"
+		}
+		instantTextBoxType = {
+			name = "supply_label"
+			position = {
+				x = 18
+				y = 320
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_supply_label"
+			maxWidth = 460
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+			pdx_tooltip = "MNT_crisis_supply_tt"
+		}
+		iconType = {
+			name = "supply_bar"
+			position = {
+				x = 18
+				y = 342
+			}
+			spriteType = "GFX_MNT_crisis_supply_bar"
+			pdx_tooltip = "MNT_crisis_supply_tt"
+		}
+		instantTextBoxType = {
+			name = "escalation_label"
+			position = {
+				x = 18
+				y = 364
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_escalation_label"
+			maxWidth = 460
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+			pdx_tooltip = "MNT_crisis_escalation_tt"
+		}
+		iconType = {
+			name = "escalation_bar"
+			position = {
+				x = 18
+				y = 386
+			}
+			spriteType = "GFX_MNT_crisis_escalation_bar"
+			pdx_tooltip = "MNT_crisis_escalation_tt"
+		}
+		instantTextBoxType = {
+			name = "patrons_title"
+			position = {
+				x = 18
+				y = 412
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_patrons_title"
+			maxWidth = 460
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "france_card"
+			position = {
+				x = 18
+				y = 437
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_france_card"
+			maxWidth = 150
+			maxHeight = 44
+			fixedsize = yes
+			format = left
+			pdx_tooltip = "MNT_crisis_patrons_tt"
+		}
+		instantTextBoxType = {
+			name = "russia_card"
+			position = {
+				x = 173
+				y = 437
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_russia_card"
+			maxWidth = 150
+			maxHeight = 44
+			fixedsize = yes
+			format = left
+			pdx_tooltip = "MNT_crisis_patrons_tt"
+		}
+		instantTextBoxType = {
+			name = "austria_card"
+			position = {
+				x = 328
+				y = 437
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_austria_card"
+			maxWidth = 150
+			maxHeight = 44
+			fixedsize = yes
+			format = left
+			pdx_tooltip = "MNT_crisis_patrons_tt"
+		}
+		iconType = {
+			name = "dispatch_bg"
+			position = {
+				x = 14
+				y = 488
+			}
+			spriteType = "GFX_MNT_treaty_dispatch_panel"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "dispatch"
+			position = {
+				x = 22
+				y = 496
+			}
+			font = "hoi_18mbs"
+			text = "MNT_crisis_dispatch"
+			maxWidth = 453
+			maxHeight = 92
+			fixedsize = yes
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "treaty_title"
+			position = {
+				x = 18
+				y = 12
+			}
+			font = "hoi_24header"
+			text = "MNT_treaty_title"
+			maxWidth = 250
+			maxHeight = 26
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "treaty_map"
+			position = {
+				x = 413
+				y = 7
+			}
+			spriteType = "GFX_MNT_treaty_map_small"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "treaty_score"
+			position = {
+				x = 18
+				y = 44
+			}
+			font = "hoi_18mbs"
+			text = "MNT_treaty_score"
+			maxWidth = 195
+			maxHeight = 23
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_score_tt"
+		}
+		instantTextBoxType = {
+			name = "treaty_status"
+			position = {
+				x = 18
+				y = 71
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_status"
+			maxWidth = 460
+			maxHeight = 21
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_status_tt"
+		}
+		instantTextBoxType = {
+			name = "treaty_base_title"
+			position = {
+				x = 18
+				y = 98
+			}
+			font = "hoi_18mbs"
+			text = "MNT_treaty_base_title"
+			maxWidth = 460
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "row_independence"
+			position = {
+				x = 14
+				y = 120
+			}
+			spriteType = "GFX_MNT_treaty_row_panel"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "icon_independence"
+			position = {
+				x = 18
+				y = 121
+			}
+			spriteType = "GFX_MNT_treaty_sovereignty"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "label_independence"
+			position = {
+				x = 74
+				y = 124
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_row_independence"
+			maxWidth = 352
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_independence_tt"
+		}
+		iconType = {
+			name = "row_demand_border"
+			position = {
+				x = 14
+				y = 198
+			}
+			spriteType = "GFX_MNT_treaty_row_panel"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "icon_demand_border"
+			position = {
+				x = 18
+				y = 199
+			}
+			spriteType = "GFX_MNT_treaty_frontier"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "label_demand_border"
+			position = {
+				x = 74
+				y = 202
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_row_demand_border"
+			maxWidth = 352
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_demand_border_tt"
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "select_demand_border"
+			position = {
+				x = 441
+				y = 213
+			}
+			quadTextureSprite = "GFX_checkbox_button"
+			pdx_tooltip = "MNT_treaty_demand_border_tt"
+		}
+		iconType = {
+			name = "selected_demand_border"
+			position = {
+				x = 441
+				y = 213
+			}
+			spriteType = "GFX_checkbox"
+			frame = 2
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "row_demand_arms"
+			position = {
+				x = 14
+				y = 252
+			}
+			spriteType = "GFX_MNT_treaty_row_panel"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "icon_demand_arms"
+			position = {
+				x = 18
+				y = 253
+			}
+			spriteType = "GFX_MNT_treaty_arms"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "label_demand_arms"
+			position = {
+				x = 74
+				y = 256
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_row_demand_arms"
+			maxWidth = 352
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_demand_arms_tt"
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "select_demand_arms"
+			position = {
+				x = 441
+				y = 267
+			}
+			quadTextureSprite = "GFX_checkbox_button"
+			pdx_tooltip = "MNT_treaty_demand_arms_tt"
+		}
+		iconType = {
+			name = "selected_demand_arms"
+			position = {
+				x = 441
+				y = 267
+			}
+			spriteType = "GFX_checkbox"
+			frame = 2
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "row_demand_recognition"
+			position = {
+				x = 14
+				y = 306
+			}
+			spriteType = "GFX_MNT_treaty_row_panel"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "icon_demand_recognition"
+			position = {
+				x = 18
+				y = 307
+			}
+			spriteType = "GFX_MNT_treaty_recognition"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "label_demand_recognition"
+			position = {
+				x = 74
+				y = 310
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_row_demand_recognition"
+			maxWidth = 352
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_demand_recognition_tt"
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "select_demand_recognition"
+			position = {
+				x = 441
+				y = 321
+			}
+			quadTextureSprite = "GFX_checkbox_button"
+			pdx_tooltip = "MNT_treaty_demand_recognition_tt"
+		}
+		iconType = {
+			name = "selected_demand_recognition"
+			position = {
+				x = 441
+				y = 321
+			}
+			spriteType = "GFX_checkbox"
+			frame = 2
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "row_offer_guarantee"
+			position = {
+				x = 14
+				y = 386
+			}
+			spriteType = "GFX_MNT_treaty_row_panel"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "icon_offer_guarantee"
+			position = {
+				x = 18
+				y = 387
+			}
+			spriteType = "GFX_MNT_treaty_guarantee"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "label_offer_guarantee"
+			position = {
+				x = 74
+				y = 390
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_row_offer_guarantee"
+			maxWidth = 352
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_offer_guarantee_tt"
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "select_offer_guarantee"
+			position = {
+				x = 441
+				y = 401
+			}
+			quadTextureSprite = "GFX_checkbox_button"
+			pdx_tooltip = "MNT_treaty_offer_guarantee_tt"
+		}
+		iconType = {
+			name = "selected_offer_guarantee"
+			position = {
+				x = 441
+				y = 401
+			}
+			spriteType = "GFX_checkbox"
+			frame = 2
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "row_offer_reparations"
+			position = {
+				x = 14
+				y = 440
+			}
+			spriteType = "GFX_MNT_treaty_row_panel"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "icon_offer_reparations"
+			position = {
+				x = 18
+				y = 441
+			}
+			spriteType = "GFX_MNT_treaty_reparations"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "label_offer_reparations"
+			position = {
+				x = 74
+				y = 444
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_row_offer_reparations"
+			maxWidth = 352
+			maxHeight = 44
+			fixedsize = yes
+			alwaystransparent = yes
+			pdx_tooltip = "MNT_treaty_offer_reparations_tt"
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "select_offer_reparations"
+			position = {
+				x = 441
+				y = 455
+			}
+			quadTextureSprite = "GFX_checkbox_button"
+			pdx_tooltip = "MNT_treaty_offer_reparations_tt"
+		}
+		iconType = {
+			name = "selected_offer_reparations"
+			position = {
+				x = 441
+				y = 455
+			}
+			spriteType = "GFX_checkbox"
+			frame = 2
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "treaty_gains_title"
+			position = {
+				x = 18
+				y = 176
+			}
+			font = "hoi_18mbs"
+			text = "MNT_treaty_gains_title"
+			maxWidth = 460
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "treaty_promises_title"
+			position = {
+				x = 18
+				y = 364
+			}
+			font = "hoi_18mbs"
+			text = "MNT_treaty_promises_title"
+			maxWidth = 460
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "treaty_rounds"
+			position = {
+				x = 18
+				y = 727
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_rounds"
+			maxWidth = 460
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "treaty_payment"
+			position = {
+				x = 18
+				y = 751
+			}
+			font = "hoi_16mbs"
+			text = "MNT_treaty_payment"
+			maxWidth = 460
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = { text = "" font = "hoi_16mbs"
+			name = "send_treaty"
+			position = {
+				x = 138
+				y = 779
+			}
+			quadTextureSprite = "GFX_button_221x34"
+			buttonText = "MNT_treaty_send"
+			buttonFont = "hoi_18mbs"
+			pdx_tooltip = "MNT_treaty_send_tt"
+		}
+
+		# BEGIN FRONTIER GUI
+		instantTextBoxType = { name = "war_title" position = { x = 18 y = 12 }
+			font = "hoi_24header" text = "MNT_frontier_title" maxWidth = 195 maxHeight = 26 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "war_map" position = { x = 413 y = 7 } spriteType = "GFX_MNT_treaty_map_small" }
+		instantTextBoxType = { name = "war_summary" position = { x = 18 y = 46 }
+			font = "hoi_18mbs" text = "MNT_frontier_summary" maxWidth = 195 maxHeight = 42 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "war_mnt" position = { x = 18 y = 78 }
+			font = "hoi_18mbs" text = "MNT_frontier_mnt_resolve" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_resolve_tt" }
+		iconType = { name = "war_mnt_bar" position = { x = 18 y = 102 } spriteType = "GFX_MNT_crisis_strength_bar" }
+		instantTextBoxType = { name = "war_oto" position = { x = 18 y = 124 }
+			font = "hoi_18mbs" text = "MNT_frontier_oto_resolve" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_resolve_tt" }
+		iconType = { name = "war_oto_bar" position = { x = 18 y = 148 } spriteType = "GFX_MNT_crisis_escalation_bar" }
+		instantTextBoxType = { name = "war_pressure" position = { x = 18 y = 421 }
+			font = "hoi_16mbs" text = "MNT_frontier_pressure" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_pressure_tt" }
+		iconType = { name = "war_pressure_bar" position = { x = 18 y = 443 } spriteType = "GFX_MNT_crisis_supply_bar" }
+		instantTextBoxType = { name = "war_cordon" position = { x = 18 y = 466 }
+			font = "hoi_16mbs" text = "MNT_frontier_cordon" maxWidth = 460 maxHeight = 40 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_cordon_tt" }
+		instantTextBoxType = { name = "war_objectives" position = { x = 18 y = 221 }
+			font = "hoi_18mbs" text = "MNT_frontier_objectives_title" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "war_grahovo" position = { x = 18 y = 280 }
+			font = "hoi_18mbs" text = "MNT_frontier_grahovo" maxWidth = 358 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_grahovo_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_show_grahovo" position = { x = 385 y = 276 } quadTextureSprite = "GFX_button_94x31" buttonText = "MNT_frontier_show" buttonFont = "hoi_16mbs" }
+		instantTextBoxType = { name = "war_mostar" position = { x = 18 y = 316 }
+			font = "hoi_18mbs" text = "MNT_frontier_mostar" maxWidth = 358 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_mostar_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_show_mostar" position = { x = 385 y = 312 } quadTextureSprite = "GFX_button_94x31" buttonText = "MNT_frontier_show" buttonFont = "hoi_16mbs" }
+
+		instantTextBoxType = { name = "war_capital" position = { x = 18 y = 248 }
+			font = "hoi_18mbs" text = "MNT_frontier_capital" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_capital_tt" }
+		instantTextBoxType = { name = "war_actions" position = { x = 18 y = 350 }
+			font = "hoi_16mbs" text = "MNT_frontier_actions" maxWidth = 460 maxHeight = 22 fixedsize = yes
+			alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_recruit" position = { x = 18 y = 378 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_recruit" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_recruit_tt" clicksound = click_default }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_observers" position = { x = 258 y = 378 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_observers" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_observers_tt" clicksound = click_default }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_clans" position = { x = 18 y = 378 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_clans" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_clans_tt" clicksound = click_default }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_appeal" position = { x = 258 y = 378 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_appeal" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_appeal_tt" clicksound = click_default }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_protest" position = { x = 138 y = 378 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_protest" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_protest_tt" clicksound = click_default }
+		buttonType = { text = "" font = "hoi_16mbs" name = "war_peace" position = { x = 138 y = 511 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_peace" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_peace_tt" clicksound = click_default }
+		instantTextBoxType = { name = "war_outcome_hint" position = { x = 18 y = 553 }
+			font = "hoi_16mbs" text = "MNT_frontier_outcome_hint" maxWidth = 460 maxHeight = 42 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "war_time" position = { x = 18 y = 170 }
+			font = "hoi_18mbs" text = "MNT_frontier_time" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_time_tt" }
+		iconType = { name = "war_time_bar" position = { x = 18 y = 194 } spriteType = "GFX_MNT_crisis_supply_bar" }
+		# BEGIN SHARED GARRISON CARD
+		iconType = { name = "overview_garrison_bg" position = { x = 18 y = 211 }
+			spriteType = "GFX_MNT_garrison_card" pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		iconType = { name = "overview_garrison_icon" position = { x = 26 y = 221 }
+			spriteType = "GFX_MNT_ottoman_manpower" pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		iconType = { name = "overview_garrison_badge" position = { x = 42 y = 237 }
+			spriteType = "GFX_MNT_ottoman_badge" pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		instantTextBoxType = { name = "overview_garrison_title" position = { x = 64 y = 217 }
+			font = "hoi_16mbs" text = "MNT_frontier_card_title" maxWidth = 185 maxHeight = 20
+			fixedsize = yes pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		instantTextBoxType = { name = "overview_garrison_value" position = { x = 64 y = 237 }
+			font = "hoi_18mbs" text = "MNT_frontier_card_value" maxWidth = 185 maxHeight = 20
+			fixedsize = yes pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		iconType = { name = "header_garrison_bg" position = { x = 278 y = 7 }
+			spriteType = "GFX_MNT_garrison_card_compact" pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		iconType = { name = "header_garrison_icon" position = { x = 286 y = 15 }
+			spriteType = "GFX_MNT_ottoman_manpower" pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		iconType = { name = "header_garrison_badge" position = { x = 302 y = 31 }
+			spriteType = "GFX_MNT_ottoman_badge" pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		instantTextBoxType = { name = "header_garrison_title" position = { x = 286 y = 40 }
+			font = "hoi_16mbs" text = "MNT_frontier_card_short_title" maxWidth = 112 maxHeight = 20
+			fixedsize = yes pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		instantTextBoxType = { name = "header_garrison_value" position = { x = 320 y = 13 }
+			font = "hoi_24header" text = "MNT_frontier_card_short_value" maxWidth = 80 maxHeight = 26
+			fixedsize = yes pdx_tooltip = "MNT_frontier_garrison_card_tt" }
+		# END SHARED GARRISON CARD
+
+		# BEGIN MNT HERZEGOVINA TERMS
+		instantTextBoxType = { name = "hrz_terms_heading" position = { x = 18 y = 497 }
+			font = "hoi_18mbs" text = "MNT_rel_terms_heading" maxWidth = 460 maxHeight = 24 fixedsize = yes
+			pdx_tooltip = "MNT_rel_exclusive_tt" }
+		iconType = { name = "hrz_amnesty_row" spriteType = "GFX_MNT_treaty_row_panel" position = { x = 14 y = 525 } scale = 1 alwaystransparent = yes }
+		iconType = { name = "hrz_amnesty_icon" spriteType = "GFX_MNT_pledge_amnesty" position = { x = 18 y = 526 } scale = 0.75 alwaystransparent = yes }
+		instantTextBoxType = { name = "hrz_amnesty_label" position = { x = 74 y = 529 }
+			font = "hoi_16mbs" text = "MNT_rel_amnesty_row" maxWidth = 352 maxHeight = 44 fixedsize = yes
+			pdx_tooltip = "MNT_rel_amnesty_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "hrz_amnesty" position = { x = 441 y = 540 }
+			quadTextureSprite = "GFX_checkbox_button" clicksound = click_default pdx_tooltip = "MNT_rel_amnesty_tt" }
+		iconType = { name = "hrz_amnesty_selected" position = { x = 441 y = 540 } spriteType = "GFX_checkbox" frame = 2 alwaystransparent = yes }
+		iconType = { name = "hrz_rights_row" spriteType = "GFX_MNT_treaty_row_panel" position = { x = 14 y = 591 } scale = 1 alwaystransparent = yes }
+		iconType = { name = "hrz_rights_icon" spriteType = "GFX_MNT_pledge_rights" position = { x = 18 y = 592 } scale = 0.75 alwaystransparent = yes }
+		instantTextBoxType = { name = "hrz_rights_label" position = { x = 74 y = 595 }
+			font = "hoi_16mbs" text = "MNT_rel_rights_row" maxWidth = 352 maxHeight = 44 fixedsize = yes
+			pdx_tooltip = "MNT_rel_rights_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "hrz_rights" position = { x = 441 y = 606 }
+			quadTextureSprite = "GFX_checkbox_button" clicksound = click_default pdx_tooltip = "MNT_rel_rights_tt" }
+		iconType = { name = "hrz_rights_selected" position = { x = 441 y = 606 } spriteType = "GFX_checkbox" frame = 2 alwaystransparent = yes }
+		iconType = { name = "hrz_nonintervention_row" spriteType = "GFX_MNT_treaty_row_panel" position = { x = 14 y = 657 } scale = 1 alwaystransparent = yes }
+		iconType = { name = "hrz_nonintervention_icon" spriteType = "GFX_MNT_pledge_nonintervention" position = { x = 18 y = 658 } scale = 0.75 alwaystransparent = yes }
+		instantTextBoxType = { name = "hrz_nonintervention_label" position = { x = 74 y = 661 }
+			font = "hoi_16mbs" text = "MNT_rel_nonintervention_row" maxWidth = 352 maxHeight = 44 fixedsize = yes
+			pdx_tooltip = "MNT_rel_nonintervention_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "hrz_nonintervention" position = { x = 441 y = 672 }
+			quadTextureSprite = "GFX_checkbox_button" clicksound = click_default pdx_tooltip = "MNT_rel_nonintervention_tt" }
+		iconType = { name = "hrz_nonintervention_selected" position = { x = 441 y = 672 } spriteType = "GFX_checkbox" frame = 2 alwaystransparent = yes }
+		iconType = { name = "hrz_exclusive_amnesty_rights" position = { x = 443 y = 575 }
+			spriteType = "GFX_focus_link_exclusive" frame = 1 scale = 0.50 rotation = 1.5708 alwaystransparent = yes }
+		iconType = { name = "hrz_exclusive_rights_nonintervention" position = { x = 443 y = 641 }
+			spriteType = "GFX_focus_link_exclusive" frame = 1 scale = 0.50 rotation = 1.5708 alwaystransparent = yes }
+		# END MNT HERZEGOVINA TERMS
+		# BEGIN MNT ENVOY PORTRAITS
+		buttonType = { name = "envoy_delarue" position = { x = 222 y = 8 }
+			quadTextureSprite = "GFX_MNT_envoy_delarue" font = "hoi_16mbs" text = "" pdx_tooltip = "MNT_envoy_button_tt" clicksound = click_default }
+		buttonType = { name = "envoy_secretary" position = { x = 222 y = 8 }
+			quadTextureSprite = "GFX_MNT_envoy_secretary" font = "hoi_16mbs" text = "" pdx_tooltip = "MNT_envoy_button_tt" clicksound = click_default }
+		buttonType = { name = "envoy_russia" position = { x = 222 y = 8 }
+			quadTextureSprite = "GFX_MNT_envoy_russia" font = "hoi_16mbs" text = "" pdx_tooltip = "MNT_envoy_button_tt" clicksound = click_default }
+		buttonType = { name = "envoy_austria" position = { x = 222 y = 8 }
+			quadTextureSprite = "GFX_MNT_envoy_austria" font = "hoi_16mbs" text = "" pdx_tooltip = "MNT_envoy_button_tt" clicksound = click_default }
+		buttonType = { name = "envoy_mirko" position = { x = 222 y = 8 }
+			quadTextureSprite = "GFX_MNT_envoy_mirko" font = "hoi_16mbs" text = "" pdx_tooltip = "MNT_envoy_button_tt" clicksound = click_default }
+		buttonType = { name = "envoy_vukalovic" position = { x = 222 y = 8 }
+			quadTextureSprite = "GFX_MNT_envoy_vukalovic" font = "hoi_16mbs" text = "" pdx_tooltip = "MNT_envoy_button_tt" clicksound = click_default }
+		instantTextBoxType = { name = "envoy_caption" position = { x = 218 y = 57 }
+			font = "hoi_16mbs" text = "MNT_envoy_caption" format = center maxWidth = 56 maxHeight = 16 fixedsize = yes alwaystransparent = yes }
+		# END MNT ENVOY PORTRAITS
+	}
+
+	containerWindowType = { name = "MNT_frontier_garrison_window" position = { x = 0 y = 0 } size = { width = 497 height = 186 }
+		instantTextBoxType = { name = "garrison_title" position = { x = 18 y = 12 }
+			font = "hoi_24header" text = "MNT_frontier_garrison_title" maxWidth = 460 maxHeight = 26 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "garrison_summary" position = { x = 18 y = 47 }
+			font = "hoi_18mbs" text = "MNT_frontier_garrison_summary" maxWidth = 460 maxHeight = 42 fixedsize = yes
+			pdx_tooltip = "MNT_frontier_garrison_tt" }
+		buttonType = { text = "" font = "hoi_16mbs" name = "garrison_recruit" position = { x = 18 y = 97 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_recruit" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_recruit_tt" clicksound = click_default }
+		buttonType = { text = "" font = "hoi_16mbs" name = "garrison_reduce" position = { x = 258 y = 97 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_frontier_reduce" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_frontier_reduce_tt" clicksound = click_default }
+		instantTextBoxType = { name = "garrison_help" position = { x = 18 y = 140 }
+			font = "hoi_16mbs" text = "MNT_frontier_garrison_help" maxWidth = 460 maxHeight = 36 fixedsize = yes
+			alwaystransparent = yes }
+	}
+
+	containerWindowType = { name = "MNT_state_food_window"
+		orientation = lower_left position = { x = 0 y = 0 } size = { width = 900 height = 430 } clipping = no
+		containerWindowType = { name = "panel" position = { x = 0 y = 0 } size = { width = 900 height = 430 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" alwaystransparent = yes } clipping = no }
+		instantTextBoxType = { name = "title" position = { x = 30 y = 22 }
+			font = "hoi_36header" context_aware_text = "MNT_state_food_title" maxWidth = 840 maxHeight = 44
+			fixedsize = yes alwaystransparent = yes }
+		instantTextBoxType = { name = "stock" position = { x = 30 y = 78 }
+			font = "hoi_24header" context_aware_text = "MNT_state_food_stock" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_food_rules_tt" }
+		iconType = { name = "food_bar" spriteType = "GFX_MNT_state_food_bar" position = { x = 30 y = 115 } }
+		instantTextBoxType = { name = "flow" position = { x = 30 y = 150 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_food_flow" maxWidth = 840 maxHeight = 54
+			fixedsize = yes context_aware_tooltip = "MNT_state_food_rules_tt" }
+		instantTextBoxType = { name = "policy" position = { x = 30 y = 224 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_food_policy" maxWidth = 840 maxHeight = 52
+			fixedsize = yes alwaystransparent = yes }
+		instantTextBoxType = { name = "price" position = { x = 30 y = 296 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_food_price" maxWidth = 840 maxHeight = 32
+			fixedsize = yes alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "buy_food" position = { x = 30 y = 360 }
+			quadTextureSprite = "GFX_button_221x34" buttonText = "MNT_state_buy_food_button" buttonFont = "hoi_16mbs"
+			pdx_tooltip = "MNT_state_buy_food_tt" clicksound = click_default }
+	}
+
+	containerWindowType = { name = "MNT_state_clans_window"
+		orientation = lower_left position = { x = 0 y = 0 } size = { width = 900 height = 430 } clipping = no
+		containerWindowType = { name = "panel" position = { x = 0 y = 0 } size = { width = 900 height = 430 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" alwaystransparent = yes } clipping = no }
+		instantTextBoxType = { name = "title" position = { x = 30 y = 22 }
+			font = "hoi_36header" context_aware_text = "MNT_state_clans_title" maxWidth = 840 maxHeight = 44
+			fixedsize = yes alwaystransparent = yes }
+		instantTextBoxType = { name = "unrest" position = { x = 30 y = 78 }
+			font = "hoi_24header" context_aware_text = "MNT_state_unrest_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_unrest_tt" }
+		iconType = { name = "unrest_bar" spriteType = "GFX_MNT_state_unrest_bar" position = { x = 30 y = 115 } }
+		instantTextBoxType = { name = "army" position = { x = 30 y = 153 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_army_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_axes_tt" }
+		instantTextBoxType = { name = "modernity" position = { x = 30 y = 198 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_modernity_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_axes_tt" }
+		instantTextBoxType = { name = "ban" position = { x = 30 y = 280 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_ban_value" maxWidth = 840 maxHeight = 54
+			fixedsize = yes context_aware_tooltip = "MNT_state_unrest_tt" }
+		instantTextBoxType = { name = "guard" position = { x = 30 y = 347 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_guard_value" maxWidth = 840 maxHeight = 66
+			fixedsize = yes context_aware_tooltip = "MNT_state_guard_unlock_tt" }
+		instantTextBoxType = { name = "clan_influence" position = { x = 30 y = 239 }
+			font = "hoi_18mbs" context_aware_text = "MNT_clans_influence_total_line" maxWidth = 840 maxHeight = 28 fixedsize = yes
+			context_aware_tooltip = "MNT_clans_influence_total_tt" }
+	}
+
+	containerWindowType = { name = "MNT_state_foreign_window"
+		orientation = lower_left position = { x = 0 y = 0 } size = { width = 900 height = 430 } clipping = no
+		containerWindowType = { name = "panel" position = { x = 0 y = 0 } size = { width = 900 height = 430 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" alwaystransparent = yes } clipping = no }
+		instantTextBoxType = { name = "title" position = { x = 30 y = 22 }
+			font = "hoi_36header" context_aware_text = "MNT_state_foreign_title" maxWidth = 840 maxHeight = 44
+			fixedsize = yes alwaystransparent = yes }
+		instantTextBoxType = { name = "points" position = { x = 30 y = 78 }
+			font = "hoi_24header" context_aware_text = "MNT_state_points_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_mandate_rules_tt" }
+		instantTextBoxType = { name = "next" position = { x = 30 y = 125 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_next_point" maxWidth = 840 maxHeight = 42
+			fixedsize = yes alwaystransparent = yes }
+		instantTextBoxType = { name = "france" position = { x = 30 y = 204 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_france_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_foreign_tt" }
+		instantTextBoxType = { name = "russia" position = { x = 30 y = 249 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_russia_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_foreign_tt" }
+		instantTextBoxType = { name = "austria" position = { x = 30 y = 294 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_austria_value" maxWidth = 840 maxHeight = 28
+			fixedsize = yes context_aware_tooltip = "MNT_state_foreign_tt" }
+		instantTextBoxType = { name = "help" position = { x = 30 y = 370 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_foreign_help" maxWidth = 840 maxHeight = 42
+			fixedsize = yes alwaystransparent = yes }
+		instantTextBoxType = { name = "nikanor_diplomacy_status" position = { x = 30 y = 331 }
+			font = "hoi_18mbs" context_aware_text = "MNT_diplomacy_nikanor_status" maxWidth = 840 maxHeight = 30 fixedsize = yes
+			context_aware_tooltip = "MNT_diplomacy_office_tt" }
+
+	}
+
+	containerWindowType = { name = "MNT_state_herzegovina_window"
+		orientation = lower_left position = { x = 0 y = 0 } size = { width = 900 height = 430 } clipping = no
+		containerWindowType = { name = "panel" position = { x = 0 y = 0 } size = { width = 900 height = 430 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" alwaystransparent = yes } clipping = no }
+		instantTextBoxType = { name = "title" position = { x = 30 y = 18 }
+			font = "hoi_36header" context_aware_text = "MNT_state_herzegovina_title" maxWidth = 840 maxHeight = 44 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "trust" position = { x = 30 y = 69 }
+			font = "hoi_24header" context_aware_text = "MNT_state_trust_value" maxWidth = 840 maxHeight = 30 fixedsize = yes
+			context_aware_tooltip = "MNT_crisis_leader_tt" }
+		iconType = { name = "trust_bar" spriteType = "GFX_MNT_state_trust_bar" position = { x = 30 y = 106 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "vukalovic" quadTextureSprite = "GFX_Portrait_HRZ_Luka_Vukalovic" position = { x = 48 y = 145 } scale = 0.95 pdx_tooltip = "MNT_state_council_tt" clicksound = click_default }
+		iconType = { name = "vukalovic_frame" spriteType = "GFX_MNT_council_frame" position = { x = 35 y = 130 } scale = 1 alwaystransparent = yes }
+		iconType = { name = "vukalovic_prison_bars" spriteType = "GFX_MNT_diplomacy_clear" position = { x = 48 y = 145 } scale = 0.95 alwaystransparent = yes }
+		instantTextBoxType = { name = "vukalovic_name" position = { x = 29 y = 363 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_vuka_name" maxWidth = 188 maxHeight = 30 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "vukalovic_status" position = { x = 29 y = 399 }
+			font = "hoi_16mbs" context_aware_text = "MNT_diplomacy_vuka_status" maxWidth = 188 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "zimonjic_emblem" quadTextureSprite = "GFX_MNT_portrait_zimonjic" position = { x = 261 y = 145 } scale = 0.95 pdx_tooltip = "MNT_state_council_tt" clicksound = click_default }
+		iconType = { name = "zimonjic_emblem_frame" spriteType = "GFX_MNT_council_frame" position = { x = 248 y = 130 } scale = 1 alwaystransparent = yes }
+		instantTextBoxType = { name = "zimonjic_emblem_name" position = { x = 242 y = 363 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_zimonjic_name" maxWidth = 188 maxHeight = 30 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "zimonjic_emblem_status" position = { x = 242 y = 399 }
+			font = "hoi_16mbs" context_aware_text = "MNT_state_zimonjic_status" maxWidth = 188 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "ljubibratic_emblem" quadTextureSprite = "GFX_MNT_portrait_ljubibratic" position = { x = 474 y = 145 } scale = 0.95 pdx_tooltip = "MNT_state_council_tt" clicksound = click_default }
+		iconType = { name = "ljubibratic_emblem_frame" spriteType = "GFX_MNT_council_frame" position = { x = 461 y = 130 } scale = 1 alwaystransparent = yes }
+		instantTextBoxType = { name = "ljubibratic_emblem_name" position = { x = 455 y = 363 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_ljubibratic_name" maxWidth = 188 maxHeight = 30 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "ljubibratic_emblem_status" position = { x = 455 y = 399 }
+			font = "hoi_16mbs" context_aware_text = "MNT_state_ljubibratic_status" maxWidth = 188 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "future_emblem" quadTextureSprite = "GFX_MNT_council_future" position = { x = 687 y = 145 } scale = 0.95 pdx_tooltip = "MNT_state_council_tt" clicksound = click_default }
+		iconType = { name = "future_emblem_frame" spriteType = "GFX_MNT_council_frame" position = { x = 674 y = 130 } scale = 1 alwaystransparent = yes }
+		instantTextBoxType = { name = "future_emblem_name" position = { x = 668 y = 363 }
+			font = "hoi_18mbs" context_aware_text = "MNT_state_future_name" maxWidth = 188 maxHeight = 30 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "future_emblem_status" position = { x = 668 y = 399 }
+			font = "hoi_16mbs" context_aware_text = "MNT_state_future_status" maxWidth = 188 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+	}
+
+	containerWindowType = { name = "MNT_rel_ottoman_window"
+		orientation = lower_left position = { x = 0 y = 0 } size = { width = 900 height = 430 } clipping = no
+		containerWindowType = { name = "panel" position = { x = 0 y = 0 } size = { width = 900 height = 430 }
+			background = { name = "Background" spriteType = "GFX_tiled_plain_bg_small" alwaystransparent = yes } clipping = no }
+		instantTextBoxType = { name = "title" position = { x = 30 y = 18 }
+			font = "hoi_36header" context_aware_text = "MNT_rel_title" maxWidth = 840 maxHeight = 44 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "help" position = { x = 30 y = 67 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_ledger_help" maxWidth = 840 maxHeight = 48 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "ornament" spriteType = "GFX_MNT_pledge_ornament" position = { x = 30 y = 102 } scale = 1 alwaystransparent = yes }
+		iconType = { name = "raids_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 35 y = 145 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_raids" quadTextureSprite = "GFX_MNT_treaty_guarantee" position = { x = 74 y = 151 } pdx_tooltip = "MNT_rel_record_raids_tt" }
+		instantTextBoxType = { name = "raids_label" position = { x = 35 y = 215 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_raids" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "raids_status" position = { x = 35 y = 243 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_raids" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "discipline_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 248 y = 145 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_discipline" quadTextureSprite = "GFX_MNT_treaty_arms" position = { x = 287 y = 151 } pdx_tooltip = "MNT_rel_record_discipline_tt" }
+		instantTextBoxType = { name = "discipline_label" position = { x = 248 y = 215 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_discipline" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "discipline_status" position = { x = 248 y = 243 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_discipline" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "nonintervention_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 461 y = 145 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_nonintervention" quadTextureSprite = "GFX_MNT_pledge_nonintervention" position = { x = 500 y = 151 } pdx_tooltip = "MNT_rel_record_nonintervention_tt" }
+		instantTextBoxType = { name = "nonintervention_label" position = { x = 461 y = 215 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_nonintervention" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "nonintervention_status" position = { x = 461 y = 243 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_nonintervention" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "amnesty_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 674 y = 145 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_amnesty" quadTextureSprite = "GFX_MNT_pledge_amnesty" position = { x = 713 y = 151 } pdx_tooltip = "MNT_rel_record_amnesty_tt" }
+		instantTextBoxType = { name = "amnesty_label" position = { x = 674 y = 215 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_amnesty" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "amnesty_status" position = { x = 674 y = 243 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_amnesty" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "rights_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 35 y = 273 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_rights" quadTextureSprite = "GFX_MNT_pledge_rights" position = { x = 74 y = 279 } pdx_tooltip = "MNT_rel_record_rights_tt" }
+		instantTextBoxType = { name = "rights_label" position = { x = 35 y = 343 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_rights" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "rights_status" position = { x = 35 y = 371 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_rights" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "commission_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 248 y = 273 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_commission" quadTextureSprite = "GFX_MNT_treaty_frontier" position = { x = 287 y = 279 } pdx_tooltip = "MNT_rel_record_commission_tt" }
+		instantTextBoxType = { name = "commission_label" position = { x = 248 y = 343 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_commission" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "commission_status" position = { x = 248 y = 371 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_commission" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "compensation_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 461 y = 273 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_compensation" quadTextureSprite = "GFX_MNT_treaty_reparations" position = { x = 500 y = 279 } pdx_tooltip = "MNT_rel_record_compensation_tt" }
+		instantTextBoxType = { name = "compensation_label" position = { x = 461 y = 343 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_compensation" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "compensation_status" position = { x = 461 y = 371 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_compensation" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		iconType = { name = "recognition_mount" spriteType = "GFX_MNT_pledge_mount" position = { x = 674 y = 273 } scale = 1 alwaystransparent = yes }
+		buttonType = { text = "" font = "hoi_16mbs" name = "pledge_recognition" quadTextureSprite = "GFX_MNT_treaty_recognition" position = { x = 713 y = 279 } pdx_tooltip = "MNT_rel_record_recognition_tt" }
+		instantTextBoxType = { name = "recognition_label" position = { x = 674 y = 343 }
+			font = "hoi_18mbs" context_aware_text = "MNT_rel_record_recognition" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+		instantTextBoxType = { name = "recognition_status" position = { x = 674 y = 371 }
+			font = "hoi_16mbs" context_aware_text = "MNT_rel_status_recognition" maxWidth = 183 maxHeight = 25 fixedsize = yes
+			alwaystransparent = yes }
+	}
+}

@@ -1,23 +1,12 @@
+# Montenegro
+
 ideas = {
 	country = {
 		MNT_idea_clan_mobilisation = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
-			on_remove = {
-				if = {
-					limit = {
-						OR = {	
-							has_border_war = yes
-							has_war = yes
-						}
-					}
-				activate_decision = MNT_decision_mobilize_the_clan_army	
-				}
-				else = {
-					#remove clan divisions
-				}
-			}
+			on_remove = { }
 			modifier = {
 				army_defence_factor = 0.15
 				army_core_defence_factor = 0.15
@@ -25,19 +14,7 @@ ideas = {
 				weekly_manpower = 10
 			}
 		}
-		#MNT_idea_clan_partial_mobilisation = {
-		#	allowed = {
-		#		always = yes
-		#	}
-		#	removal_cost = -1
-		#	picture = generic_pp_unity_bonus
-		#	modifier = {
-		#		army_defence_factor = 0.1
-		#		army_core_defence_factor = 0.1
-		#		war_support_factor = 0.025
-		#		weekly_manpower = 5
-		#	}
-		#}
+
 		MNT_idea_withheld_taxes = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -47,6 +24,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
+
 		MNT_Montenegrin_Support = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -58,6 +36,7 @@ ideas = {
 				war_support_factor = 0.05
 			}
 		}
+
 		MNT_Montenegrin_Support1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -69,6 +48,7 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
+
 		MNT_Conflicts_With_Ottoman_Empire = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -86,6 +66,7 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 		}
+
 		MNT_WAR = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -97,18 +78,21 @@ ideas = {
 				weekly_manpower = 5
 			}
 		}
+
 		MNT_Clans_Question = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_Clans_question
 			modifier = { stability_weekly = -0.001 }
 		}
+
 		MNT_Clans_Question2 = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_Clans_Question
 			modifier = { stability_weekly = -0.01 }
 		}
+
 		MNT_clans_cooperation = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -119,6 +103,7 @@ ideas = {
 				max_command_power_mult = 0.05
 			}
 		}
+
 		MNT_Administrative_chaos = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -129,6 +114,7 @@ ideas = {
 				conscription_factor = -0.02
 			}
 		}
+
 		MNT_Administrative_chaos1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -139,24 +125,28 @@ ideas = {
 				conscription_factor = -0.01
 			}
 		}
+
 		MNT_Administrative_chaos2 = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_Administrative_chaos
 			modifier = { stability_factor = -0.05 }
 		}
+
 		MNT_Unsure_positions_of_church = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_Unsure_positions_of_church
 			modifier = { political_power_factor = -0.1 }
 		}
+
 		MNT_Unsure_positions_of_church1 = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_Unsure_positions_of_church
 			modifier = { political_power_factor = -0.05 }
 		}
+
 		MNT_The_Theological_Seminary_of_St_Peter_of_Cetinje = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -166,6 +156,7 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
+
 		MNT_Clans_Army = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -177,6 +168,7 @@ ideas = {
 				army_core_defence_factor = 0.15
 			}
 		}
+
 		MNT_Clans_Army1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -188,6 +180,7 @@ ideas = {
 				army_core_defence_factor = 0.15
 			}
 		}
+
 		MNT_Clans_Army2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -199,6 +192,7 @@ ideas = {
 				army_core_defence_factor = 0.15
 			}
 		}
+
 		MNT_Salt_Works = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -209,6 +203,7 @@ ideas = {
 			}
 			research_bonus = { resource_extraction_tech = 0.03 }
 		}
+
 		MNT_Salt_Works2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -220,6 +215,7 @@ ideas = {
 			}
 			research_bonus = { resource_extraction_tech = 0.05 }
 		}
+
 		MNT_mechanised_agriculture = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -229,6 +225,7 @@ ideas = {
 				production_speed_cotton_farm_factor = 0.1
 			}
 		}
+
 		MNT_mechanised_agriculture1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -238,6 +235,7 @@ ideas = {
 				production_speed_cotton_farm_factor = 0.2
 			}
 		}
+
 		MNT_mechanised_agriculture2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -247,6 +245,7 @@ ideas = {
 				production_speed_cotton_farm_factor = 0.3
 			}
 		}
+
 		MNT_mechanised_agriculture3 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -256,6 +255,7 @@ ideas = {
 				production_speed_cotton_farm_factor = 0.35
 			}
 		}
+
 		MNT_local_montenegrin_agriculture = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -265,6 +265,7 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+
 		MNT_Montenegrin_landlord_agriculture = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -272,6 +273,7 @@ ideas = {
 			modifier = { conscription_factor = 0.05 }
 			research_bonus = { farming_tech = 0.05 }
 		}
+
 		MNT_state_agriculture = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -282,6 +284,7 @@ ideas = {
 				surrender_limit = 0.1
 			}
 		}
+
 		MNT_Danilo_Code = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -289,6 +292,7 @@ ideas = {
 			modifier = { drift_defence_factor = 0.05 }
 			research_bonus = { humanities_tech = 0.05 }
 		}
+
 		MNT_Danilo_Code1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -299,6 +303,7 @@ ideas = {
 			}
 			research_bonus = { humanities_tech = 0.1 }
 		}
+
 		MNT_bogisic_code = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -309,12 +314,14 @@ ideas = {
 			}
 			research_bonus = { humanities_tech = 0.15 }
 		}
+
 		MNT_Crimean_War_Neutrality = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = { }
 		}
+
 		MNT_Outdated_Economy = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -332,6 +339,7 @@ ideas = {
 				resource_extraction_tech = -0.3
 			}
 		}
+
 		MNT_Outdated_Economy1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -349,6 +357,7 @@ ideas = {
 				resource_extraction_tech = -0.3
 			}
 		}
+
 		MNT_Outdated_Economy2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -366,6 +375,7 @@ ideas = {
 				resource_extraction_tech = -0.25
 			}
 		}
+
 		MNT_Outdated_Economy3 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -382,6 +392,7 @@ ideas = {
 				resource_extraction_tech = -0.2
 			}
 		}
+
 		MNT_Outdated_Economy4 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -397,6 +408,7 @@ ideas = {
 				resource_extraction_tech = -0.15
 			}
 		}
+
 		MNT_Outdated_Economy5 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -412,6 +424,7 @@ ideas = {
 				resource_extraction_tech = -0.15
 			}
 		}
+
 		MNT_Outdated_Economy6 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -424,6 +437,7 @@ ideas = {
 			}
 			research_bonus = { resource_extraction_tech = -0.15 }
 		}
+
 		MNT_Outdated_Economy7 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -435,6 +449,7 @@ ideas = {
 				production_speed_machine_parts_factory_factor = -0.25
 			}
 		}
+
 		MNT_Outdated_Economy8 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -446,6 +461,7 @@ ideas = {
 				production_speed_machine_parts_factory_factor = -0.15
 			}
 		}
+
 		MNT_Disastrous_Agriculture = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -457,6 +473,7 @@ ideas = {
 			}
 			research_bonus = { farming_tech = -0.15 }
 		}
+
 		MNT_Disastrous_Agriculture1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -468,6 +485,7 @@ ideas = {
 			}
 			research_bonus = { farming_tech = -0.1 }
 		}
+
 		MNT_Disastrous_Agriculture2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -479,6 +497,7 @@ ideas = {
 			}
 			research_bonus = { farming_tech = -0.1 }
 		}
+
 		MNT_Disastrous_Agriculture3 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -490,6 +509,7 @@ ideas = {
 			}
 			research_bonus = { farming_tech = -0.05 }
 		}
+
 		MNT_Disastrous_Agriculture4 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -497,6 +517,7 @@ ideas = {
 			modifier = { production_speed_farm_factor = -0.05 }
 			research_bonus = { farming_tech = -0.05 }
 		}
+
 		MNT_Fewer_Farmers_More_Soldiers = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -506,6 +527,7 @@ ideas = {
 				supply_consumption_factor = -0.1
 			}
 		}
+
 		MNT_crops_export = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -515,6 +537,7 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+
 		MNT_Disconnected_Nahiyahs = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -527,6 +550,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.3 }
 		}
+
 		MNT_Disconnected_Nahiyahs1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -539,6 +563,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.25 }
 		}
+
 		MNT_Disconnected_Nahiyahs2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -551,6 +576,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.2 }
 		}
+
 		MNT_Disconnected_Nahiyahs3 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -563,6 +589,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.15 }
 		}
+
 		MNT_Disconnected_Nahiyahs4 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -575,6 +602,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.15 }
 		}
+
 		MNT_Disconnected_Nahiyahs5 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -587,6 +615,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.15 }
 		}
+
 		MNT_Disconnected_Nahiyahs6 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -599,6 +628,7 @@ ideas = {
 			}
 			research_bonus = { transport_tech = -0.15 }
 		}
+
 		MNT_Kotor_Bay_Trade = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -614,6 +644,7 @@ ideas = {
 				extra_trade_to_target_factor = 0.2
 			}
 		}
+
 		MNT_Kotor_Bay_Trade1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -629,6 +660,7 @@ ideas = {
 				extra_trade_to_target_factor = 0.25
 			}
 		}
+
 		MNT_Urban_supply = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -640,46 +672,55 @@ ideas = {
 				monthly_population = -0.1
 			}
 		}
+
 		MNT_agricultural_siutation_1 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { production_speed_buildings_factor = -0.3 }
 		}
+
 		MNT_agricultural_siutation_2 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { production_speed_buildings_factor = -0.2 }
 		}
+
 		MNT_agricultural_siutation_3 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { production_speed_buildings_factor = -0.1 }
 		}
+
 		MNT_agricultural_siutation_4 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { production_speed_buildings_factor = 0 }
 		}
+
 		MNT_agricultural_siutation_5 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { production_speed_buildings_factor = 0.1 }
 		}
+
 		MNT_agricultural_siutation_6 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { production_speed_buildings_factor = 0.15 }
 		}
+
 		MNT_idea_la_souverainete_du_montenegro = {
 			allowed = { always = no }
 			picture = MNT_idea_la_souverainete_du_montenegro
 			modifier = { stability_factor = 0.05 }
 		}
+
 		MNT_the_question_of_the_new_chancellor = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { political_power_gain = -0.1 }
 		}
+
 		MNT_dominance_of_the_rich_ottomans = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -691,6 +732,7 @@ ideas = {
 				surrender_limit = -0.15
 			}
 		}
+
 		MNT_dominance_of_the_rich_ottomans_Weakening = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -701,6 +743,7 @@ ideas = {
 				surrender_limit = -0.1
 			}
 		}
+
 		MNT_dominance_of_the_rich_ottomans1 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -712,12 +755,14 @@ ideas = {
 				surrender_limit = -0.2
 			}
 		}
+
 		MNT_beef_exports_profit = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_beef_exports_profit
 			modifier = { consumer_goods_expected_value = -0.02 }
 		}
+
 		MNT_ottoman_mining_sanctions = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -727,6 +772,7 @@ ideas = {
 				trade_opinion_factor = -0.15
 			}
 		}
+
 		MNT_Montenegrins_army = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -743,6 +789,7 @@ ideas = {
 				max_planning_factor = 0.05
 			}
 		}
+
 		MNT_Montenegrins_army2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -764,6 +811,7 @@ ideas = {
 				attrition = -0.12
 			}
 		}
+
 		MNT_Montenegrin_medical_units = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -773,6 +821,7 @@ ideas = {
 				attrition = -0.04
 			}
 		}
+
 		MNT_Montenegrin_medical_units1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -782,6 +831,7 @@ ideas = {
 				attrition = -0.08
 			}
 		}
+
 		MNT_Montenegrin_medical_units2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -791,6 +841,7 @@ ideas = {
 				attrition = -0.12
 			}
 		}
+
 		MNT_conditions_in_the_army = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -801,6 +852,7 @@ ideas = {
 				army_org_factor = -0.04
 			}
 		}
+
 		MNT_conditions_in_the_army1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -810,6 +862,7 @@ ideas = {
 				max_training = 0.05
 			}
 		}
+
 		MNT_conditions_in_the_army2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -820,6 +873,7 @@ ideas = {
 				max_command_power_mult = 0.2
 			}
 		}
+
 		MNT_mountains_are_like_the_air_we_breathe = {
 			allowed = { always = yes }
 			picture = generic_pp_unity_bonus
@@ -831,6 +885,7 @@ ideas = {
 			}
 			modifier = { custom_modifier_tooltip = MNT_mountains_are_like_the_air_we_breathe1 }
 		}
+
 		MNT_mountains_are_like_the_air_we_breathe1 = {
 			allowed = { always = yes }
 			picture = generic_pp_unity_bonus
@@ -839,6 +894,7 @@ ideas = {
 				max_planning_factor = 0.04
 			}
 		}
+
 		MNT_mountains_are_like_the_air_we_breathe2 = {
 			allowed = { always = yes }
 			picture = generic_pp_unity_bonus
@@ -847,12 +903,14 @@ ideas = {
 				max_planning_factor = 0.04
 			}
 		}
+
 		MNT_army_prestige = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_army_prestige
 			modifier = { army_org = 3 }
 		}
+
 		MNT_army_prestige1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -862,6 +920,7 @@ ideas = {
 				org_loss_when_moving = 0.04
 			}
 		}
+
 		MNT_army_prestige2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -872,6 +931,7 @@ ideas = {
 				coordination_bonus = 0.2
 			}
 		}
+
 		MNT_mountain_artillery = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -891,6 +951,7 @@ ideas = {
 				#}
 			}
 		}
+
 		MNT_cooperation_with_Serbia = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -900,6 +961,7 @@ ideas = {
 				guarantee_cost = -0.3
 			}
 		}
+
 		MNT_battle_of_the_fortresses = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -909,6 +971,7 @@ ideas = {
 				production_speed_bunker_factor = 0.1
 			}
 		}
+
 		MNT_battle_of_the_fortresses1 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -920,6 +983,7 @@ ideas = {
 				consumer_goods_expected_value = 0.05
 			}
 		}
+
 		MNT_battle_of_the_fortresses2 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -931,6 +995,7 @@ ideas = {
 				consumer_goods_expected_value = 0.05
 			}
 		}
+
 		MNT_battle_of_the_fortresses3 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -942,6 +1007,7 @@ ideas = {
 				consumer_goods_expected_value = 0.025
 			}
 		}
+
 		MNT_battle_of_the_fortresses4 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -953,6 +1019,7 @@ ideas = {
 				consumer_goods_expected_value = 0.05
 			}
 		}
+
 		MNT_non_state_army = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -963,6 +1030,7 @@ ideas = {
 				conscription = -0.005
 			}
 		}
+
 		MNT_non_state_army1 = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -973,6 +1041,7 @@ ideas = {
 				conscription = -0.003
 			}
 		}
+
 		MNT_ban_on_arms_imports = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -983,6 +1052,7 @@ ideas = {
 				naval_equipment = -0.3
 			}
 		}
+
 		MNT_negotiations_with_the_Ottoman_Empire = {
 			allowed = { always = no }
 			picture = MNT_negotiations_with_the_Ottoman_Empire
@@ -991,6 +1061,7 @@ ideas = {
 				training_time_army_factor = -0.55
 			}
 		}
+
 		MNT_negotiations_with_the_Ottoman_Empire_Failure = {
 			allowed = { always = no }
 			picture = MNT_negotiations_with_the_Ottoman_Empire
@@ -999,6 +1070,7 @@ ideas = {
 				training_time_army_factor = -0.45
 			}
 		}
+
 		MNT_negotiations_with_the_Ottoman_Empire_Unacceptable = {
 			allowed = { always = no }
 			picture = MNT_negotiations_with_the_Ottoman_Empire
@@ -1007,6 +1079,7 @@ ideas = {
 				training_time_army_factor = -0.35
 			}
 		}
+
 		MNT_negotiations_with_the_Ottoman_Empire_Compromise = {
 			allowed = { always = no }
 			picture = MNT_negotiations_with_the_Ottoman_Empire
@@ -1015,11 +1088,13 @@ ideas = {
 				training_time_army_factor = -0.25
 			}
 		}
+
 		MNT_negotiations_with_the_Ottoman_Empire_Success = {
 			allowed = { always = no }
 			picture = MNT_negotiations_with_the_Ottoman_Empire
 			modifier = { }
 		}
+
 		MNT_montenegrin_militia = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
@@ -1033,26 +1108,31 @@ ideas = {
 				max_dig_in = 3
 			}
 		}
+
 		MNT_Montenegrin_Herzegovinian_war_against_the_Ottomans_defeat = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { }
 		}
+
 		MNT_Montenegrin_Herzegovinian_war_against_the_Ottomans_Equilibrium = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { }
 		}
+
 		MNT_Montenegrin_Herzegovinian_war_against_the_Ottomans_Advantage = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { }
 		}
+
 		MNT_Montenegrin_Herzegovinian_war_against_the_Ottomans_win = {
 			allowed = { always = no }
 			picture = generic_pp_unity_bonus
 			modifier = { }
 		}
+
 		MNT_Mostar_Convention = {
 			allowed = { always = no }
 			picture = MNT_Mostar_Convention
@@ -1061,6 +1141,7 @@ ideas = {
 				training_time_army_factor = 0.3
 			}
 		}
+
 		MNT_Scutari_Convention = {
 			allowed = { always = no }
 			picture = MNT_Scutari_Convention
@@ -1076,6 +1157,7 @@ ideas = {
 				naval_equipment = -0.15
 			}
 		}
+
 		MNT_Scutari_Convention1 = {
 			allowed = { always = no }
 			picture = MNT_Scutari_Convention
@@ -1091,6 +1173,7 @@ ideas = {
 				naval_equipment = -0.075
 			}
 		}
+
 		MNT_Scutari_Convention2 = {
 			allowed = { always = no }
 			picture = MNT_Scutari_Convention
@@ -1100,42 +1183,49 @@ ideas = {
 				training_time_army_factor = 0.05
 			}
 		}
+
 		MNT_nonexistent_education_system = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = { research_speed_factor = -0.2 }
 		}
+
 		MNT_nonexistent_education_system1 = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = { research_speed_factor = -0.15 }
 		}
+
 		MNT_nonexistent_education_system2 = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = { research_speed_factor = -0.1 }
 		}
+
 		MNT_nonexistent_education_system3 = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = { research_speed_factor = -0.5 }
 		}
+
 		MNT_The_Crnogorac_Newspaper = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = { political_power_gain = 0.1 }
 		}
+
 		MNT_French_support = {
 			allowed = { always = yes }
 			removal_cost = -1
 			picture = MNT_French_support
 			modifier = { political_power_gain = 0.05 }
 		}
+
 		MNT_Russian_financial_assistance = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1145,6 +1235,7 @@ ideas = {
 				research_speed_factor = 0.2
 			}
 		}
+
 		MNT_Russian_financial_assistance1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1154,6 +1245,7 @@ ideas = {
 				research_speed_factor = 0.1
 			}
 		}
+
 		MNT_Aftermath_of_assasination_attempt = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1163,6 +1255,7 @@ ideas = {
 				war_support_factor = -0.1
 			}
 		}
+
 		MNT_Aftermath_of_assasination_attempt1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1172,6 +1265,7 @@ ideas = {
 				war_support_factor = -0.1
 			}
 		}
+
 		MNT_Aftermath_of_assasination_attempt2 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1181,6 +1275,7 @@ ideas = {
 				war_support_factor = -0.07
 			}
 		}
+
 		MNT_Aftermath_of_assasination_attempt3 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1190,6 +1285,7 @@ ideas = {
 				war_support_factor = -0.04
 			}
 		}
+
 		MNT_Aftermath_of_assasination_attempt4 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1200,6 +1296,7 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
+
 		MNT_russia_direction = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1209,6 +1306,7 @@ ideas = {
 				political_power_gain = 0.025
 			}
 		}
+
 		MNT_russia_direction1 = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1218,6 +1316,7 @@ ideas = {
 				political_power_gain = 0.025
 			}
 		}
+
 		MNT_Sardinia_Piedmont_support = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1227,17 +1326,7 @@ ideas = {
 				political_power_gain = 0.025
 			}
 		}
-		#MNT_workshop_manual_production_of_weapons  = {
-		#allowed = {
-		#always = yes
-		#}
-		#removal_cost = -1
-		#picture = generic_pp_unity_bonus
-		#modifier = {
-		#production_factory_max_efficiency_factor = -0.35
-		#production_lack_of_resource_penalty_factor = -0.2
-		#}
-		#}
+
 		MNT_repaying_Ottoman_debt = {
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1247,6 +1336,44 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.2
 				production_speed_buildings_factor = -0.2
 			}
+		}
+
+		MNT_missing_metropolitan = { picture = MNT_Unsure_positions_of_church
+			allowed = { original_tag = MNT }
+			modifier = { stability_factor = -0.025 political_power_gain = -0.05 }
+		}
+
+		MNT_missing_chancellor = { picture = MNT_missing_chancellor
+			allowed = { original_tag = MNT }
+			modifier = { political_power_gain = -0.05 }
+		}
+
+		MNT_small_administration = { allowed = { tag = MNT } picture = generic_assembly_tensions removal_cost = -1
+			modifier = { research_speed_factor = -0.05 political_power_gain = -0.05 }
+		}
+
+		MNT_state_patrols = { picture = generic_army_war_college allowed = { tag = MNT }
+			modifier = { army_org_factor = 0.02 }
+		}
+
+		MNT_state_central_command = { picture = generic_army_war_college allowed = { tag = MNT }
+			modifier = { army_org_factor = 0.03 planning_speed = 0.05 }
+		}
+
+		MNT_state_clan_defence = { picture = generic_pp_unity_bonus allowed = { tag = MNT }
+			modifier = { army_defence_factor = 0.03 }
+		}
+
+		MNT_state_public_offices = { picture = generic_pp_unity_bonus allowed = { tag = MNT }
+			modifier = { political_power_gain = 0.10 }
+		}
+
+		MNT_rel_amnesty_order = { picture = MNT_pledge_amnesty allowed = { tag = OTO } removal_cost = -1
+			modifier = { stability_factor = 0.01 }
+		}
+
+		MNT_rel_rights_charter = { picture = MNT_pledge_rights allowed = { tag = OTO } removal_cost = -1
+			modifier = { political_power_gain = -0.05 stability_factor = 0.02 }
 		}
 	}
 }

@@ -1,0 +1,112 @@
+# Montenegro
+
+MNT_frontier_garrison_category = {
+	icon = generic_army_support scripted_gui = MNT_frontier_garrison_dashboard visible_when_empty = yes
+	allowed = { OR = { tag = MNT tag = OTO tag = FRA tag = RUS tag = AUS } }
+	visible = { MNT_frontier_prewar = yes MNT = { has_country_flag = MNT_frontier_initialized has_completed_focus = MNT_focus_guerrilla_war } }
+}
+
+MNT_medal_engine_check = {
+	icon = generic_army_support
+	priority = 10000
+	allowed = { tag = MNT }
+	visible = { is_debug = yes }
+}
+
+MNT_state_management = {
+	icon = generic_economy priority = 850 visible_when_empty = yes
+	allowed = { tag = MNT }
+	visible = { has_country_flag = MNT_state_initialized }
+}
+
+MNT_state_debug = {
+	icon = generic_political_actions priority = 1100
+	allowed = { tag = MNT }
+	visible = { is_debug = yes }
+}
+
+MNT_rel_obligations = {
+	icon = generic_political_actions priority = 840 visible_when_empty = yes
+	allowed = { OR = { tag = MNT tag = OTO } }
+	visible = { MNT = { has_country_flag = MNT_content_consolidated } }
+}
+
+MNT_decision_category_Herzegovinian_uprising_1857 = {
+	priority = 900
+	icon = border_conflicts
+	scripted_gui = MNT_crisis_dashboard
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			tag = MNT
+			tag = SER
+			tag = OTO
+			tag = AUS
+			tag = RUS
+			tag = FRA
+		}
+	}
+	visible = {
+		MNT = {
+			has_completed_focus = MNT_focus_guerrilla_war
+			NOT = { has_completed_focus = MNT_focus_new_goals_for_our_nation }
+		}
+	}
+}
+
+MNT_decision_category_clans = {
+	scripted_gui = MNT_clans_dashboard
+	visible_when_empty = yes
+	icon = generic_political_actions
+	allowed = { tag = MNT }
+}
+MNT_decision_category_foreign_politics = {
+	icon = generic_political_actions
+	allowed = { tag = MNT }
+}
+
+MNT_decision_category_resolve_national_policy = {
+	icon = generic_political_actions
+	allowed = { tag = MNT }
+		visible = { has_completed_focus = MNT_focus_normalization_of_the_relations_with_russia }
+}
+
+MNT_decision_category_economy = {
+	icon = generic_economy
+	allowed = { tag = MNT }
+	visible = { has_completed_focus = MNT_focus_into_the_new_age }
+}
+
+MNT_decision_category_agriculture = {
+	icon = generic_economy
+	allowed = { tag = MNT }
+	visible = { has_completed_focus = MNT_focus_into_the_new_age }
+}
+
+MNT_decision_category_administration = {
+	icon = generic_economy
+	allowed = { tag = MNT }
+	visible = { has_completed_focus = MNT_focus_into_the_new_age }
+}
+
+MNT_decision_category_army = {
+	icon = generic_economy
+	allowed = { tag = MNT }
+	visible = {
+		#has_completed_focus = MNT_danilos_army_reform
+	}
+}
+
+MNT_decision_category_Herzegovinian_uprising = {
+	icon = border_conflicts
+	visible_when_empty = yes
+	allowed = { tag = MNT }
+	visible = { HRZ = { has_war_with = OTO } }
+}
+
+MNT_Balance_of_Power_foregin_interest = {
+	icon = generic_economy
+	visible_when_empty = yes
+	allowed = { tag = MNT }
+	visible = { has_completed_focus = MNT_focus_Montenegrin_question }
+	}

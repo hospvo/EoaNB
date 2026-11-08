@@ -1,46 +1,71 @@
+# Montenegro
+
 opinion_modifiers = {
+	MNT_crisis_war_on_the_frontier = { value = -25 months = 12 }
+
+	MNT_diplomacy_consecration_friend = { value = 25 months = 24 }
+
+	MNT_diplomacy_consecration_rival = { value = -25 months = 24 }
+
+	MNT_diplomacy_delegate_friend = { value = 15 months = 12 }
+
+	MNT_diplomacy_delegate_rival = { value = -10 months = 12 }
+
+	MNT_diplomacy_captains_delegate = { value = -5 months = 12 }
+
+	MNT_diplomacy_rebel_scandal = { value = -30 months = 12 }
+
+	MNT_diplomacy_rebel_concern = { value = -5 months = 12 }
+
+	MNT_diplomacy_open_rebel_army = { value = -25 months = 12 }
+
+	MNT_diplomacy_rebel_aid = { value = -10 months = 12 }
 
 	MNT_Supported_Vukalovic = {
 		value = -20
 		months = 36
 	}
-	
+
 	MNT_ready_to_fight_for_Montenegro = {
 		value = 50
 		months = 60
 	}
+
 	MNT_foregin_power_made_diplomatic_pressure = {
 		value = 25
 		months = 42
 	}
+
 	OTO_foregin_power_made_diplomatic_pressure_on_us = {
 		value = -25
 		months = 42
 	}
-	OTO_foregin_power_made_diplomatic_pressure_on_us = {
-		value = -25
-		months = 42
-	}
+
 	supporter_of_Montenegro = {
 		value = 15
-		months = 60	
+		months = 60
 	}
+
 	supporter_of_Montenegro_OTO = {
 		value = -15
-		months = 60	
+		months = 60
 	}
+
 	breach_of_mostar_agreement = {
 		value = -25
 		months = 48
 	}
+
 	supported_montenegro_cause = {
 		value = 5
 		months = 36
 	}
+
 	refused_to_support_montenegro_cause = {
 		value = -5
 		months = 36
 	}
+
 	interfering_in_Ottoman_affairs = {
 		value = -5
 		months = 36

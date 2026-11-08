@@ -1,0 +1,640 @@
+# Montenegro
+
+scripted_gui = {
+	MNT_clans_dashboard = {
+		context_type = decision_category window_name = "MNT_clans_dashboard_window"
+		visible = { tag = MNT } ai_enabled = { always = no }
+		effects = {
+			raise_kuci_click = { MNT_clans_raise_kuci = yes }
+			petition_kuci_click = { MNT_clans_petition_kuci = yes }
+			raise_vasojevici_click = { MNT_clans_raise_vasojevici = yes }
+			petition_vasojevici_click = { MNT_clans_petition_vasojevici = yes }
+			raise_drobnjaci_click = { MNT_clans_raise_drobnjaci = yes }
+			petition_drobnjaci_click = { MNT_clans_petition_drobnjaci = yes }
+			raise_piperi_click = { MNT_clans_raise_piperi = yes }
+			petition_piperi_click = { MNT_clans_petition_piperi = yes }
+			raise_cuce_click = { MNT_clans_raise_cuce = yes }
+			petition_cuce_click = { MNT_clans_petition_cuce = yes }
+			raise_njegusi_click = { MNT_clans_raise_njegusi = yes }
+			petition_njegusi_click = { MNT_clans_petition_njegusi = yes }
+			raise_ceklin_click = { MNT_clans_raise_ceklin = yes }
+			petition_ceklin_click = { MNT_clans_petition_ceklin = yes }
+			raise_bjelice_click = { MNT_clans_raise_bjelice = yes }
+			petition_bjelice_click = { MNT_clans_petition_bjelice = yes }
+			raise_grahovo_click = { MNT_clans_raise_grahovo = yes }
+			petition_grahovo_click = { MNT_clans_petition_grahovo = yes }
+		}
+		triggers = {
+			raise_kuci_click_enabled = { MNT_clans_can_raise_kuci = yes }
+			petition_kuci_click_enabled = { MNT_clans_can_petition_kuci = yes }
+			raise_vasojevici_click_enabled = { MNT_clans_can_raise_vasojevici = yes }
+			petition_vasojevici_click_enabled = { MNT_clans_can_petition_vasojevici = yes }
+			raise_drobnjaci_click_enabled = { MNT_clans_can_raise_drobnjaci = yes }
+			petition_drobnjaci_click_enabled = { MNT_clans_can_petition_drobnjaci = yes }
+			raise_piperi_click_enabled = { MNT_clans_can_raise_piperi = yes }
+			petition_piperi_click_enabled = { MNT_clans_can_petition_piperi = yes }
+			raise_cuce_click_enabled = { MNT_clans_can_raise_cuce = yes }
+			petition_cuce_click_enabled = { MNT_clans_can_petition_cuce = yes }
+			raise_njegusi_click_enabled = { MNT_clans_can_raise_njegusi = yes }
+			petition_njegusi_click_enabled = { MNT_clans_can_petition_njegusi = yes }
+			raise_ceklin_click_enabled = { MNT_clans_can_raise_ceklin = yes }
+			petition_ceklin_click_enabled = { MNT_clans_can_petition_ceklin = yes }
+			raise_bjelice_click_enabled = { MNT_clans_can_raise_bjelice = yes }
+			petition_bjelice_click_enabled = { MNT_clans_can_petition_bjelice = yes }
+			raise_grahovo_click_enabled = { MNT_clans_can_raise_grahovo = yes }
+			petition_grahovo_click_enabled = { MNT_clans_can_petition_grahovo = yes }
+		}
+	}
+
+	MNT_crisis_dashboard = {
+		context_type = decision_category
+		window_name = "MNT_crisis_dashboard_window"
+		visible = {
+			MNT = {
+				has_country_flag = MNT_crisis_initialized
+			}
+		}
+		ai_enabled = {
+			always = no
+		}
+		effects = {
+			# BEGIN MNT ENVOY EFFECTS
+			envoy_delarue_click = { if = { limit = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } } country_event = { id = MNT_diplomacy.8 } } }
+			envoy_secretary_click = { if = { limit = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } } country_event = { id = MNT_diplomacy.8 } } }
+			envoy_russia_click = { if = { limit = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } } country_event = { id = MNT_diplomacy.8 } } }
+			envoy_austria_click = { if = { limit = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } } country_event = { id = MNT_diplomacy.8 } } }
+			envoy_mirko_click = { if = { limit = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } } country_event = { id = MNT_diplomacy.8 } } }
+			envoy_vukalovic_click = { if = { limit = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } } country_event = { id = MNT_diplomacy.8 } } }
+			# END MNT ENVOY EFFECTS
+
+			# BEGIN MNT TERMS EFFECTS
+			hrz_amnesty_click = { MNT_rel_select_amnesty = yes }
+			hrz_rights_click = { MNT_rel_select_rights = yes }
+			hrz_nonintervention_click = { MNT_rel_select_nonintervention = yes }
+			# END MNT TERMS EFFECTS
+
+			war_show_grahovo_click = { goto_province = 13779 }
+			war_show_mostar_click = { goto_province = 9894 }
+
+			select_demand_border_click = {
+				MNT_crisis_gui_demand_border = yes
+			}
+			select_demand_arms_click = {
+				MNT_crisis_gui_demand_arms = yes
+			}
+			select_demand_recognition_click = {
+				MNT_crisis_gui_demand_recognition = yes
+			}
+			select_offer_guarantee_click = {
+				MNT_crisis_gui_offer_guarantee = yes
+			}
+			select_offer_reparations_click = {
+				MNT_crisis_gui_offer_reparations = yes
+			}
+			send_treaty_click = {
+				MNT_crisis_gui_submit = yes
+			}
+			leader_portrait_click = {
+				if = { limit = { MNT = { has_country_flag = MNT_diplomacy_vukalovic_captured } } country_event = { id = MNT_diplomacy.6 } }
+				else = { country_event = { id = MNT_crisis.40 } }
+			}
+
+			war_recruit_click = { MNT_frontier_recruit = yes }
+			war_observers_click = { MNT_frontier_observers = yes }
+			war_appeal_click = { MNT_frontier_appeal = yes }
+			war_protest_click = { MNT_frontier_protest = yes }
+			war_peace_click = { MNT_frontier_offer_peace = yes }
+			war_clans_click = { if = { limit = { tag = MNT MNT_frontier_running = yes MNT_clans_may_muster = yes } mobilise_clan_army = yes } }
+
+		}
+		triggers = {
+			# BEGIN MNT ENVOY TRIGGERS
+			envoy_caption_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_selected } }
+			envoy_delarue_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_delarue } }
+			envoy_secretary_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_nikanor NOT = { has_country_flag = MNT_diplomacy_consecrated } } }
+			envoy_russia_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_nikanor has_country_flag = MNT_diplomacy_russian_consecration } }
+			envoy_austria_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_nikanor has_country_flag = MNT_diplomacy_austrian_consecration } }
+			envoy_mirko_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_mirko } }
+			envoy_vukalovic_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_diplomacy_delegate_vukalovic } }
+			# END MNT ENVOY TRIGGERS
+
+			# BEGIN MNT TERMS TRIGGERS
+			hrz_terms_heading_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_exclusive_amnesty_rights_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_exclusive_rights_nonintervention_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_amnesty_click_enabled = { tag = MNT MNT_crisis_can_edit_treaty = yes }
+			hrz_amnesty_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_amnesty_label_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_amnesty_row_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_amnesty_icon_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_amnesty_selected_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_rel_choose_amnesty } }
+			hrz_rights_click_enabled = { tag = MNT MNT_crisis_can_edit_treaty = yes }
+			hrz_rights_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_rights_label_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_rights_row_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_rights_icon_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_rights_selected_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_rel_choose_rights } }
+			hrz_nonintervention_click_enabled = { tag = MNT MNT_crisis_can_edit_treaty = yes }
+			hrz_nonintervention_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_nonintervention_label_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_nonintervention_row_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_nonintervention_icon_visible = { MNT = { MNT_crisis_talks_phase = yes } }
+			hrz_nonintervention_selected_visible = { MNT = { MNT_crisis_talks_phase = yes has_country_flag = MNT_rel_choose_nonintervention } }
+			# END MNT TERMS TRIGGERS
+
+			leader_prison_bars_visible = { MNT = { has_country_flag = MNT_diplomacy_vukalovic_captured NOT = { check_variable = { MNT_crisis_phase = 2 } } NOT = { check_variable = { MNT_crisis_phase = 3 } } } }
+
+			select_demand_border_click_enabled = {
+				tag = MNT
+				MNT_crisis_can_edit_treaty = yes
+			}
+			select_demand_arms_click_enabled = {
+				tag = MNT
+				MNT_crisis_can_edit_treaty = yes
+			}
+			select_demand_recognition_click_enabled = {
+				tag = MNT
+				MNT_crisis_can_edit_treaty = yes
+			}
+			select_offer_guarantee_click_enabled = {
+				tag = MNT
+				MNT_crisis_can_edit_treaty = yes
+				NOT = {
+					check_variable = {
+						MNT_crisis_austria > 2
+					}
+				}
+			}
+			select_offer_reparations_click_enabled = {
+				tag = MNT
+				MNT_crisis_can_edit_treaty = yes
+			}
+			send_treaty_click_enabled = {
+				tag = MNT
+				MNT_crisis_can_send_treaty = yes
+			}
+			phase_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			goal_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			herzegovina_map_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			herzegovina_map_caption_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			leader_card_bg_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			leader_portrait_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			leader_name_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			leader_role_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			leader_relationship_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			strength_label_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			strength_bar_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			supply_label_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			supply_bar_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			escalation_label_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			escalation_bar_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			patrons_title_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			france_card_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			russia_card_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			austria_card_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			dispatch_bg_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			dispatch_visible = {
+				NOT = {
+					MNT = {
+						MNT_crisis_talks_phase = yes
+					}
+				}
+
+				NOT = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			}
+			treaty_title_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_map_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_score_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_status_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_base_title_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			row_independence_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			icon_independence_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			label_independence_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			row_demand_border_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			icon_demand_border_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			label_demand_border_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			select_demand_border_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			selected_demand_border_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+					has_country_flag = MNT_crisis_demand_border
+				}
+			}
+			row_demand_arms_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			icon_demand_arms_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			label_demand_arms_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			select_demand_arms_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			selected_demand_arms_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+					has_country_flag = MNT_crisis_demand_arms
+				}
+			}
+			row_demand_recognition_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			icon_demand_recognition_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			label_demand_recognition_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			select_demand_recognition_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			selected_demand_recognition_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+					has_country_flag = MNT_crisis_demand_recognition
+				}
+			}
+			row_offer_guarantee_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			icon_offer_guarantee_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			label_offer_guarantee_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			select_offer_guarantee_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			selected_offer_guarantee_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+					has_country_flag = MNT_crisis_offer_guarantee
+				}
+			}
+			row_offer_reparations_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			icon_offer_reparations_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			label_offer_reparations_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			select_offer_reparations_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			selected_offer_reparations_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+					has_country_flag = MNT_crisis_offer_reparations
+				}
+			}
+			treaty_gains_title_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_promises_title_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_rounds_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			treaty_payment_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+			send_treaty_visible = {
+				MNT = {
+					MNT_crisis_talks_phase = yes
+				}
+			}
+
+			# FRONTIER WIRED
+			war_time_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_time_bar_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_show_grahovo_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_show_mostar_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+
+			war_title_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_map_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_summary_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_mnt_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_mnt_bar_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_oto_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_oto_bar_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_pressure_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_pressure_bar_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_cordon_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_objectives_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_grahovo_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_mostar_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+
+			war_capital_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_actions_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_recruit_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } tag = OTO }
+			war_observers_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } tag = OTO }
+			war_clans_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } tag = MNT }
+			war_appeal_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } tag = MNT }
+			war_protest_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } OR = { tag = FRA tag = RUS tag = AUS } }
+			war_peace_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } OR = { tag = MNT tag = OTO } }
+			war_outcome_hint_visible = { MNT = { check_variable = { MNT_crisis_phase = 3 } } }
+			war_recruit_click_enabled = { MNT_frontier_can_recruit = yes }
+			war_observers_click_enabled = { MNT_frontier_can_observers = yes }
+			war_appeal_click_enabled = { MNT_frontier_can_appeal = yes }
+			war_protest_click_enabled = { MNT_frontier_can_protest = yes }
+			war_peace_click_enabled = { MNT_frontier_can_offer_peace = yes }
+			war_clans_click_enabled = { tag = MNT MNT_frontier_running = yes MNT_clans_may_muster = yes check_variable = { MNT_clans_ready > 0 } }
+			# BEGIN SHARED GARRISON TRIGGERS
+			overview_garrison_bg_visible = { MNT = { has_country_flag = MNT_frontier_initialized check_variable = { MNT_crisis_phase = 1 } } }
+			overview_garrison_icon_visible = { MNT = { has_country_flag = MNT_frontier_initialized check_variable = { MNT_crisis_phase = 1 } } }
+			overview_garrison_badge_visible = { MNT = { has_country_flag = MNT_frontier_initialized check_variable = { MNT_crisis_phase = 1 } } }
+			overview_garrison_title_visible = { MNT = { has_country_flag = MNT_frontier_initialized check_variable = { MNT_crisis_phase = 1 } } }
+			overview_garrison_value_visible = { MNT = { has_country_flag = MNT_frontier_initialized check_variable = { MNT_crisis_phase = 1 } } }
+			header_garrison_bg_visible = { MNT = { has_country_flag = MNT_frontier_initialized OR = { check_variable = { MNT_crisis_phase = 2 } check_variable = { MNT_crisis_phase = 3 } } } }
+			header_garrison_icon_visible = { MNT = { has_country_flag = MNT_frontier_initialized OR = { check_variable = { MNT_crisis_phase = 2 } check_variable = { MNT_crisis_phase = 3 } } } }
+			header_garrison_badge_visible = { MNT = { has_country_flag = MNT_frontier_initialized OR = { check_variable = { MNT_crisis_phase = 2 } check_variable = { MNT_crisis_phase = 3 } } } }
+			header_garrison_title_visible = { MNT = { has_country_flag = MNT_frontier_initialized OR = { check_variable = { MNT_crisis_phase = 2 } check_variable = { MNT_crisis_phase = 3 } } } }
+			header_garrison_value_visible = { MNT = { has_country_flag = MNT_frontier_initialized OR = { check_variable = { MNT_crisis_phase = 2 } check_variable = { MNT_crisis_phase = 3 } } } }
+			# END SHARED GARRISON TRIGGERS
+		}
+		properties = {
+			strength_bar = {
+				frame = MNT.MNT_crisis_strength_bar
+			}
+			supply_bar = {
+				frame = MNT.MNT_crisis_supply_bar
+			}
+			escalation_bar = {
+				frame = MNT.MNT_crisis_escalation_bar
+			}
+
+			war_time_bar = { frame = MNT.MNT_frontier_left_bar }
+			war_mnt_bar = { frame = MNT.MNT_frontier_mnt_bar }
+			war_oto_bar = { frame = MNT.MNT_frontier_oto_bar }
+			war_pressure_bar = { frame = MNT.MNT_frontier_pressure }
+
+		}
+	}
+
+	MNT_frontier_garrison_dashboard = {
+		context_type = decision_category window_name = "MNT_frontier_garrison_window"
+		visible = { MNT_frontier_prewar = yes }
+		ai_enabled = { always = no }
+		effects = { garrison_recruit_click = { MNT_frontier_recruit = yes } garrison_reduce_click = { MNT_frontier_reduce = yes } }
+		triggers = {
+			garrison_recruit_visible = { tag = OTO }
+			garrison_reduce_visible = { tag = OTO }
+			garrison_recruit_click_enabled = { MNT_frontier_can_recruit = yes }
+			garrison_reduce_click_enabled = { MNT_frontier_can_reduce = yes }
+		}
+	}
+}

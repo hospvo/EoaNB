@@ -1,0 +1,14 @@
+# Priorities influence the AI; the daily cordon is the actual movement safeguard.
+OTO_herzegovina_garrison = {
+	allowed = { tag = OTO }
+	enable = { MNT_frontier_prewar = yes MNT = { has_completed_focus = MNT_focus_guerrilla_war } }
+	abort = { NOT = { MNT_frontier_prewar = yes } }
+	ai_strategy = { type = put_unit_buffers ratio = 0.04 order_id = 1858 states = { 1205 1204 225 } area = europe subtract_fronts_from_need = yes }
+}
+OTO_herzegovina_limited_front = {
+	allowed = { tag = OTO }
+	enable = { MNT_frontier_running = yes }
+	abort = { NOT = { MNT_frontier_running = yes } }
+	ai_strategy = { type = front_control tag = MNT ratio = 0.1 priority = 200 ordertype = front execution_type = balanced execute_order = yes manual_attack = yes }
+	ai_strategy = { type = front_unit_request tag = MNT value = -80 }
+}

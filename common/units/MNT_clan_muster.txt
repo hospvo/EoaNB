@@ -1,0 +1,228 @@
+# Temporary muster battalion: identical to irregular_infantry. Never remains in a finished levy.
+sub_units = {
+	MNT_clan_muster_marker = { #temporary identification marker
+		sprite = irregular_infantry
+		map_icon_category = infantry
+
+		priority = 600
+		active = no
+
+		type = { infantry }
+
+		group = infantry
+
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+
+		combat_width = 2
+
+		#Size Definitions
+		max_strength = 20
+		max_organisation = 45
+		default_morale = 0.25
+		manpower = 1000
+
+		soft_attack = -0.20
+
+		#Misc Abilities
+		training_time = 60
+		suppression = 0.5
+		weight = 0.5
+
+		supply_consumption = 0.05
+
+		need = { infantry_equipment = 100 }
+		forest = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		hills = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		desert = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		mountain = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		jungle = {
+			attack = 0.10
+			defence = 0.15
+		}
+		jungle_hills ={
+			attack = 0.10
+			defence = 0.15
+		}
+		urban = {
+			attack = 0.10
+			defence = 0.15
+		}
+		marsh = {
+			attack = 0.10
+			defence = 0.15
+		}
+		amphibious = { attack = -0.4 }
+
+	}
+	MNT_clan_muster_medium_marker = { #temporary identification marker
+		sprite = irregular_infantry
+		map_icon_category = infantry
+
+		priority = 600
+		active = no
+
+		type = { infantry }
+
+		group = infantry
+
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+
+		combat_width = 2
+
+		#Size Definitions
+		max_strength = 20
+		max_organisation = 45
+		default_morale = 0.25
+		manpower = 1000
+
+		soft_attack = -0.20
+
+		#Misc Abilities
+		training_time = 60
+		suppression = 0.5
+		weight = 0.5
+
+		supply_consumption = 0.05
+
+		need = { infantry_equipment = 100 }
+		forest = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		hills = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		desert = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		mountain = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		jungle = {
+			attack = 0.10
+			defence = 0.15
+		}
+		jungle_hills ={
+			attack = 0.10
+			defence = 0.15
+		}
+		urban = {
+			attack = 0.10
+			defence = 0.15
+		}
+		marsh = {
+			attack = 0.10
+			defence = 0.15
+		}
+		amphibious = { attack = -0.4 }
+
+	}
+	MNT_clan_muster_large_marker = { #temporary identification marker
+		sprite = irregular_infantry
+		map_icon_category = infantry
+
+		priority = 600
+		active = no
+
+		type = { infantry }
+
+		group = infantry
+
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+
+		combat_width = 2
+
+		#Size Definitions
+		max_strength = 20
+		max_organisation = 45
+		default_morale = 0.25
+		manpower = 1000
+
+		soft_attack = -0.20
+
+		#Misc Abilities
+		training_time = 60
+		suppression = 0.5
+		weight = 0.5
+
+		supply_consumption = 0.05
+
+		need = { infantry_equipment = 100 }
+		forest = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		hills = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		desert = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		mountain = {
+			attack = 0.10
+			defence = 0.15
+		}
+
+		jungle = {
+			attack = 0.10
+			defence = 0.15
+		}
+		jungle_hills ={
+			attack = 0.10
+			defence = 0.15
+		}
+		urban = {
+			attack = 0.10
+			defence = 0.15
+		}
+		marsh = {
+			attack = 0.10
+			defence = 0.15
+		}
+		amphibious = { attack = -0.4 }
+
+	}
+}

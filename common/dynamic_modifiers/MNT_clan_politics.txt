@@ -1,0 +1,5 @@
+MNT_clans_political_influence = {
+	icon = "GFX_idea_MNT_clan_influence"
+	enable = { tag = MNT }
+	political_power_factor = MNT_clans_influence_total
+}

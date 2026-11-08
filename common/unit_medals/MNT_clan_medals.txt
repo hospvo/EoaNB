@@ -1,0 +1,16 @@
+# Clan identity badge, issued by script when a levy is mustered.
+unit_medals = {
+	MNT_black_mountain_badge = {
+		available = {
+			tag = MNT
+			has_country_flag = MNT_clans_issue_badge
+		}
+		frame = 1
+		icon = "GFX_medal_icon_mnt_clans"
+		cost = 0
+		unit_modifiers = {
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+		}
+	}
+}
