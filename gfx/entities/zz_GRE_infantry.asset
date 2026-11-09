@@ -1,0 +1,16 @@
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "GRE_infantry_entity"
+	pdxmesh = "GRE_infantry_rifle_mesh"
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "GRE_infantry_2_entity"
+	pdxmesh = "GRE_infantry_mg_mesh"
+}
+
+entity = {
+	clone = "GRE_infantry_2_entity"
+	name = "GRE_infantry_3_entity"
+}
