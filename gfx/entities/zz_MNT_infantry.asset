@@ -2,21 +2,46 @@ entity = {
 	clone = "irregular_infantry_entity"
 	name = "MNT_irregular_infantry_entity"
 	pdxmesh = "MNT_infantry_rifle_mesh"
+	attach = { name = "rifle1" Right_Hand_node = "MNT_traditional_rifle_right_entity" }
+	attach = { name = "rifle2" Left_Hand_node = "MNT_traditional_rifle_left_entity" }
+	attach = { name = "rifle3" mid_back_node = "MNT_traditional_rifle_long_idle_entity" }
+	attach = { name = "rifle4" Root_node_2 = "MNT_traditional_rifle_right_entity" }
 }
 
 entity = {
 	clone = "infantry_rifle_entity"
 	name = "MNT_infantry_entity"
 	pdxmesh = "MNT_infantry_rifle_mesh"
+	attach = { name = "rifle1" Right_Hand_node = "MNT_traditional_rifle_right_entity" }
+	attach = { name = "rifle2" Left_Hand_node = "MNT_traditional_rifle_left_entity" }
+	attach = { name = "rifle3" mid_back_node = "MNT_traditional_rifle_long_idle_entity" }
+	attach = { name = "rifle4" Root_node_2 = "MNT_traditional_rifle_right_entity" }
 }
 
 entity = {
-	clone = "infantry_2_entity"
+	clone = "MNT_infantry_entity"
 	name = "MNT_infantry_2_entity"
-	pdxmesh = "MNT_infantry_mg_mesh"
 }
 
 entity = {
 	clone = "MNT_infantry_2_entity"
 	name = "MNT_infantry_3_entity"
+}
+
+entity = {
+	clone = "MNT_infantry_entity"
+	name = "MNT_krnka_infantry_entity"
+	attach = { name = "rifle1" Right_Hand_node = "MNT_krnka_right_entity" }
+	attach = { name = "rifle2" Left_Hand_node = "MNT_krnka_left_entity" }
+	attach = { name = "rifle3" mid_back_node = "MNT_krnka_long_idle_entity" }
+	attach = { name = "rifle4" Root_node_2 = "MNT_krnka_right_entity" }
+}
+
+entity = {
+	clone = "MNT_irregular_infantry_entity"
+	name = "MNT_krnka_irregular_infantry_entity"
+	attach = { name = "rifle1" Right_Hand_node = "MNT_krnka_right_entity" }
+	attach = { name = "rifle2" Left_Hand_node = "MNT_krnka_left_entity" }
+	attach = { name = "rifle3" mid_back_node = "MNT_krnka_long_idle_entity" }
+	attach = { name = "rifle4" Root_node_2 = "MNT_krnka_right_entity" }
 }

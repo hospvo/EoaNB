@@ -1,0 +1,171 @@
+# Montenegro infantry models follow the equipment actually issued to the division.
+MNT = {
+	infantry_equipment = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_3 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_4 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_5 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_6 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_7 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_8 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_9 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_10 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_11 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_12 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_13 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_14 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+	infantry_equipment_rifle_15 = {
+		pool = {
+			sub_units = { irregular_infantry }
+			weight = 4000
+			models = { MNT_krnka_irregular_infantry_entity }
+		}
+		pool = {
+			sub_units = { line_infantry light_infantry infantry }
+			weight = 4000
+			models = { MNT_krnka_infantry_entity }
+		}
+	}
+}

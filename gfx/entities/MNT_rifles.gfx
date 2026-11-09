@@ -1,0 +1,10 @@
+objectTypes = {
+	pdxmesh = {
+		name = "MNT_traditional_rifle_mesh"
+		file = "gfx/models/units/montenegro/MNT_traditional_rifle.mesh"
+	}
+	pdxmesh = {
+		name = "MNT_krnka_mesh"
+		file = "gfx/models/units/montenegro/MNT_krnka.mesh"
+	}
+}

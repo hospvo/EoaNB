@@ -1,0 +1,10 @@
+spriteTypes = {
+ spriteType = {
+  name = "GFX_Portrait_MNT_Sylvestr_Krnka"
+  texturefile = "gfx/leaders/MNT/Portrait_MNT_Sylvestr_Krnka.png"
+ }
+ spriteType = {
+  name = "GFX_idea_MNT_Sylvestr_Krnka"
+  texturefile = "gfx/interface/ideas/MNT/idea_MNT_Sylvestr_Krnka.png"
+ }
+}
