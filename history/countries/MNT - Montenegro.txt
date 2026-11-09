@@ -321,6 +321,7 @@
 	recruit_character = MNT_valtazar_bogisic
 	recruit_character = MNT_milena_vukotic	#no pic
 	recruit_character = MNT_petar_popovic_pecija
+	recruit_character = MNT_sylvestr_krnka
 	recruit_character = MNT_jan_vaclik	#no pic
 	recruit_character = MNT_nicifor_ducic
 	recruit_character = MNT_rade_turov_plamenac

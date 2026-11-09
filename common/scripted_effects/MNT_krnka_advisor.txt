@@ -1,0 +1,14 @@
+# Register the new advisor once in new and existing Montenegro campaigns.
+MNT_register_krnka_advisor = {
+ if = {
+  limit = {
+   date < 1903.1.4
+   NOT = { has_country_flag = MNT_krnka_advisor_registered }
+  }
+  if = {
+   limit = { NOT = { has_character = MNT_sylvestr_krnka } }
+   recruit_character = MNT_sylvestr_krnka
+  }
+  set_country_flag = MNT_krnka_advisor_registered
+ }
+}

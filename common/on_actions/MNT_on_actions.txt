@@ -3,6 +3,7 @@
 on_actions = {
 	on_daily_MNT = {
 		effect = {
+			MNT_register_krnka_advisor = yes
 			MNT_clans_daily = yes
 
 			if = {
@@ -42,6 +43,7 @@ on_actions = {
 
 	on_startup = {
 		effect = {
+			MNT = { MNT_register_krnka_advisor = yes }
 			MNT = {
 				MNT_clans_daily = yes
 			}

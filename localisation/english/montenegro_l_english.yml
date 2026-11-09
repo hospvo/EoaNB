@@ -2444,3 +2444,6 @@
  MNT_infantry_equipment_rifle_0_short:0 "Long Rifle"
  MNT_infantry_equipment_rifle_3:0 "Krnka Breech-loading Rifle"
  MNT_infantry_equipment_rifle_3_short:0 "Krnka Rifle"
+ MNT_advisor_Sylvestr_Krnka:0 "Sylvestr Krnka"
+ MNT_breechloading_pioneer:0 "Breech-loading Rifle Pioneer"
+ MNT_breechloading_pioneer_desc:0 "A Bohemian gunsmith and inventor whose breech-loading rifle system helped modernise Montenegro's small arms."

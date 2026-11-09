@@ -438,4 +438,24 @@ characters = {
 			attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 3
 		}
 	}
+
+ MNT_sylvestr_krnka = {
+  name = "Sylvestr Krnka"
+  portraits = {
+   civilian = {
+    large = "GFX_Portrait_MNT_Sylvestr_Krnka"
+    small = "GFX_idea_MNT_Sylvestr_Krnka"
+   }
+  }
+  advisor = {
+   slot = political_advisor
+   idea_token = MNT_advisor_Sylvestr_Krnka
+   cost = 100
+   allowed = { original_tag = MNT }
+   available = { date < 1903.1.4 }
+   traits = { MNT_breechloading_pioneer }
+   research_bonus = { rifle_equipment_techs = 0.10 }
+   ai_will_do = { factor = 1 }
+  }
+ }
 }
