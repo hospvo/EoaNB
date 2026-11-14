@@ -1,0 +1,24 @@
+# A visual landmark at Cetinje; no construction or economic/combat bonuses.
+buildings = {
+    landmark_mnt_biljarda = {
+        show_on_map = 1
+        base_cost = 20000
+        damage_factor = 0
+        icon_frame = 22
+        value = 0
+        is_buildable = no
+        disable_grow_animation = yes
+        spawn_point = mnt_biljarda_spawn
+        only_display_if_exists = yes
+        always_shown = yes
+        level_cap = { province_max = 1 }
+    }
+}
+
+spawn_points = {
+    mnt_biljarda_spawn = {
+        type = province
+        max = 1
+        disable_auto_nudging = yes
+    }
+}

@@ -1,0 +1,14 @@
+objectTypes = {
+    pdxmesh = {
+        name = "MNT_biljarda_mesh"
+        file = "gfx/models/buildings/montenegro/MNT_biljarda.mesh"
+        meshsettings = {
+            name = "MNT_biljardaShape"
+            index = 0
+            texture_diffuse = "MNT_biljarda_diffuse.dds"
+            texture_normal = "MNT_biljarda_normal.dds"
+            texture_specular = "MNT_biljarda_spec.dds"
+            shader = "PdxMeshAdvancedSnow"
+        }
+    }
+}

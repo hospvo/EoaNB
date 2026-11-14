@@ -1,0 +1,15 @@
+entity = {
+    name = "building_landmark_mnt_biljarda"
+    pdxmesh = "MNT_biljarda_mesh"
+    default_state = "idle"
+    state = { name = "idle" }
+    scale = 1.0
+}
+
+# The nudger also requires an entity for each custom spawn-point type.
+entity = {
+    name = "building_mnt_biljarda_spawn"
+    pdxmesh = "building_landmark_spawn"
+    default_state = "idle"
+    state = { name = "idle" }
+}
