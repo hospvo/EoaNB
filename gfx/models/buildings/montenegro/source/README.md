@@ -24,8 +24,10 @@ architectural details; they do not establish every detail of the 1857 appearance
 ## Editing and rebuilding
 
 Import `MNT_biljarda.obj` into Blender with its MTL and PNG to edit the geometry.
-OBJ dimensions are approximate metres, with Y as up. Native mesh export uses
-0.045 map units per metre. The OBJ, recipe and source textures are not loaded by
+OBJ dimensions are approximate metres, with Y as up. Native map export uses
+0.042 / 0.095 / 0.034 map units per metre on X / Y / Z: height is exaggerated and
+the courts compressed for readability beside the game's generic buildings.
+The OBJ, recipe and source textures are not loaded by
 the game. Runtime uses only the parent directory's mesh and three DDS maps.
 
 Rebuild with Python 3, numpy, Pillow and scipy:
@@ -45,10 +47,20 @@ is placed in province 9821 (Cetinje),
 state 942. A separate startup hook adds one level once per save. The model stays
 with the site when ownership changes. Existing building types are not overridden.
 
+The heightmap-fitted retaining terrace and entry stairs are built for the fixed
+site recorded in `map-placement.json`, currently X 3100.00, Y 14.35, Z 1372.20,
+rotation zero. The level court sits above the sampled terrain maximum; its lower
+foundation follows the slope. Moving or rotating it requires rebuilding the
+foundation and updating the marker together. Nearby shared-industry visual slots
+in state 942 are moved into province 13780 to leave a clear civic landmark.
+No building levels or production statistics are changed by the marker moves.
+
 Validation: binary mesh round-trip, finite vectors and indices, normal/tangent
 normalization, UV bounds, full DDS mip chains and isolated software renders.
 An isolated vanilla boot loaded the model definitions without a Biljarda mesh or
 material error. It revealed a missing spawn-marker entity; the matching entity
 has been added. The test instance was stopped to avoid interrupting another mod.
-The corrected placement, runtime visibility, terrain seating and map scale still
-require an in-game check in EoaNB.
+A subsequent in-game screenshot showed the initial flat court intersecting the
+hillside. The revised model has been checked with software rendering against the
+actual EoaNB heightmap, including the complete court and terrain-following base.
+Its final appearance under the game's lighting still requires an in-game check.

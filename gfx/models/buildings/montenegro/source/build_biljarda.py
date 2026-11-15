@@ -1,17 +1,29 @@
 """Build the Biljarda landmark. Python 3 + numpy + Pillow + scipy; no Blender required.
 
-Dimensions are approximate metres. Export uses 0.045 native map units per metre.
+Dimensions are approximate metres. Map export exaggerates height for readability.
 Run from any directory. OBJ/MTL are also written for editing in Blender.
 """
 from pathlib import Path
-import io, math, struct
+import io, math, struct, json
 import numpy as np
 from PIL import Image
 from scipy.ndimage import gaussian_filter
 from pdx_io import Node, dump, read
 
 HERE=Path(__file__).resolve().parent; OUT=HERE.parent
-N=2048; SCALE=.045
+N=2048
+# The former uniform scale made the palace lower than the terrain variation.
+# Keep a compact footprint and a legible silhouette beside generic factories.
+MAP_SCALE=np.array([.042,.095,.034])
+SITE_X=3100.00;SITE_Z=1372.20
+ROOT=HERE.parents[4]
+terrain=np.array(Image.open(ROOT/'map/heightmap.bmp'),dtype=float)
+def ground_height(x,z):
+ yy=terrain.shape[0]-1-z;xx=x
+ ix=int(np.floor(xx));iy=int(np.floor(yy));fx=xx-ix;fy=yy-iy
+ return ((terrain[iy,ix]*(1-fx)+terrain[iy,ix+1]*fx)*(1-fy)+(terrain[iy+1,ix]*(1-fx)+terrain[iy+1,ix+1]*fx)*fy)*.1
+heights=[ground_height(SITE_X+x,SITE_Z+z) for x in np.linspace(-1.68,1.68,49) for z in np.linspace(-1.22,1.22,41)]
+SITE_Y=round(max(heights)+.06,2)
 ATLAS={
  'stone':(.006,.006,.494,.494), 'roof':(.506,.006,.994,.494),
  'paving':(.006,.506,.494,.994), 'wood':(.506,.506,.994,.86),
@@ -122,8 +134,21 @@ def gate(x,z,orientation=1):
  box(x+radius,x+radius+.7,0,top,z-thick/2,z+thick/2)
  box(x-radius-.85,x+radius+.85,top,top+.18,z-.52,z+.52,'trim')
 
+# Terrain-fitted retaining terrace: the upper court is level and fully above the
+# hillside; its lower edge follows the heightmap instead of floating in space.
+ring=[]
+for cx,cz,start in [(36.2,32,0),(-36.2,32,90),(-36.2,-32,180),(36.2,-32,270)]:
+ for angle in np.linspace(start,start+90,9):
+  angle=np.deg2rad(angle);ring.append((cx+3.48*np.cos(angle),cz+3.48*np.sin(angle)))
+for (x,z),(X,Z) in zip(ring,ring[1:]+ring[:1]):
+ y=(ground_height(SITE_X+x*MAP_SCALE[0],SITE_Z+z*MAP_SCALE[2])-SITE_Y-.12)/MAP_SCALE[1]
+ Y=(ground_height(SITE_X+X*MAP_SCALE[0],SITE_Z+Z*MAP_SCALE[2])-SITE_Y-.12)/MAP_SCALE[1]
+ panel((x,y,z),(X,Y,Z),(X,-.08,Z),(x,-.08,z),'stone',3)
+ # A pale coping course separates the residence from the dark political map.
+ panel((x,-.10,z),(X,-.10,Z),(X*.99,-.10,Z*.99),(x*.99,-.10,z*.99),'trim',3)
+ # Close the terrace deck between the court rectangle and the rounded towers.
+ face([(0,-.08,0),(x,-.08,z),(X,-.08,Z)],'paving',normal=(0,1,0),coords=[(.5,.5),((x+40)/80,(z+36)/72),((X+40)/80,(Z+36)/72)])
 # Enclosure and shallow paved court. The 1916 relief pavilion is deliberately absent.
-box(-39,39,-.55,-.08,-35,35,'soil',8)
 box(-36.2,36.2,-.08,0,-32,32,'paving',4.5)
 for z in [-32,32]:
  for left,right in ([(-36.2,-2.35),(2.35,36.2)] if z<0 else [(-36.2,36.2)]):
@@ -165,6 +190,12 @@ for x in [-36.2,36.2]:
   window(x,4.3,z-3.055,-1,.64,1.15,False)
 # Entrance opening in the front enclosure.
 gate(0,-32)
+# A modest stair connects the gateway to the hillside, rather than leaving a
+# sheer retaining wall across the only entrance.
+foot_y=(ground_height(SITE_X,SITE_Z-45*MAP_SCALE[2])-SITE_Y-.035)/MAP_SCALE[1]
+for step in range(8):
+ near=-32-step*13/8;far=-32-(step+1)*13/8;top=foot_y*(step+1)/8
+ box(-2.25,2.25,foot_y-.25,top,far,near,'trim',3)
 # Roof chimneys with collars and dark recessed flues.
 for x in [-25,-11,11,25]:
  box(x-.48,x+.48,8.2,10.65,-.5,.5)
@@ -177,14 +208,18 @@ for z in [-18,19]:
 
 # Texture atlas: preserve generated material samples; add exact shader palette swatches.
 diff=np.array(Image.open(HERE/'biljarda_materials.png').convert('RGB').resize((N,N),Image.Resampling.LANCZOS),float)
-colors={'shutter':[103,38,30],'glass':[26,34,37],'trim':[160,157,145],'shadow':[28,26,23],'soil':[98,91,74],'metal':[112,115,113]}
+colors={'shutter':[119,42,31],'glass':[26,34,37],'trim':[187,181,163],'shadow':[28,26,23],'soil':[98,91,74],'metal':[123,126,122]}
 for key,color in colors.items():
  u,v,U,V=ATLAS[key];diff[int((v-.008)*N):int((V+.008)*N),int((u-.008)*N):int((U+.008)*N)]=color
-diff[:1024,:1024]*=.91
+# Brighter, slightly warm limestone and quieter texture detail stay readable
+# under the map's night/overcast tint, without emissive or unlit materials.
+stone=diff[:1024,:1024];stone[:]=gaussian_filter(stone,sigma=(1.2,1.2,0))*.99+np.array([7,6,3])
+roof=diff[:1024,1024:];roof[:]=gaussian_filter(roof,sigma=(1,1,0))*.93+np.array([15,16,16])
+paving=diff[1024:,:1024];paving[:]=gaussian_filter(paving,sigma=(1.8,1.8,0))*.93+np.array([11,7,0])
 normal=np.tile(np.array([128,128,0,128],float),(N,N,1));spec=np.tile(np.array([0,65,0,65],float),(N,N,1))
 lum=diff@[.299,.587,.114];dy,dx=np.gradient(gaussian_filter(lum,.8))
 normal[:,:,0]-=np.clip(dx*.65,-15,15);normal[:,:,1]-=np.clip(dy*.65,-15,15);normal[:,:,3]=normal[:,:,0]
-spec[:1024,1024:]=[0,90,155,112]
+spec[:1024,1024:]=[0,81,100,89]
 for key in ['glass','metal']:
  u,v,U,V=ATLAS[key];spec[int((v-.008)*N):int((V+.008)*N),int((u-.008)*N):int((U+.008)*N)]=[0,92,0 if key=='glass' else 175,140]
 
@@ -201,7 +236,7 @@ def dds(arr,path,fmt):
 for suffix,arr,fmt in [('diffuse',diff,'DXT1'),('normal',normal,'DXT5'),('spec',spec,'DXT5')]:dds(arr,OUT/('MNT_biljarda_'+suffix+'.dds'),fmt)
 Image.fromarray(np.uint8(np.clip(diff,0,255))).save(HERE/'MNT_biljarda_diffuse.png')
 
-p=np.asarray(P)*SCALE;n=np.asarray(NORMAL);uv=np.asarray(UV);tri=np.asarray(TRI)
+p=np.asarray(P)*MAP_SCALE;n=np.asarray(NORMAL)/MAP_SCALE;n/=np.linalg.norm(n,axis=1,keepdims=True);uv=np.asarray(UV);tri=np.asarray(TRI)
 # Remove degenerate triangles (arch crown and any collapsed wedges).
 valid=np.linalg.norm(np.cross(p[tri[:,1]]-p[tri[:,0]],p[tri[:,2]]-p[tri[:,0]]),axis=1)>1e-10;tri=tri[valid]
 a=p[tri[:,1]]-p[tri[:,0]];b=p[tri[:,2]]-p[tri[:,0]];du=uv[tri[:,1]]-uv[tri[:,0]];dv=uv[tri[:,2]]-uv[tri[:,0]]
@@ -230,4 +265,6 @@ with (HERE/'MNT_biljarda.obj').open('w') as f:
  for v in n:f.write('vn '+' '.join(f'{x:.6f}' for x in v)+'\n')
  for t in tri:f.write('f '+' '.join(f'{i+1}/{i+1}/{i+1}' for i in t)+'\n')
 (HERE/'MNT_biljarda.mtl').write_text('newmtl Biljarda\nKd 1 1 1\nmap_Kd MNT_biljarda_diffuse.png\n')
+(HERE/'map-placement.json').write_text(json.dumps({'state':942,'province':9821,'x':SITE_X,'y':SITE_Y,'z':SITE_Z,'rotation':0,'map_scale':MAP_SCALE.tolist(),'terrain_min':min(heights),'terrain_max':max(heights)},indent=2))
 print(f'Exported {len(p)} vertices, {len(tri)} triangles; bounds {p.min(0)} to {p.max(0)}')
+print(f'Placement: {SITE_X};{SITE_Y};{SITE_Z}; terrain {min(heights):.2f} to {max(heights):.2f}')
