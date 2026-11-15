@@ -38,8 +38,10 @@ swatches, mipmaps, geometry and UVs are derived by the build script.
 
 ## Game integration
 
-`landmark_mnt_biljarda` is a non-buildable visual landmark with no modifiers and
-no DLC requirement. A dedicated spawn point is placed in province 9821 (Cetinje),
+`landmark_mnt_biljarda` is a non-buildable landmark with +3% political power gain
+for a Montenegrin controller and no DLC requirement. Its modifier is displayed
+in the building UI, with a dedicated two-frame map icon. A dedicated spawn point
+is placed in province 9821 (Cetinje),
 state 942. A separate startup hook adds one level once per save. The model stays
 with the site when ownership changes. Existing building types are not overridden.
 

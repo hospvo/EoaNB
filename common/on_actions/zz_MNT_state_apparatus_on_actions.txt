@@ -1,0 +1,19 @@
+on_actions = {
+    on_startup = {
+        effect = { MNT = { MNT_initialize_state_apparatus = yes } }
+    }
+    on_daily_MNT = {
+        effect = {
+            # Compatibility with older saves and the legacy content migration.
+            if = {
+                limit = {
+                    OR = {
+                        NOT = { has_country_flag = MNT_state_apparatus_initialized }
+                        has_idea = MNT_small_administration
+                    }
+                }
+                MNT_initialize_state_apparatus = yes
+            }
+        }
+    }
+}

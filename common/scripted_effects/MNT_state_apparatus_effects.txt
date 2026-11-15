@@ -1,0 +1,37 @@
+MNT_initialize_state_apparatus = {
+    if = {
+        limit = { original_tag = MNT }
+        # Replace the pre-existing spirit rather than stacking its penalties.
+        if = {
+            limit = { has_country_flag = MNT_state_apparatus_reformed }
+            remove_ideas = MNT_small_administration
+        }
+        else = {
+            if = {
+                limit = { NOT = { has_character = MNT_underdeveloped_state_apparatus } }
+                recruit_character = MNT_underdeveloped_state_apparatus
+            }
+            if = {
+                limit = { NOT = { has_idea = MNT_advisor_underdeveloped_state_apparatus } }
+                activate_advisor = MNT_advisor_underdeveloped_state_apparatus
+            }
+            remove_ideas = MNT_small_administration
+        }
+        set_country_flag = MNT_state_apparatus_initialized
+    }
+}
+
+# Reserved for a future reform focus/event. No current focus invokes this effect.
+# The persistent flag prevents a reformed administration returning on save load.
+MNT_reform_state_apparatus = {
+    if = {
+        limit = { original_tag = MNT }
+        set_country_flag = MNT_state_apparatus_reformed
+        remove_ideas = MNT_small_administration
+        remove_ideas = MNT_advisor_underdeveloped_state_apparatus
+        if = {
+            limit = { has_character = MNT_underdeveloped_state_apparatus }
+            retire_character = MNT_underdeveloped_state_apparatus
+        }
+    }
+}

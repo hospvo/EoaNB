@@ -1,0 +1,7 @@
+leader_traits = {
+    MNT_underdeveloped_state_apparatus_trait = {
+        random = no
+        research_speed_factor = -0.05
+        political_power_gain = -0.05
+    }
+}

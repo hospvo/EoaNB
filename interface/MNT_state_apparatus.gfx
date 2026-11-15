@@ -1,0 +1,11 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_idea_MNT_underdeveloped_state_apparatus"
+        texturefile = "gfx/interface/ideas/MNT/MNT_underdeveloped_state_apparatus.png"
+    }
+    spriteType = {
+        name = "GFX_MNT_biljarda_icon_small"
+        texturefile = "gfx/interface/buildings/MNT_biljarda_icon_small.png"
+        noOfFrames = 2
+    }
+}

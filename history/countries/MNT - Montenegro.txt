@@ -1,4 +1,7 @@
 1857.1.1 = {
+	# Permanent institutional advisor; removed only by a later state reform.
+	recruit_character = MNT_underdeveloped_state_apparatus
+	activate_advisor = MNT_advisor_underdeveloped_state_apparatus
 	### General Setup ###
 	capital = 942
 

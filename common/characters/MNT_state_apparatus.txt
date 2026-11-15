@@ -1,0 +1,19 @@
+# Institutional advisor: intentionally occupies one political-advisor seat.
+characters = {
+    MNT_underdeveloped_state_apparatus = {
+        name = MNT_underdeveloped_state_apparatus
+        portraits = {
+            civilian = { small = GFX_idea_MNT_underdeveloped_state_apparatus }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = MNT_advisor_underdeveloped_state_apparatus
+            cost = 0
+            can_be_fired = no
+            allowed = { original_tag = MNT }
+            available = { NOT = { has_country_flag = MNT_state_apparatus_reformed } }
+            traits = { MNT_underdeveloped_state_apparatus_trait }
+            ai_will_do = { factor = 0 }
+        }
+    }
+}
