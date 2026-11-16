@@ -25,7 +25,7 @@ architectural details; they do not establish every detail of the 1857 appearance
 
 Import `MNT_biljarda.obj` into Blender with its MTL and PNG to edit the geometry.
 OBJ dimensions are approximate metres, with Y as up. Native map export uses
-0.042 / 0.095 / 0.034 map units per metre on X / Y / Z: height is exaggerated and
+0.028 / 0.065 / 0.023 map units per metre on X / Y / Z: height is exaggerated and
 the courts compressed for readability beside the game's generic buildings.
 The OBJ, recipe and source textures are not loaded by
 the game. Runtime uses only the parent directory's mesh and three DDS maps.
@@ -48,12 +48,17 @@ state 942. A separate startup hook adds one level once per save. The model stays
 with the site when ownership changes. Existing building types are not overridden.
 
 The heightmap-fitted retaining terrace and entry stairs are built for the fixed
-site recorded in `map-placement.json`, currently X 3100.00, Y 14.35, Z 1372.20,
+site recorded in `map-placement.json`, currently X 3102.10, Y 14.24, Z 1371.50,
 rotation zero. The level court sits above the sampled terrain maximum; its lower
 foundation follows the slope. Moving or rotating it requires rebuilding the
 foundation and updating the marker together. Nearby shared-industry visual slots
 in state 942 are moved into province 13780 to leave a clear civic landmark.
 No building levels or production statistics are changed by the marker moves.
+The Cetinje supply-node visual marker is also separated from the landmark at
+X 3099.10, Y 14.10, Z 1372.00, still in its original province 9821. Its supply
+function and building level are unchanged. The residence now uses fewer facade
+windows at map scale, softer material contrast and a side entry by its end wing.
+These are deliberate visual simplifications rather than surveyed details.
 
 Validation: binary mesh round-trip, finite vectors and indices, normal/tangent
 normalization, UV bounds, full DDS mip chains and isolated software renders.

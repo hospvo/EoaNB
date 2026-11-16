@@ -12,18 +12,17 @@ from pdx_io import Node, dump, read
 
 HERE=Path(__file__).resolve().parent; OUT=HERE.parent
 N=2048
-# The former uniform scale made the palace lower than the terrain variation.
-# Keep a compact footprint and a legible silhouette beside generic factories.
-MAP_SCALE=np.array([.042,.095,.034])
-SITE_X=3100.00;SITE_Z=1372.20
+# Compact map-scale silhouette. A flatter site makes a low terrace sufficient.
+MAP_SCALE=np.array([.028,.065,.023])
+SITE_X=3102.10;SITE_Z=1371.50
 ROOT=HERE.parents[4]
 terrain=np.array(Image.open(ROOT/'map/heightmap.bmp'),dtype=float)
 def ground_height(x,z):
  yy=terrain.shape[0]-1-z;xx=x
  ix=int(np.floor(xx));iy=int(np.floor(yy));fx=xx-ix;fy=yy-iy
  return ((terrain[iy,ix]*(1-fx)+terrain[iy,ix+1]*fx)*(1-fy)+(terrain[iy+1,ix]*(1-fx)+terrain[iy+1,ix+1]*fx)*fy)*.1
-heights=[ground_height(SITE_X+x,SITE_Z+z) for x in np.linspace(-1.68,1.68,49) for z in np.linspace(-1.22,1.22,41)]
-SITE_Y=round(max(heights)+.06,2)
+heights=[ground_height(SITE_X+x,SITE_Z+z) for x in np.linspace(-1.12,1.12,49) for z in np.linspace(-.83,.83,41)]
+SITE_Y=round(max(heights)+.04,2)
 ATLAS={
  'stone':(.006,.006,.494,.494), 'roof':(.506,.006,.994,.494),
  'paving':(.006,.506,.494,.994), 'wood':(.506,.506,.994,.86),
@@ -141,8 +140,8 @@ for cx,cz,start in [(36.2,32,0),(-36.2,32,90),(-36.2,-32,180),(36.2,-32,270)]:
  for angle in np.linspace(start,start+90,9):
   angle=np.deg2rad(angle);ring.append((cx+3.48*np.cos(angle),cz+3.48*np.sin(angle)))
 for (x,z),(X,Z) in zip(ring,ring[1:]+ring[:1]):
- y=(ground_height(SITE_X+x*MAP_SCALE[0],SITE_Z+z*MAP_SCALE[2])-SITE_Y-.12)/MAP_SCALE[1]
- Y=(ground_height(SITE_X+X*MAP_SCALE[0],SITE_Z+Z*MAP_SCALE[2])-SITE_Y-.12)/MAP_SCALE[1]
+ y=(ground_height(SITE_X+x*MAP_SCALE[0],SITE_Z+z*MAP_SCALE[2])-SITE_Y-.07)/MAP_SCALE[1]
+ Y=(ground_height(SITE_X+X*MAP_SCALE[0],SITE_Z+Z*MAP_SCALE[2])-SITE_Y-.07)/MAP_SCALE[1]
  panel((x,y,z),(X,Y,Z),(X,-.08,Z),(x,-.08,z),'stone',3)
  # A pale coping course separates the residence from the dark political map.
  panel((x,-.10,z),(X,-.10,Z),(X*.99,-.10,Z*.99),(x*.99,-.10,z*.99),'trim',3)
@@ -151,12 +150,13 @@ for (x,z),(X,Z) in zip(ring,ring[1:]+ring[:1]):
 # Enclosure and shallow paved court. The 1916 relief pavilion is deliberately absent.
 box(-36.2,36.2,-.08,0,-32,32,'paving',4.5)
 for z in [-32,32]:
- for left,right in ([(-36.2,-2.35),(2.35,36.2)] if z<0 else [(-36.2,36.2)]):
+ for left,right in [(-36.2,36.2)]:
   box(left,right,0,3.15,z-.37,z+.37)
   box(left,right,3.15,3.33,z-.50,z+.50,'trim')
 for x in [-36.2,36.2]:
- box(x-.37,x+.37,0,3.15,-32,32)
- box(x-.50,x+.50,3.15,3.33,-32,32,'trim')
+ for near,far in ([(-32,-9.85),(-5.15,32)] if x<0 else [(-32,32)]):
+  box(x-.37,x+.37,0,3.15,near,far)
+  box(x-.50,x+.50,3.15,3.33,near,far,'trim')
 # Central two-storey residence, with deeper end pavilions.
 box(-36.2,36.2,0,7.5,-3.75,3.75)
 hiproof(-29.4,29.4,-3.75,3.75,7.5,2.2)
@@ -168,7 +168,8 @@ for side in [-1,1]:
  z=side*3.75
  box(-36.2,36.2,0,.38,min(z,z+side*.12),max(z,z+side*.12),'trim',3)
  box(-36.5,36.5,7.27,7.50,min(z,z+side*.17),max(z,z+side*.17),'trim',3)
- for x in np.linspace(-33.8,33.8,23):
+ # A reduced map-scale window rhythm avoids a black-and-white barcode at zoom.
+ for x in np.linspace(-33.8,33.8,15):
   for y in [1.05,4.63]:
    if y<2 and abs(x)<2.0:continue
    if side>0 and abs(x)>28.5:continue
@@ -188,14 +189,17 @@ for x in [-36.2,36.2]:
   cone(x,z,3.48,6.5,.95)
   window(x,4.3,z+3.055,1,.64,1.15,False)
   window(x,4.3,z-3.055,-1,.64,1.15,False)
-# Entrance opening in the front enclosure.
-gate(0,-32)
-# A modest stair connects the gateway to the hillside, rather than leaving a
-# sheer retaining wall across the only entrance.
-foot_y=(ground_height(SITE_X,SITE_Z-45*MAP_SCALE[2])-SITE_Y-.035)/MAP_SCALE[1]
+# The side gateway adjoins the residence, as in the museum's exterior reference.
+# A side entrance also avoids turning the front court into a fortress rampart.
+start=len(P);gate(0,0)
+for i in range(start,len(P)):
+ x,y,z=P[i];P[i]=np.array([z-36.2,y,-x-7.5])
+ nx,ny,nz=NORMAL[i];NORMAL[i]=np.array([nz,ny,-nx])
+# Low side steps connect the entry terrace to the hill.
+foot_y=(ground_height(SITE_X-49*MAP_SCALE[0],SITE_Z-7.5*MAP_SCALE[2])-SITE_Y-.035)/MAP_SCALE[1]
 for step in range(8):
- near=-32-step*13/8;far=-32-(step+1)*13/8;top=foot_y*(step+1)/8
- box(-2.25,2.25,foot_y-.25,top,far,near,'trim',3)
+ near=-36.2-step*12.8/8;far=-36.2-(step+1)*12.8/8;top=foot_y*(step+1)/8
+ box(far,near,foot_y-.25,top,-9.75,-5.25,'trim',3)
 # Roof chimneys with collars and dark recessed flues.
 for x in [-25,-11,11,25]:
  box(x-.48,x+.48,8.2,10.65,-.5,.5)
@@ -208,17 +212,17 @@ for z in [-18,19]:
 
 # Texture atlas: preserve generated material samples; add exact shader palette swatches.
 diff=np.array(Image.open(HERE/'biljarda_materials.png').convert('RGB').resize((N,N),Image.Resampling.LANCZOS),float)
-colors={'shutter':[119,42,31],'glass':[26,34,37],'trim':[187,181,163],'shadow':[28,26,23],'soil':[98,91,74],'metal':[123,126,122]}
+colors={'shutter':[112,60,43],'glass':[65,65,57],'trim':[169,162,144],'shadow':[50,47,39],'soil':[98,91,74],'metal':[123,126,122]}
 for key,color in colors.items():
  u,v,U,V=ATLAS[key];diff[int((v-.008)*N):int((V+.008)*N),int((u-.008)*N):int((U+.008)*N)]=color
 # Brighter, slightly warm limestone and quieter texture detail stay readable
 # under the map's night/overcast tint, without emissive or unlit materials.
-stone=diff[:1024,:1024];stone[:]=gaussian_filter(stone,sigma=(1.2,1.2,0))*.99+np.array([7,6,3])
+stone=diff[:1024,:1024];soft=gaussian_filter(stone,sigma=(4,4,0));stone[:]=soft+(stone-soft)*.40+np.array([7,6,3])
 roof=diff[:1024,1024:];roof[:]=gaussian_filter(roof,sigma=(1,1,0))*.93+np.array([15,16,16])
 paving=diff[1024:,:1024];paving[:]=gaussian_filter(paving,sigma=(1.8,1.8,0))*.93+np.array([11,7,0])
 normal=np.tile(np.array([128,128,0,128],float),(N,N,1));spec=np.tile(np.array([0,65,0,65],float),(N,N,1))
 lum=diff@[.299,.587,.114];dy,dx=np.gradient(gaussian_filter(lum,.8))
-normal[:,:,0]-=np.clip(dx*.65,-15,15);normal[:,:,1]-=np.clip(dy*.65,-15,15);normal[:,:,3]=normal[:,:,0]
+normal[:,:,0]-=np.clip(dx*.28,-8,8);normal[:,:,1]-=np.clip(dy*.28,-8,8);normal[:,:,3]=normal[:,:,0]
 spec[:1024,1024:]=[0,81,100,89]
 for key in ['glass','metal']:
  u,v,U,V=ATLAS[key];spec[int((v-.008)*N):int((V+.008)*N),int((u-.008)*N):int((U+.008)*N)]=[0,92,0 if key=='glass' else 175,140]
